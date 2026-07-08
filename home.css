@@ -1,0 +1,65 @@
+/* 폰트 프리텐다드 */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+* { box-sizing: border-box; }
+
+/* 상단 flex 태그바 */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'pretendard' sans-serif;
+}
+/* 메인컨테이너 flex */
+.top-btn-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #303030;
+    width: 1200px; height: 56px;
+}
+/* 태그 개별 */
+.tag-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+}
+border {
+    border: none;
+    padding: 0;
+}
+.tag {
+    padding: 8px 12px;
+    border: 1px solid #AAA; background-color: #303030;
+    color: white; font-size: 14px; font-weight: 400;
+    border-radius: 999px; flex: 1; flex-wrap: nowrap;
+}
+.tag-more {
+    padding: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: #212121;
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+/* 하단 영상 썸네일 그리드 */
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px; margin: 24px;
+}
+.video-box {
+
+}
