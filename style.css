@@ -4,18 +4,115 @@
 
 * { margin : 0; padding: 0; box-sizing: border-box; }
 
+:root {
+    --bg: #2d2d2d; /* 전체 배경 */
+    --text-main: #f5f5f5; /* 메인 텍스트 */
+    --text-sub: #d3d3d3; /* 서브 텍스트 */
+    --text-tag: #0a0a0a; /* 태그 활성화 텍스트 */
+    --tag-on: #ffffff; /* 태그 활성화 */
+    --tag-off: #464646; /* 태그 비활성화 */
+}
+
+body {
+    font-family: 'Roboto Sans', sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
+    line-height: 1.6; /* 헤더 높이 확인후 수정 */
+    padding-top: 60px;
+}
+
+.video {
+    display: grid;
+    grid-template-columns: 670px 430px;
+}
+
 /*  ====================
     1. 비디오 칸
 ===================== */
+
+.primary {
+    grid-column: 1/4;
+}
+
+.video_player {}
+
+.video_player_youtube {}
+
+.video_play_youtube_controls {}
+
+.video_play_youtube_controls_left {}
+
+.video_play_youtube_controls_right {}
+
+.video_info {}
+
+.video_info_bottom {}
+
+.video_info_bottom_view {}
+
+.video_info_bottom_controls {}
 
 /* =====================
     2. 채널 칸
 ===================== */
 
+.channel {}
+
+.chaneel_top {}
+
+.channel_top_proname {}
+
+.channel_top_button {}
+
+.channel_mid {}
+
+.channel_bottom {}
+
 /* =====================
     3. 댓글
 ===================== */
 
+.comment {}
+
+.comment_top {}
+
+.comment_top_sort {}
+
+.comment_top_usercomment {}
+
+.comment_top_usercomment_comment {}
+
+.commnet_bottom {}
+
+.comment_bottom_pic {}
+
+.comment_bottom_comment {}
+
+.comment_bottom_comment_header {}
+
+.comment_bottom_comment_text {}
+
+.comment_bottom_comment_toolbar {}
 /* =====================
     4. 영상 목록
 ===================== */
+
+.secondary {}
+
+.secondary_tag {}
+
+.secondary_tag_btn {}
+
+.secondary_list {}
+
+.secondary_list_video {}
+
+.secondary_list_video_thumbnail {}
+
+.secondary_list_video_thumbnail_time {}
+
+.secondary_list_video_info {}
+
+.secondary_list_video_info_title {}
+
+.secondary_list_video_info_description {}
