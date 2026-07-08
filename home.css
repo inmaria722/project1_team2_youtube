@@ -61,5 +61,19 @@ border {
     gap: 16px; margin: 24px;
 }
 .video-box {
-
+    background-color: 000;
+    width: 276px; height: 247px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.thumb-img {
+    
+}
+.video-thumb {
+    width: 276px; height: 155px;
+}
+.youtuber {
+    width: 36px; height: 36px;
+    border-radius: 50%;
 }
