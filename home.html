@@ -33,7 +33,7 @@
     <!-- 메인 -->
     <main>
         <!-- 상단 체크박스 모음 -->
-        <form class="fillter">
+        <form class="filter">
             <input type="checkbox" name="top-tags" id="tag-Music" hidden>
             <input type="checkbox" name="top-tags" id="tag-Camping" hidden>
             <input type="checkbox" name="top-tags" id="tag-Game" hidden>
@@ -47,304 +47,304 @@
             <input type="checkbox" name="top-tags" id="tag-IT" hidden>
             <input type="checkbox" name="top-tags" id="tag-Trip" hidden>
             <input type="checkbox" name="top-tags" id="tag-shopping" hidden>
+            <!-- 섹션 상단 플렉스 프레임 -->
+            <section class="top-btn-box">
+                <!-- 인라인 블럭 플렉스로 나열할 아이템들 만들기 -->
+                <!-- 전체 태그 취소할 버튼 -->
+                <button type="reset" class="tag-reset">ALL</button>
+                <!-- 태그들 중복선택가능 + 선택된 내용의 영상만 표시 -->
+                <label for="tag-Music" class="tag">Music</label>
+                <label for="tag-Camping" class="tag">Camping</label>
+                <label for="tag-Game" class="tag">Game</label>
+                <label for="tag-AI" class="tag">AI</label>
+                <label for="tag-DIY" class="tag">DIY</label>
+                <label for="tag-Food" class="tag">Food</label>
+                <label for="tag-Cook" class="tag">Cook</label>
+                <label for="tag-Movie" class="tag">Movie</label>
+                <label for="tag-Car" class="tag">Car</label>
+                <label for="tag-SNS" class="tag">SNS</label>
+                <label for="tag-IT" class="tag">IT</label>
+                <label for="tag-Trip" class="tag">Trip</label>
+                <label for="tag-shopping" class="tag">shopping</label>
+            </section>
+
+            <!-- 섹션 하단 그리드 -->
+            <section class="main-grid">
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box camping">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%BA%A0%ED%95%91%EC%8D%B8%EB%84%A4%EC%9D%BC.png" alt="camp-thumb" class="video-thumb">
+                        <div class="video-time">32:43</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%BA%A0%ED%95%91%EC%9C%A0%ED%8A%9C%EB%B2%84.png" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">힐링캠프! 호수속에서 낭만넘치는 캠핑!</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>감성캠퍼</span><br>
+                        <span>12.7k Views . 3 week ago</span>
+                    </div>
+                </article>
+                    <!-- 위에 목록을 15개 복사 -->
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EA%B2%8C%EC%9E%84%EC%8D%B8%EB%84%A4%EC%9D%BC.png" alt="game-thumb" class="video-thumb">
+                        <div class="video-time">21:50</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EA%B2%8C%EC%9E%84%EC%9C%A0%ED%8A%9C%EB%B2%84.png" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">에테르 레전드 신규 레이드 업데이트! 보스 미리보기, 파티 조합 추천!</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>판타지덕후</span><br>
+                        <span>6.7k Views . 2 hours ago</span>
+                    </div>
+                </article>
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="" alt="thumb" class="video-thumb">
+                        <div class="video-time">영상길이</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">영상제목</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>유튜버이름</span><br>
+                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                    </div>
+                </article>
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="" alt="thumb" class="video-thumb">
+                        <div class="video-time">영상길이</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">영상제목</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>유튜버이름</span><br>
+                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                    </div>
+                </article>
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="" alt="thumb" class="video-thumb">
+                        <div class="video-time">영상길이</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">영상제목</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>유튜버이름</span><br>
+                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                    </div>
+                </article>
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="" alt="thumb" class="video-thumb">
+                        <div class="video-time">영상길이</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">영상제목</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>유튜버이름</span><br>
+                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                    </div>
+                </article>
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="" alt="thumb" class="video-thumb">
+                        <div class="video-time">영상길이</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">영상제목</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>유튜버이름</span><br>
+                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                    </div>
+                </article>
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="" alt="thumb" class="video-thumb">
+                        <div class="video-time">영상길이</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">영상제목</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>유튜버이름</span><br>
+                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                    </div>
+                </article>
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="" alt="thumb" class="video-thumb">
+                        <div class="video-time">영상길이</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">영상제목</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>유튜버이름</span><br>
+                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                    </div>
+                </article>
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="" alt="thumb" class="video-thumb">
+                        <div class="video-time">영상길이</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">영상제목</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>유튜버이름</span><br>
+                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                    </div>
+                </article>
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="" alt="thumb" class="video-thumb">
+                        <div class="video-time">영상길이</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">영상제목</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>유튜버이름</span><br>
+                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                    </div>
+                </article>
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="" alt="thumb" class="video-thumb">
+                        <div class="video-time">영상길이</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">영상제목</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>유튜버이름</span><br>
+                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                    </div>
+                </article>
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="" alt="thumb" class="video-thumb">
+                        <div class="video-time">영상길이</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">영상제목</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>유튜버이름</span><br>
+                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                    </div>
+                </article>
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="" alt="thumb" class="video-thumb">
+                        <div class="video-time">영상길이</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">영상제목</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>유튜버이름</span><br>
+                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                    </div>
+                </article>
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="" alt="thumb" class="video-thumb">
+                        <div class="video-time">영상길이</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">영상제목</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>유튜버이름</span><br>
+                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                    </div>
+                </article>
+                <!-- 그리드에 들어갈 박스 -->
+                <article class="video-box">
+                    <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                    <div class="thumb-img">
+                        <img src="" alt="thumb" class="video-thumb">
+                        <div class="video-time">영상길이</div>
+                    </div>
+                    <!-- 하단 프로필이미지 -->
+                    <img src="" alt="youtuber-img" class="youtuber">
+                    <!-- 하단 영상 제목 -->
+                    <span class="video_title">영상제목</span>
+                    <!-- 하단 게시자 닉네임 및 영상정보 -->
+                    <div class="video_info">
+                        <span>유튜버이름</span><br>
+                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                    </div>
+                </article>
+            </section>
         </form>
-        <!-- 섹션 상단 플렉스 프레임 -->
-        <section class="top-btn-box">
-            <!-- 인라인 블럭 플렉스로 나열할 아이템들 만들기 -->
-            <!-- 전체 태그 취소할 버튼 -->
-            <button type="reset" class="tag-reset">ALL</button>
-            <!-- 태그들 중복선택가능 + 선택된 내용의 영상만 표시 -->
-            <label for="tag-Music" class="tag">Music</label>
-            <label for="tag-Camping" class="tag">Camping</label>
-            <label for="tag-Game" class="tag">Game</label>
-            <label for="tag-AI" class="tag">AI</label>
-            <label for="tag-DIY" class="tag">DIY</label>
-            <label for="tag-Food" class="tag">Food</label>
-            <label for="tag-Cook" class="tag">Cook</label>
-            <label for="tag-Movie" class="tag">Movie</label>
-            <label for="tag-Car" class="tag">Car</label>
-            <label for="tag-SNS" class="tag">SNS</label>
-            <label for="tag-IT" class="tag">IT</label>
-            <label for="tag-Trip" class="tag">Trip</label>
-            <label for="tag-shopping" class="tag">shopping</label>
-        </section>
-        
-        <!-- 섹션 하단 그리드 -->
-        <section class="main-grid">
-            <!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-                <!-- 위에 목록을 15개 복사 -->
-<!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-            <!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-            <!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-            <!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-            <!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-            <!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-            <!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-            <!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-            <!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-            <!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-            <!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-            <!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-            <!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-            <!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-            <!-- 그리드에 들어갈 박스 -->
-            <article class="video-box">
-                <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
-                <div class="thumb-img">
-                    <img src="" alt="thumb" class="video-thumb">
-                    <div class="video-time">영상길이</div>
-                </div>
-                <!-- 하단 프로필이미지 -->
-                <img src="" alt="youtuber-img" class="youtuber">
-                <!-- 하단 영상 제목 -->
-                <span class="video_title">영상제목</span>
-                <!-- 하단 게시자 닉네임 및 영상정보 -->
-                <div class="video_info">
-                    <span>유튜버이름</span><br>
-                    <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
-                </div>
-            </article>
-        </section>
     </main>
 </body>
 </html>
