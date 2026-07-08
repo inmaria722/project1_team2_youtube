@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YouTube</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="chanelpage.css" />
+    <link rel="stylesheet" href="channelpage.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -210,16 +210,29 @@
       </ul>
     </nav>
 
-    <!-- 채널 -->
-    <section>
-      <!-- 채널 - 커버 -->
+    <!-- 채널 배너 -->
+    <section class="channel-banner-box">
+      <!-- 배너 - 배너 이미지 -->
+      <div class="banner-img">
+        <img src="./images/channel_banner.jpg" alt="채널 배너 이미지" />
+      </div>
 
       <!-- 채널 - 프로필 -->
-      <!-- 프로필 - 사진 -->
-      <!-- 프로필 - 이름 -->
-      <!-- 프로필 - 구독자 수 -->
+      <div class="profile-box">
+        <div class="profile">
+          <!-- 프로필 - 사진 -->
+          <div class="profile-img">
+            <img src="./images/channel_profile.jpg" alt="채널 프로필 이미지" />
+          </div>
+          <!-- 프로필 - 이름 -->
+          <h3 class="profile-name">혜안</h3>
+          <!-- 프로필 - 구독자 수 -->
+          <span class="profile-subscribers">3.4M</span>
+        </div>
 
-      <!-- 프로필 - 구독 버튼 -->
+        <!-- 프로필 - 구독 버튼 -->
+        <button class="sub-btn">SUBSCRIBES</button>
+      </div>
 
       <!-- 채널 - 툴바 -->
       <!-- 툴바 - 홈 -->
