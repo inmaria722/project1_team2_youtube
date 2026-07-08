@@ -14,42 +14,45 @@
             <!-- 좌측 - 비디오 칸 (그림자, Video, 이미지)-->
             <div class="video_player">
                 <!-- 비디오칸 - 비디오 영상 -->
+                <video src="video/test_video.mp4" poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_IntOwaoF1e8SMBUx10scQ6SQow7XRGjTwlXqPc2Kyg&s=10" width="640" height="360"></video>
                 <div class="video_player_youtube">
-                    <video controls src=""></video>
+                    <div class="video_player_youtube_title">
                     <!-- 비디오 영상 - 제목 -->
-                    <h3>테스트용 1</h3>
-                    <!-- 비디오  영상 - 인포 아이콘 -->
-                    <a href="#">i</a>
-                    <!-- 비디오  영상 - 영상 하단-->
+                        <div class="video_player_youtube_title_name">테스트용 1</div>
+                        <!-- 비디오  영상 - 인포 아이콘 -->
+                        <button class="video_player_youtube_title_btn">i</button>
+                        <!-- 비디오  영상 - 영상 하단-->
+                    </div>
                     <div class="video_player_youtube_controls">
                         <!-- 영상 하단 - 재생바 -->
-                        <p class="video-played">테</p>
-                        <p class="video-loaded">스</p>
-                        <p class="video-full">트</p>
+                        <input type="range" class="video_player_youtube_controls_progress">
                         <!-- 영상 하단 - 좌측-->
-                        <aside class="video_player_Youtube_controls_left">
-                            <!-- 영상 하단 - 재생 아이콘 -->
-                            <p>재생</p>
-                            <!-- 영상 하단 - 다음 아이콘 -->
-                            <p>다음</p>
-                            <!-- 영상 하단 - 소리 아이콘 -->
-                            <p>소리</p>
-                            <!-- 영상 하단 - 재생 시간 -->
-                            <p>5·07 / 15·28</p>
-                        </aside>
-                        <!-- 영상 하단 -- 우측 -->
-                        <aside class="video_player_Youtube_controls-right">
-                            <!-- 영상 하단 - 자막 아이콘 -->
-                            <p>자막</p>
-                            <!-- 영상 하단 - 화질 아이콘 -->
-                            <p>화질</p>
-                                <!-- 아이콘 - HD -->
-                            <!-- 영상 하단 - 영화관 사이즈 아이콘 -->
-                            <p>영화관 모드</p>
-                            <!-- 영상 하단 - 소형 플레이어 아이콘 -->
-                            <p>소형 플레이어</p>
-                            <!-- 영상 하단 - 전체 화면 아이콘 -->                                <p>전체 화면</p>
-                        </aside>
+                        <div class="video_player_youtube_controls_btn">
+                            <div class="video_player_youtube_controls_btn_left">
+                                <!-- 영상 하단 - 재생 아이콘 -->
+                                <button class="video_player_youtube_controls_btn_left_play">▶</button>
+                                <!-- 영상 하단 - 다음 아이콘 -->
+                                <button class="video_player_youtube_controls_btn_left_next">⏭</button>
+                                <!-- 영상 하단 - 소리 아이콘 -->
+                                <button class="video_player_youtube_controls_btn_left_sound">🔊</button>
+                                <!-- 영상 하단 - 재생 시간 -->
+                                <span>5·07 / 15·28</span>
+                            </div>
+                            <!-- 영상 하단 -- 우측 -->
+                            <div class="video_player_youtube_controls_btn_right">
+                                <!-- 영상 하단 - 자막 아이콘 -->
+                                <button class="video_player_youtube_controls_btn_right_cc">CC</button>
+                                <!-- 영상 하단 - 화질 아이콘 -->
+                                <button class="video_player_youtube_controls_btn_right_hd">⚙️</button>
+                                    <!-- 아이콘 - HD -->
+                                <!-- 영상 하단 - 영화관 사이즈 아이콘 -->
+                                <button class="video_player_youtube_controls_btn_right_theater">□</button>
+                                <!-- 영상 하단 - 소형 플레이어 아이콘 -->
+                                <button class="video_player_youtube_controls_btn_right_small">📺</button>
+                                <!-- 영상 하단 - 전체 화면 아이콘 -->
+                                <button class="video_player_youtube_controls_btn_right_full">⛶</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -310,9 +313,7 @@
                 <!-- 태그 - 버튼 -->
                 <span class="secondary_tag_btn">모두</span>
                 <!-- 태그 - 버튼 -->
-                <div class="secondary_tag_btn">
-                    <p>테스트 이름 제공</p>
-                </div>
+                <span class="secondary_tag_btn">테스트 이름 제공</span>
             </div>
             <!-- 사이드바 - 영상 목록 -->
             <div class="secondary_list">
