@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>youtube clone page</title>
+    <link rel="stylesheet" href="./home.css">
 </head>
 <body>
     <!-- 헤더 -->
@@ -34,38 +35,42 @@
     <main>
         <!-- 상단 체크박스 모음 -->
         <form class="filter">
-            <input type="checkbox" name="top-tags" id="tag-Music" hidden>
-            <input type="checkbox" name="top-tags" id="tag-Camping" hidden>
-            <input type="checkbox" name="top-tags" id="tag-Game" hidden>
-            <input type="checkbox" name="top-tags" id="tag-AI" hidden>
-            <input type="checkbox" name="top-tags" id="tag-DIY" hidden>
-            <input type="checkbox" name="top-tags" id="tag-Food" hidden>
-            <input type="checkbox" name="top-tags" id="tag-Cook" hidden>
-            <input type="checkbox" name="top-tags" id="tag-Movie" hidden>
-            <input type="checkbox" name="top-tags" id="tag-Car" hidden>
-            <input type="checkbox" name="top-tags" id="tag-SNS" hidden>
-            <input type="checkbox" name="top-tags" id="tag-IT" hidden>
-            <input type="checkbox" name="top-tags" id="tag-Trip" hidden>
+            <input type="checkbox" name="top-tags" id="tag-music" hidden>
+            <input type="checkbox" name="top-tags" id="tag-camping" hidden>
+            <input type="checkbox" name="top-tags" id="tag-game" hidden>
+            <input type="checkbox" name="top-tags" id="tag-ai" hidden>
+            <input type="checkbox" name="top-tags" id="tag-diy" hidden>
+            <input type="checkbox" name="top-tags" id="tag-food" hidden>
+            <input type="checkbox" name="top-tags" id="tag-cook" hidden>
+            <input type="checkbox" name="top-tags" id="tag-movie" hidden>
+            <input type="checkbox" name="top-tags" id="tag-car" hidden>
+            <input type="checkbox" name="top-tags" id="tag-sns" hidden>
+            <input type="checkbox" name="top-tags" id="tag-it" hidden>
+            <input type="checkbox" name="top-tags" id="tag-trip" hidden>
             <input type="checkbox" name="top-tags" id="tag-shopping" hidden>
             <!-- 섹션 상단 플렉스 프레임 -->
             <section class="top-btn-box">
                 <!-- 인라인 블럭 플렉스로 나열할 아이템들 만들기 -->
                 <!-- 전체 태그 취소할 버튼 -->
-                <button type="reset" class="tag-reset">ALL</button>
+                <button type="reset" class="tag tag-reset">ALL</button>
                 <!-- 태그들 중복선택가능 + 선택된 내용의 영상만 표시 -->
-                <label for="tag-Music" class="tag">Music</label>
-                <label for="tag-Camping" class="tag">Camping</label>
-                <label for="tag-Game" class="tag">Game</label>
-                <label for="tag-AI" class="tag">AI</label>
-                <label for="tag-DIY" class="tag">DIY</label>
-                <label for="tag-Food" class="tag">Food</label>
-                <label for="tag-Cook" class="tag">Cook</label>
-                <label for="tag-Movie" class="tag">Movie</label>
-                <label for="tag-Car" class="tag">Car</label>
-                <label for="tag-SNS" class="tag">SNS</label>
-                <label for="tag-IT" class="tag">IT</label>
-                <label for="tag-Trip" class="tag">Trip</label>
+                <label for="tag-music" class="tag">Music</label>
+                <label for="tag-camping" class="tag">Camping</label>
+                <label for="tag-game" class="tag">Game</label>
+                <label for="tag-ai" class="tag">AI</label>
+                <label for="tag-diy" class="tag">DIY</label>
+                <label for="tag-food" class="tag">Food</label>
+                <label for="tag-cook" class="tag">Cook</label>
+                <label for="tag-movie" class="tag">Movie</label>
+                <label for="tag-car" class="tag">Car</label>
+                <label for="tag-sns" class="tag">SNS</label>
+                <label for="tag-it" class="tag">IT</label>
+                <label for="tag-trip" class="tag">Trip</label>
                 <label for="tag-shopping" class="tag">shopping</label>
+                <span class="tag">items</span>
+                <span class="tag">items</span>
+                <span class="tag">items</span>
+                <span class="tag-more" aria-hidden="true">></span>
             </section>
 
             <!-- 섹션 하단 그리드 -->
@@ -84,12 +89,12 @@
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
                         <span>감성캠퍼</span><br>
-                        <span>12.7k Views . 3 week ago</span>
+                        <span>12.7K Views . 3 week ago</span>
                     </div>
                 </article>
                     <!-- 위에 목록을 15개 복사 -->
                 <!-- 그리드에 들어갈 박스 -->
-                <article class="video-box">
+                <article class="video-box game">
                     <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
                     <div class="thumb-img">
                         <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EA%B2%8C%EC%9E%84%EC%8D%B8%EB%84%A4%EC%9D%BC.png" alt="game-thumb" class="video-thumb">
@@ -101,246 +106,246 @@
                     <span class="video_title">에테르 레전드 신규 레이드 업데이트! 보스 미리보기, 파티 조합 추천!</span>
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
-                        <span>판타지덕후</span><br>
-                        <span>6.7k Views . 2 hours ago</span>
+                        <span>판친놈</span><br>
+                        <span>61.7K Views . 2 hours ago</span>
                     </div>
                 </article>
                 <!-- 그리드에 들어갈 박스 -->
-                <article class="video-box">
+                <article class="video-box music">
                     <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
                     <div class="thumb-img">
-                        <img src="" alt="thumb" class="video-thumb">
-                        <div class="video-time">영상길이</div>
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EB%AE%A4%EC%A7%81%EC%8D%B8%EB%84%A4%EC%9D%BC.png" alt="music-thumb" class="video-thumb">
+                        <div class="video-time">8:37</div>
                     </div>
                     <!-- 하단 프로필이미지 -->
-                    <img src="" alt="youtuber-img" class="youtuber">
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EB%AE%A4%EC%A7%81%EC%9C%A0%ED%8A%9C%EB%B2%84.png" alt="youtuber-img" class="youtuber">
                     <!-- 하단 영상 제목 -->
-                    <span class="video_title">영상제목</span>
+                    <span class="video_title">세계가 감동한 K-pop스타의 역동적인 무대!</span>
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
-                        <span>유튜버이름</span><br>
-                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                        <span>MW</span><br>
+                        <span>1.2M Views . (업로드일자)3 months ago</span>
                     </div>
                 </article>
                 <!-- 그리드에 들어갈 박스 -->
-                <article class="video-box">
+                <article class="video-box ai">
                     <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
                     <div class="thumb-img">
-                        <img src="" alt="thumb" class="video-thumb">
-                        <div class="video-time">영상길이</div>
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/AI%EC%8D%B8%EB%84%A4%EC%9D%BC.png" alt="AI-thumb" class="video-thumb">
+                        <div class="video-time">20:17</div>
                     </div>
                     <!-- 하단 프로필이미지 -->
-                    <img src="" alt="youtuber-img" class="youtuber">
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/AI%EC%9C%A0%ED%8A%9C%EB%B2%84.png" alt="youtuber-img" class="youtuber">
                     <!-- 하단 영상 제목 -->
-                    <span class="video_title">영상제목</span>
+                    <span class="video_title">코딩 누가 더 잘해? GPT와 제미나이에게 싸움붙여보기</span>
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
-                        <span>유튜버이름</span><br>
-                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                        <span>AI실험실</span><br>
+                        <span>287.1k Views . 1 years ago</span>
                     </div>
                 </article>
                 <!-- 그리드에 들어갈 박스 -->
-                <article class="video-box">
+                <article class="video-box diy">
                     <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
                     <div class="thumb-img">
-                        <img src="" alt="thumb" class="video-thumb">
-                        <div class="video-time">영상길이</div>
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/DIY%EC%8D%B8%EB%84%A4%EC%9D%BC.png" alt="diy-thumb" class="video-thumb">
+                        <div class="video-time">44:39</div>
                     </div>
                     <!-- 하단 프로필이미지 -->
-                    <img src="" alt="youtuber-img" class="youtuber">
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/DIY%EC%9C%A0%ED%8A%9C%EB%B2%84.png" alt="youtuber-img" class="youtuber">
                     <!-- 하단 영상 제목 -->
-                    <span class="video_title">영상제목</span>
+                    <span class="video_title">셀프 홈 인테리어! 어렵지 않아요😊</span>
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
-                        <span>유튜버이름</span><br>
-                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                        <span>DIY홈랩</span><br>
+                        <span>112.7K Views . 1 years ago</span>
                     </div>
                 </article>
                 <!-- 그리드에 들어갈 박스 -->
-                <article class="video-box">
+                <article class="video-box car">
                     <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
                     <div class="thumb-img">
-                        <img src="" alt="thumb" class="video-thumb">
-                        <div class="video-time">영상길이</div>
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%9E%90%EB%8F%99%EC%B0%A8%EC%8D%B8%EB%84%A4%EC%9D%BC.png" alt="car-thumb" class="video-thumb">
+                        <div class="video-time">28:17</div>
                     </div>
                     <!-- 하단 프로필이미지 -->
-                    <img src="" alt="youtuber-img" class="youtuber">
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%9E%90%EB%8F%99%EC%B0%A8%EC%9C%A0%ED%8A%9C%EB%B2%84.png" alt="youtuber-img" class="youtuber">
                     <!-- 하단 영상 제목 -->
-                    <span class="video_title">영상제목</span>
+                    <span class="video_title">벤츠 콘셉트카 공개했는데 디자인이? </span>
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
-                        <span>유튜버이름</span><br>
-                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                        <span>인포카</span><br>
+                        <span>(조회수)12.7K Views . (업로드일자)4 months ago</span>
                     </div>
                 </article>
                 <!-- 그리드에 들어갈 박스 -->
-                <article class="video-box">
+                <article class="video-box it">
                     <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
                     <div class="thumb-img">
-                        <img src="" alt="thumb" class="video-thumb">
-                        <div class="video-time">영상길이</div>
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/IT%EC%8D%B8%EB%84%A4%EC%9D%BC.png" alt="it-thumb" class="video-thumb">
+                        <div class="video-time">19:22</div>
                     </div>
                     <!-- 하단 프로필이미지 -->
-                    <img src="" alt="youtuber-img" class="youtuber">
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/IT%EC%9C%A0%ED%8A%9C%EB%B2%84.png" alt="youtuber-img" class="youtuber">
                     <!-- 하단 영상 제목 -->
-                    <span class="video_title">영상제목</span>
+                    <span class="video_title">드디어 출시❗최고성능 Nova One X 언박싱!</span>
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
-                        <span>유튜버이름</span><br>
-                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                        <span>새폰내폰</span><br>
+                        <span>337.6K Views . 1 days ago</span>
                     </div>
                 </article>
                 <!-- 그리드에 들어갈 박스 -->
-                <article class="video-box">
+                <article class="video-box trip">
                     <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
                     <div class="thumb-img">
-                        <img src="" alt="thumb" class="video-thumb">
-                        <div class="video-time">영상길이</div>
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%97%AC%ED%96%89%EC%8D%B8%EB%84%A4%EC%9D%BC.png" alt="trip-thumb" class="video-thumb">
+                        <div class="video-time">1:20:01</div>
                     </div>
                     <!-- 하단 프로필이미지 -->
-                    <img src="" alt="youtuber-img" class="youtuber">
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%97%AC%ED%96%89%EC%9C%A0%ED%8A%9C%EB%B2%84.png" alt="youtuber-img" class="youtuber">
                     <!-- 하단 영상 제목 -->
-                    <span class="video_title">영상제목</span>
+                    <span class="video_title">안가보면 후회한다니까요? 스위스 여행!</span>
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
-                        <span>유튜버이름</span><br>
-                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                        <span>여행로드</span><br>
+                        <span>630.4K Views . 2 week ago</span>
                     </div>
                 </article>
                 <!-- 그리드에 들어갈 박스 -->
-                <article class="video-box">
+                <article class="video-box food">
                     <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
                     <div class="thumb-img">
-                        <img src="" alt="thumb" class="video-thumb">
-                        <div class="video-time">영상길이</div>
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%9D%8C%EC%8B%9D%EC%8D%B8%EB%84%A4%EC%9D%BC.png" alt="food-thumb" class="video-thumb">
+                        <div class="video-time">42:41</div>
                     </div>
                     <!-- 하단 프로필이미지 -->
-                    <img src="" alt="youtuber-img" class="youtuber">
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%9D%8C%EC%8B%9D%EC%9C%A0%ED%8A%9C%EB%B2%84.png" alt="youtuber-img" class="youtuber">
                     <!-- 하단 영상 제목 -->
-                    <span class="video_title">영상제목</span>
+                    <span class="video_title">국내여행 해운대! 무엇을 먹어야 할까?</span>
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
-                        <span>유튜버이름</span><br>
-                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                        <span>J의 국내 탐방</span><br>
+                        <span>410K Views . (업로드일자)11 months ago</span>
                     </div>
                 </article>
                 <!-- 그리드에 들어갈 박스 -->
-                <article class="video-box">
+                <article class="video-box cook">
                     <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
                     <div class="thumb-img">
-                        <img src="" alt="thumb" class="video-thumb">
-                        <div class="video-time">영상길이</div>
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%9A%94%EB%A6%AC%EC%8D%B8%EB%84%A4%EC%9D%BC.png" alt="cook-thumb" class="video-thumb">
+                        <div class="video-time">8:24</div>
                     </div>
                     <!-- 하단 프로필이미지 -->
-                    <img src="" alt="youtuber-img" class="youtuber">
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%9A%94%EB%A6%AC%EC%9C%A0%ED%8A%9C%EB%B2%84.png" alt="youtuber-img" class="youtuber">
                     <!-- 하단 영상 제목 -->
-                    <span class="video_title">영상제목</span>
+                    <span class="video_title">돈없으면 만들어먹자! 깐풍기 만들기🧑‍🍳</span>
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
-                        <span>유튜버이름</span><br>
-                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                        <span>컨셉집밥</span><br>
+                        <span>(조회수)77.9K Views . (업로드일자)2 months ago</span>
                     </div>
                 </article>
                 <!-- 그리드에 들어갈 박스 -->
-                <article class="video-box">
+                <article class="video-box movie">
                     <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
                     <div class="thumb-img">
-                        <img src="" alt="thumb" class="video-thumb">
-                        <div class="video-time">영상길이</div>
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%98%81%ED%99%94%EC%8D%B8%EB%84%A4%EC%9D%BC.png" alt="movie-thumb" class="video-thumb">
+                        <div class="video-time">17:28</div>
                     </div>
                     <!-- 하단 프로필이미지 -->
-                    <img src="" alt="youtuber-img" class="youtuber">
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%98%81%ED%99%94%EC%9C%A0%ED%8A%9C%EB%B2%84.png" alt="youtuber-img" class="youtuber">
                     <!-- 하단 영상 제목 -->
-                    <span class="video_title">영상제목</span>
+                    <span class="video_title">습하고 더운날은 공포영화지😱</span>
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
-                        <span>유튜버이름</span><br>
-                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                        <span>무비조아</span><br>
+                        <span>900.24K Views . 1 week ago</span>
                     </div>
                 </article>
                 <!-- 그리드에 들어갈 박스 -->
-                <article class="video-box">
+                <article class="video-box trip">
                     <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
                     <div class="thumb-img">
-                        <img src="" alt="thumb" class="video-thumb">
-                        <div class="video-time">영상길이</div>
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%97%AC%ED%96%89%EC%8D%B8%EB%84%A4%EC%9D%BC3.png" alt="trip-thumb" class="video-thumb">
+                        <div class="video-time">42:10</div>
                     </div>
                     <!-- 하단 프로필이미지 -->
-                    <img src="" alt="youtuber-img" class="youtuber">
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%97%AC%ED%96%89%EC%9C%A0%ED%8A%9C%EB%B2%842.png" alt="youtuber-img" class="youtuber">
                     <!-- 하단 영상 제목 -->
-                    <span class="video_title">영상제목</span>
+                    <span class="video_title">감탄이 절로 나오는 그리스 산토리니✈️</span>
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
-                        <span>유튜버이름</span><br>
-                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                        <span>여행무드</span><br>
+                        <span>500.2K Views . 8 months ago</span>
                     </div>
                 </article>
                 <!-- 그리드에 들어갈 박스 -->
-                <article class="video-box">
+                <article class="video-box shopping">
                     <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
                     <div class="thumb-img">
-                        <img src="" alt="thumb" class="video-thumb">
-                        <div class="video-time">영상길이</div>
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%87%BC%ED%95%91%EC%8D%B8%EB%84%A4%EC%9D%BC.png" alt="shopping-thumb" class="video-thumb">
+                        <div class="video-time">7:32</div>
                     </div>
                     <!-- 하단 프로필이미지 -->
-                    <img src="" alt="youtuber-img" class="youtuber">
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%87%BC%ED%95%91%EC%9C%A0%ED%8A%9C%EB%B2%84.png" alt="youtuber-img" class="youtuber">
                     <!-- 하단 영상 제목 -->
-                    <span class="video_title">영상제목</span>
+                    <span class="video_title">쿠팡 가성비 아이템 총집합💸</span>
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
-                        <span>유튜버이름</span><br>
-                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                        <span>현명한 소비</span><br>
+                        <span>67.7K Views . 5 months ago</span>
                     </div>
                 </article>
                 <!-- 그리드에 들어갈 박스 -->
-                <article class="video-box">
+                <article class="video-box sns">
                     <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
                     <div class="thumb-img">
-                        <img src="" alt="thumb" class="video-thumb">
-                        <div class="video-time">영상길이</div>
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/SNS%EC%8D%B8%EB%84%A4%EC%9D%BC.png" alt="sns-thumb" class="video-thumb">
+                        <div class="video-time">4:17</div>
                     </div>
                     <!-- 하단 프로필이미지 -->
-                    <img src="" alt="youtuber-img" class="youtuber">
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/SNS%EC%9C%A0%ED%8A%9C%EB%B2%84.png" alt="youtuber-img" class="youtuber">
                     <!-- 하단 영상 제목 -->
-                    <span class="video_title">영상제목</span>
+                    <span class="video_title">맨날보면서 아직도 몰라? 인스타 완전정복👀</span>
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
-                        <span>유튜버이름</span><br>
-                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                        <span>알쓸정</span><br>
+                        <span>770,2K Views . 10 months ago</span>
                     </div>
                 </article>
                 <!-- 그리드에 들어갈 박스 -->
-                <article class="video-box">
+                <article class="video-box trip">
                     <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
                     <div class="thumb-img">
-                        <img src="" alt="thumb" class="video-thumb">
-                        <div class="video-time">영상길이</div>
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%97%AC%ED%96%89%EC%8D%B8%EB%84%A4%EC%9D%BC2.png" alt="trip-thumb" class="video-thumb">
+                        <div class="video-time">50:29</div>
                     </div>
                     <!-- 하단 프로필이미지 -->
-                    <img src="" alt="youtuber-img" class="youtuber">
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EC%97%AC%ED%96%89%EC%9C%A0%ED%8A%9C%EB%B2%84.png" alt="youtuber-img" class="youtuber">
                     <!-- 하단 영상 제목 -->
-                    <span class="video_title">영상제목</span>
+                    <span class="video_title">옆나라인데 어려워? 다 알려줄게 따라와</span>
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
-                        <span>유튜버이름</span><br>
-                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                        <span>여행로드</span><br>
+                        <span>992.1K Views . 2 years ago</span>
                     </div>
                 </article>
                 <!-- 그리드에 들어갈 박스 -->
-                <article class="video-box">
+                <article class="video-box game">
                     <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
                     <div class="thumb-img">
-                        <img src="" alt="thumb" class="video-thumb">
-                        <div class="video-time">영상길이</div>
+                        <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EA%B2%8C%EC%9E%84%EC%8D%B8%EB%84%A4%EC%9D%BC2.png" alt="game-thumb" class="video-thumb">
+                        <div class="video-time">27:40</div>
                     </div>
                     <!-- 하단 프로필이미지 -->
-                    <img src="" alt="youtuber-img" class="youtuber">
+                    <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/%EA%B2%8C%EC%9E%84%EC%9C%A0%ED%8A%9C%EB%B2%842.png" alt="youtuber-img" class="youtuber">
                     <!-- 하단 영상 제목 -->
-                    <span class="video_title">영상제목</span>
+                    <span class="video_title">역대급할인 지금 사면 올 이번년도 하고도 남을 할인 총집합</span>
                     <!-- 하단 게시자 닉네임 및 영상정보 -->
                     <div class="video_info">
-                        <span>유튜버이름</span><br>
-                        <span>(조회수)12.7k Views . (업로드일자)3 week ago</span>
+                        <span>겜픽</span><br>
+                        <span>73K Views . 1 days ago</span>
                     </div>
                 </article>
             </section>
