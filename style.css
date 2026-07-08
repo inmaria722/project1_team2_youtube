@@ -9,11 +9,12 @@
 
 :root {
   --bg: #000;
+  --text: #fff;
 }
 
 body {
   min-height: 100vh;
-  background-color: var(--bg);
+  background-color: var(--text);
 }
 
 a {

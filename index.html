@@ -6,6 +6,10 @@
     <title>YouTube</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="chanelpage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
   </head>
   <body>
     <!-- 헤더 -->
@@ -23,7 +27,9 @@
           <!-- 검색 - 검색 입력 창 -->
           <div class="search-typing">Search</div>
           <!-- 검색 - 돋보기 버튼 -->
-          <div class="search-icon">⌕</div>
+          <div class="search-icon">
+            <img src="./images/search.png" alt="돋보기 아이콘" />
+          </div>
         </div>
         <!-- 검색 박스 - 마이크 버튼 -->
         <div class="mic-icon">
@@ -35,15 +41,15 @@
       <nav class="header_menu">
         <!-- 네비게이션 - 동영상 추가 버튼 -->
         <a href="#" class="create">
-          <img src="./images/create.png" alt="동영상 만들기" />
+          <img src="./images/create.png" alt="동영상 추가 아이콘" />
         </a>
         <!-- 네비게이션 - 앱 버튼 -->
         <a href="#" class="apps">
-          <img src="./images/apps.png" alt="앱" />
+          <img src="./images/apps.png" alt="앱 아이콘" />
         </a>
         <!-- 네비게이션 - 알림 버튼 -->
         <a href="#" class="notif">
-          <img src="./images/notification.png" alt="알림" />
+          <img src="./images/notification.png" alt="알림 아이콘" />
         </a>
         <!-- 네비게이션 - 프로필 버튼 -->
         <a href="#" class="profile">
@@ -57,51 +63,150 @@
       <!-- 사이드바 - 최상단 -->
       <ul class="top menu-box">
         <!-- 최상단 - 홈 -->
-        <li class="menu"><a href="#" class="menu-item">HOME</a></li>
+        <li class="menu">
+          <img src="./images/Home.png" alt="홈 아이콘" />
+          <a href="#" class="menu-item">홈</a>
+        </li>
         <!-- 최상단 - 탐색 -->
-        <li class="menu"><a href="#" class="menu-item">Explore</a></li>
+        <li class="menu">
+          <img src="./images/Explore.png" alt="탐색 아이콘" />
+          <a href="#" class="menu-item">탐색</a>
+        </li>
         <!-- 최상단 - 구독 -->
-        <li class="menu"><a href="#" class="menu-item">Subscriptions</a></li>
+        <li class="menu">
+          <img src="./images/subscription.png" alt="구독 아이콘" />
+          <a href="#" class="menu-item">구독</a>
+        </li>
       </ul>
 
       <!-- 사이드바 - 상단 -->
       <ul class="top-2 menu-box">
         <!-- 상단 - 라이브러리 -->
-        <li class="menu"><a href="#" class="menu-item">Library</a></li>
+        <li class="menu">
+          <img src="./images/Library.png" alt="라이브러리 아이콘" />
+          <a href="#" class="menu-item">라이브러리</a>
+        </li>
         <!-- 상단 - 기록 -->
-        <li class="menu"><a href="#" class="menu-item">History</a></li>
+        <li class="menu">
+          <img src="./images/History.png" alt="기록 아이콘" />
+          <a href="#" class="menu-item">기록</a>
+        </li>
         <!-- 상단 - 내 동영상 -->
-        <li class="menu"><a href="#" class="menu-item">Your Videos</a></li>
+        <li class="menu">
+          <img src="./images/Your Videos.png" alt="내 동영상 아이콘" />
+          <a href="#" class="menu-item">내 동영상</a>
+        </li>
         <!-- 상단 - 나중에 볼 동영상 -->
-        <li class="menu"><a href="#" class="menu-item">Watch Later</a></li>
+        <li class="menu">
+          <img src="./images/Watch Later.png" alt="나중에 볼 동영상 아이콘" />
+          <a href="#" class="menu-item">나중에 볼 동영상</a>
+        </li>
         <!-- 상단 - 좋아요 표시한 동영상 -->
-        <li class="menu"><a href="#" class="menu-item">Liked Videos</a></li>
+        <li class="menu">
+          <img
+            src="./images/Liked Videos.png"
+            alt="좋아요 표시한 동영상 아이콘"
+          />
+          <a href="#" class="menu-item">좋아요 표시한 동영상</a>
+        </li>
         <!-- 상단 - 더보기 -->
-        <li class="menu"><a href="#" class="menu-item">Show More</a></li>
+        <li class="menu">
+          <img src="./images/Show More.png" alt="더보기 아이콘" />
+          <a href="#" class="menu-item">더보기</a>
+        </li>
       </ul>
 
       <!-- 사이드바 - 구독 -->
       <ul class="subs">
         <!-- 구독 - 타이틀 -->
+        <h4 class="menu-title">구독</h4>
         <!-- 구독 - 아이템*7 -->
+        <li class="menu">
+          <img src="./images/subscription-01.jpg" alt="구독한 유튜버 프로필" />
+          <a href="#" class="menu-item">가오니의 메뉴판GAONI</a>
+        </li>
+        <li class="menu">
+          <img src="./images/subscription-02.jpg" alt="구독한 유튜버 프로필" />
+          <a href="#" class="menu-item">살뺴조DietJo</a>
+        </li>
+        <li class="menu">
+          <img src="./images/subscription-03.jpg" alt="구독한 유튜버 프로필" />
+          <a href="#" class="menu-item">혜안</a>
+        </li>
+        <li class="menu">
+          <img src="./images/subscription-04.jpg" alt="구독한 유튜버 프로필" />
+          <a href="#" class="menu-item">진돌</a>
+        </li>
+        <li class="menu">
+          <img src="./images/subscription-05.jpg" alt="구독한 유튜버 프로필" />
+          <a href="#" class="menu-item">찰스엔터</a>
+        </li>
+        <li class="menu">
+          <img src="./images/subscription-06.jpg" alt="구독한 유튜버 프로필" />
+          <a href="#" class="menu-item">오늘의 주우재</a>
+        </li>
+        <li class="menu">
+          <img src="./images/subscription-07.jpg" alt="구독한 유튜버 프로필" />
+          <a href="#" class="menu-item">aespa</a>
+        </li>
         <!-- 구독 - 더보기 -->
+        <li class="menu">
+          <img src="./images/Show More.png" alt="더보기 아이콘" />
+          <a href="#" class="menu-item">더보기</a>
+        </li>
       </ul>
 
       <!-- 사이드바 - 유튜브 더 보기 -->
       <ul class="more">
         <!-- 유튜브 더 보기 - 타이틀 -->
+        <h4 class="menu-title">구독</h4>
         <!-- 유튜브 더 보기 - 유튜브 프리미엄 -->
+        <li class="menu">
+          <img
+            src="./images/Youtube Premium.png"
+            alt="유튜브 프리미엄 아이콘"
+          />
+          <a href="#" class="menu-item">유튜브 프리미엄</a>
+        </li>
         <!-- 유튜브 더 보기 - 게임 -->
+        <li class="menu">
+          <img src="./images/Gaming.png" alt="게임 아이콘" />
+          <a href="#" class="menu-item">게임</a>
+        </li>
         <!-- 유튜브 더 보기 - 라이브 -->
+        <li class="menu">
+          <img src="./images/Live.png" alt="라이브 아이콘" />
+          <a href="#" class="menu-item">라이브</a>
+        </li>
         <!-- 유튜브 더 보기 - 스포츠 -->
+        <li class="menu">
+          <img src="./images/Sports.png" alt="스포츠 아이콘" />
+          <a href="#" class="menu-item">스포츠</a>
+        </li>
       </ul>
 
       <!-- 사이드바 - 하단 -->
       <ul class="bottom">
         <!-- 하단 - 환경설정 -->
+        <li class="menu">
+          <img src="./images/Settings.png" alt="환경설정 아이콘" />
+          <a href="#" class="menu-item">환경설정</a>
+        </li>
         <!-- 하단 - 신고 기록 -->
+        <li class="menu">
+          <img src="./images/Report History.png" alt="신고 기록 아이콘" />
+          <a href="#" class="menu-item">신고 기록</a>
+        </li>
         <!-- 하단 - 도움 -->
+        <li class="menu">
+          <img src="./images/Help.png" alt="도움 아이콘" />
+          <a href="#" class="menu-item">도움</a>
+        </li>
         <!-- 하단 - 피드백 보내기 -->
+        <li class="menu">
+          <img src="./images/Send feedback.png" alt="피드백 보내기 아이콘" />
+          <a href="#" class="menu-item">피드백 보내기</a>
+        </li>
       </ul>
     </nav>
 
