@@ -14,16 +14,15 @@
 }
 
 body {
-    font-family: 'Roboto Sans', sans-serif;
+    font-family: 'Youtube Sans', 'Roboto Sans', Arial, sans-serif;
     background-color: var(--bg);
     color: var(--text-main);
     line-height: 1.6; /* 헤더 높이 확인후 수정 */
     padding-top: 60px;
 }
 
-.video {
-    display: grid;
-    grid-template-columns: 670px 430px;
+video {
+    background: transparent no-repeat 0 0;
 }
 
 /*  ====================
@@ -31,18 +30,102 @@ body {
 ===================== */
 
 .primary {
-    grid-column: 1/4;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: column;
+    padding: 0 40px 0 40px;
+    max-width: 670px;
 }
 
-.video_player {}
+.video_player {
+    position: relative;
+    width: 640px;
+    height: 360px;
+    border: 1px solid white;
+    overflow: hidden;
+}
 
-.video_player_youtube {}
+.video_player_youtube_controls button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-main);
+}
 
-.video_play_youtube_controls {}
+.video_player video{
+    object-fit: cover;
+}
 
-.video_play_youtube_controls_left {}
+.video_player_youtube {
 
-.video_play_youtube_controls_right {}
+}
+
+.video_player_youtube_title {
+    position: absolute;
+    display: flex;
+    top: 0px; right: 0px; left: 0px;
+    justify-content: space-between;
+    align-content: center;
+    padding: 20px 25px;
+    z-index: 10;
+    background: linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0.7));
+}
+
+.video_player_youtube_title_name{
+    font-size: 20px;
+    color: var(--text-main);
+}
+
+.video_player_youtube_title_btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.video_player_youtube_controls {
+    position: absolute;
+    left:0; right: 0; bottom: 0;
+    padding: 15px 15px 10px 15px;
+    background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.7));
+}
+
+.video_player_youtube_controls_progress {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.video_player_youtube_controls_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video_player_youtube_controls_btn_left {
+    display: flex;
+    gap: 25px;
+    padding-left: 20px;
+    align-items: center;
+}
+.video_player_youtube_controls_btn_left_play { font-size: 20px; }
+.video_player_youtube_controls_btn_left_next { font-size: 30px; }
+.video_player_youtube_controls_btn_left_sound { font-size: 23px; }
+
+.video_player_youtube_controls_btn_right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.video_player_youtube_controls_btn_right_cc { font-size: 21px; }
+.video_player_youtube_controls_btn_right_hd { font-size: 25px; }
+.video_player_youtube_controls_btn_right_theater { font-size: 40px; }
+.video_player_youtube_controls_btn_right_small { font-size: 30px; }
+.video_player_youtube_controls_btn_right_full { font-size: 30px; }
 
 .video_info {}
 
@@ -97,7 +180,12 @@ body {
     4. 영상 목록
 ===================== */
 
-.secondary {}
+.secondary {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+    padding-right: 20px;
+}
 
 .secondary_tag {}
 
