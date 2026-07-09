@@ -1,0 +1,90 @@
+/* ===================
+    1. 채널 배너
+====================== */
+.channel-banner-box {
+  margin-top: 56px;
+}
+
+.banner-img {
+  height: 200px;
+}
+
+.banner-img img {
+  height: 100%;
+}
+
+/* ===================
+    2. 프로필
+====================== */
+.profile-box {
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 65px 4px 65px;
+  color: var(--text);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-name {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.profile-subscribers {
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+.sub-btn {
+  border: none;
+  background-color: var(--y-point);
+  border-radius: 2px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* ===================
+    3. 툴 바
+====================== */
+.toolbar {
+  background-color: var(--bg);
+  padding: 0 65px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--text);
+}
+
+.tool {
+  display: inline-block;
+  padding: 16px 32px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--gray);
+}
+
+.toolbar_search-box {
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  gap: 200px;
+}
+
+.toolbar_more-btn {
+  transform: rotate(-90deg);
+}

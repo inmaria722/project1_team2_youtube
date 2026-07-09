@@ -13,10 +13,12 @@
   --border: #303030;
   --text: #fff;
   --black: #000;
+  --gray: #aaaaaa;
+  --y-point: #cc0000;
 }
 
 body {
-  font-family: "YouTube Sans", Roboto, Arial, sans-serif;
+  font-family: "Pretendard", sans-serif;
   min-height: 100vh;
   background-color: #000;
 }
