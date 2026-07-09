@@ -14,12 +14,18 @@
   <body>
     <!-- 헤더 -->
     <header>
-      <!-- 헤더 - 사이드바 버튼 -->
-      <button class="sidebar-btn">≡</button>
-      <!-- 헤더 - 유튜브 로고 -->
-      <a href="#" class="header_logo"
-        ><img src="./images/youtube logo.png" alt="유튜브 로고"
-      /></a>
+      <!-- 헤더 - 왼쪽 묶음 -->
+      <div class="header-left">
+        <!-- 헤더 - 사이드바 버튼 -->
+        <button class="sidebar-btn">
+          <i class="fa-solid fa-bars" style="color: rgb(255, 255, 255)"></i>
+        </button>
+        <!-- 헤더 - 유튜브 로고 -->
+        <a href="#" class="header_logo"
+          ><img src="./images/youtube logo.png" alt="유튜브 로고"
+        /></a>
+      </div>
+
       <!-- 헤더 - 검색 박스 -->
       <div class="search-box-wrap">
         <!-- 검색 박스 - 검색 -->
@@ -32,27 +38,31 @@
           </div>
         </div>
         <!-- 검색 박스 - 마이크 버튼 -->
-        <div class="mic-icon">
-          <img src="./images/microphone.png" alt="마이크 아이콘" />
+        <div class="mic-icon-box">
+          <img
+            class="mic-icon"
+            src="./images/microphone.png"
+            alt="마이크 아이콘"
+          />
         </div>
       </div>
 
       <!-- 헤더 - 네비게이션 -->
       <nav class="header_menu">
         <!-- 네비게이션 - 동영상 추가 버튼 -->
-        <a href="#" class="create">
+        <a href="#" class="create menu-icon">
           <img src="./images/create.png" alt="동영상 추가 아이콘" />
         </a>
         <!-- 네비게이션 - 앱 버튼 -->
-        <a href="#" class="apps">
+        <a href="#" class="apps menu-icon">
           <img src="./images/apps.png" alt="앱 아이콘" />
         </a>
         <!-- 네비게이션 - 알림 버튼 -->
-        <a href="#" class="notif">
+        <a href="#" class="notif menu-icon">
           <img src="./images/notification.png" alt="알림 아이콘" />
         </a>
         <!-- 네비게이션 - 프로필 버튼 -->
-        <a href="#" class="profile">
+        <a href="#" class="header-profile">
           <img src="./images/header_nav_profile.jpg" alt="프로필 이미지" />
         </a>
       </nav>

@@ -8,14 +8,17 @@
 }
 
 :root {
-  --bg: #000;
+  --bg: #212121;
+  --bg-2: #121212;
+  --border: #303030;
   --text: #fff;
+  --black: #000;
 }
 
 body {
   font-family: "YouTube Sans", Roboto, Arial, sans-serif;
   min-height: 100vh;
-  background-color: var(--bg);
+  background-color: #000;
 }
 
 a {
@@ -31,12 +34,128 @@ li {
 img {
   display: block;
   width: 100%;
+  object-fit: cover;
 }
 
 /* ===================
     1. 헤더
 ====================== */
+header {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text);
+  background-color: var(--bg);
+}
 
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.header_logo {
+  width: 120px;
+}
+
+.search-box-wrap {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.search-typing {
+  width: 362px;
+  height: 100%;
+  background-color: var(--bg-2);
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  color: var(--border);
+}
+
+.search-icon {
+  width: auto;
+  height: 100%;
+  padding: 2px 20px;
+  background-color: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mic-icon-box {
+  width: 40px;
+  height: 40px;
+  background-color: var(--black);
+  border-radius: 100px;
+  margin-left: 4px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mic-icon {
+  width: auto;
+  height: 100%;
+}
+
+.header_menu {
+  width: 204px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apps,
+.notif {
+  padding: 12px;
+}
+
+.header-profile {
+  display: block;
+  width: 40px;
+  padding: 4px;
+  overflow: hidden;
+}
+
+.header-profile img {
+  border-radius: 50%;
+}
 /* ===================
     2. 사이드바
 ====================== */
