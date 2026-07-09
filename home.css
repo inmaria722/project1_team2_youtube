@@ -75,6 +75,11 @@ border {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
+    border-radius: 5px;
+    transition: background 0.6s;
+}
+.video-box:hover {
+    background-color: rgba(42,144,232, 0.4);
 }
 .thumb-img {
     position: relative;
