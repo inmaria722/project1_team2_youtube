@@ -19,6 +19,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'pretendard' sans-serif;
+    background-color: #000;
 }
 /* 메인컨테이너 flex */
 .top-btn-box {
@@ -26,7 +27,8 @@ body {
     flex-direction: row;
     align-items: center;
     background-color: #303030;
-    width: 1200px; height: 56px;
+    width: 100%; height: 56px;
+    overflow: hidden;
 }
 /* 태그 개별 */
 .tag-list {
@@ -45,14 +47,21 @@ border {
     color: white; font-size: 14px; font-weight: 400;
     border-radius: 999px; flex: 1; flex-wrap: nowrap;
 }
+.tag-reset {
+    background-color: #fff;
+    color: #030303;
+    margin-left: 12px;
+}
 .tag-more {
     padding: 20px;
     display: flex;
     justify-content: end;
     align-items: center;
     background-color: #212121;
+    color: #fff;
     flex: 0 0 auto;
     margin-left: auto;
+    opacity: 90%;
 }
 /* 하단 영상 썸네일 그리드 */
 .main-grid {
@@ -61,19 +70,51 @@ border {
     gap: 16px; margin: 24px;
 }
 .video-box {
-    background-color: 000;
+    background-color: #000;
     width: 276px; height: 247px;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 .thumb-img {
-    
+    position: relative;
+    overflow: hidden;
 }
 .video-thumb {
+    display: block;
     width: 276px; height: 155px;
+}
+.video-time {
+    position: absolute;
+    padding: 3px 4px;
+    right: 8px; bottom: 8px;
+    background-color: #000;
+    color: #fff; font-size: 10px; font-weight: 400;
+}
+
+.video-bottom {
+    display: flex;
+    flex: 1;
+    gap: 12px;
+    flex-wrap: nowrap;
+    margin-top: 12px;
 }
 .youtuber {
     width: 36px; height: 36px;
     border-radius: 50%;
+}
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.video_title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+}
+.video_info {
+    font-size: 12px;
+    font-weight: 400;
+    color: #AAA;
 }
