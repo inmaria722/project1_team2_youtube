@@ -74,11 +74,47 @@ button {
     white-space: nowrap;
     cursor: pointer;
 }
+/* 상단 태그 선택시 해당되는 영상만 표시 */
+.filter:has(input[type="checkbox"]:checked) .video-box { display: none; }
+
+#tag-music:checked ~ .main-grid .music,
+#tag-camping:checked ~ .main-grid .camping,
+#tag-game:checked ~ .main-grid .game,
+#tag-ai:checked ~ .main-grid .ai,
+#tag-diy:checked ~ .main-grid .diy,
+#tag-food:checked ~ .main-grid .food,
+#tag-cook:checked ~ .main-grid .cook,
+#tag-movie:checked ~ .main-grid .movie,
+#tag-car:checked ~ .main-grid .car,
+#tag-sns:checked ~ .main-grid .sns,
+#tag-it:checked ~ .main-grid .it,
+#tag-trip:checked ~ .main-grid .trip,
+#tag-shopping:checked ~ .main-grid .shopping { display: flex; }
+
+/* 태그 선택시 태그 색과 글자색 변경 */
+#tag-music:checked ~ .top-btn-box label[for="tag-music"],
+#tag-camping:checked ~ .top-btn-box label[for="tag-camping"],
+#tag-game:checked ~ .top-btn-box label[for="tag-game"],
+#tag-ai:checked ~ .top-btn-box label[for="tag-ai"],
+#tag-diy:checked ~ .top-btn-box label[for="tag-diy"],
+#tag-food:checked ~ .top-btn-box label[for="tag-food"],
+#tag-cook:checked ~ .top-btn-box label[for="tag-cook"],
+#tag-movie:checked ~ .top-btn-box label[for="tag-movie"],
+#tag-car:checked ~ .top-btn-box label[for="tag-car"],
+#tag-sns:checked ~ .top-btn-box label[for="tag-sns"],
+#tag-it:checked ~ .top-btn-box label[for="tag-it"],
+#tag-trip:checked ~ .top-btn-box label[for="tag-trip"],
+#tag-shopping:checked ~ .top-btn-box label[for="tag-shopping"] { background-color: #fff; color: #030303; }
+
+/* 태그리셋버튼 */
 .tag-reset {
     background-color: #fff;
     color: #030303;
     margin-left: 12px;
 }
+/* 태그 선택시 버튼색상변경 */
+.filter:has(input[type="checkbox"]:checked) .tag-reset { background-color: #030303; border: 1px solid #AAA; color: #fff; }
+
 .tag-more {
     padding: 20px;
     display: flex;
