@@ -88,3 +88,42 @@
 .toolbar_more-btn {
   transform: rotate(-90deg);
 }
+
+/* ===================
+    4. 대표 동영상
+====================== */
+.hero-video {
+  padding: 24px 65px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+  color: var(--text);
+}
+
+.player {
+  width: 424px;
+}
+
+.hero-video_desc-box {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-video_title {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.hero-video_stats {
+  color: var(--gray);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.hero-video_desc {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
