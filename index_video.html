@@ -60,33 +60,35 @@
             <!-- 비디오칸 - 영상 정보 -->
             <div class="video_info">
                 <!-- 영상 정보 - 제목 -->
-                <h2>영상제목 : 테스트입니다</h2>
+                <h2 class="video_info_title">영상제목 : 테스트입니다</h2>
                 <!-- 영상 정보 - 제목 하단 -->
                 <div class="video_info_bottom">
                     <!-- 제목 하단 - 조회수,업로드 일 -->
                     <div class="video_info_bottom_view">
-                        <p>조회수 10만회 3년전</p>
+                        <span>조회수 10만회</span>
+                        <span>·</span>
+                        <span>2021.10.8</span>
                     </div>
                     <!-- 제목 하단 - 우측 아이콘 -->
                     <div class="video_info_bottom_controls">
                         <!-- 아이콘 - 좋아요 버튼 -->
-                        <p>좋아요 1.7만</p>
+                        <button>👍 1.7만</button>
                             <!-- 버튼 - 아이콘 -->
                             <!-- 버튼 - 숫자 -->
                         <!-- 아이콘 - 싫어요 버튼 -->
-                        <p>싫어요 632</p>
+                        <button>👎 632</button>
                             <!-- 버튼 - 아이콘 -->
                             <!-- 버튼 - 숫자 -->
                         <!-- 아이콘 - 공유 버튼 -->
-                        <p>공유</p>
+                        <button>↗ 공유</button>
                             <!-- 버튼 - 아이콘 -->
                             <!-- 버튼 - 글자 -->
                         <!-- 아이콘 - 플레이리스트 저장 버튼 -->
-                        <p>저장</p>
+                        <button>☰ 저장</button>
                             <!-- 버튼 - 아이콘 -->
                             <!-- 버튼 - 글자 -->
                         <!-- 아이콘 - 더보기 버튼 -->
-                        <p>···</p>
+                        <button>···</button>
                             <!-- 버튼 - 아이콘 -->
                     </div>
                 </div>
@@ -97,25 +99,23 @@
             <!-- 메인 - 채널칸 -->
             <div class="channel">
                 <!-- 채널칸 - 상단칸 -->
+                <!-- 상단칸 - 채널 사진 -->
+                <img src="https://placehold.co/60x60" alt="profile_channel" class="channel_top_propic">
                 <div class="channel_top">
-                    <!-- 상단칸 - 채널 사진 -->
-                    <img src="https://placehold.co/60x60" alt="profile_channel" class="channel_top_propic">
                     <!-- 상단칸 - 채널 명 -->
                     <!-- 채널 명 - 채널 이름 -->
-                    <h3 class="channel_top_proname">테스트이름</h3>
+                    <p class="channel_top_proname">테스트이름</p>
                     <!-- 채널 명 - 구독자 수 -->
-                    <p>구독자 2만명</p>
+                    <p class="channel_top_viewer">구독자 2만명</p>
                     <!-- 상단칸 - 구독 버튼 -->
-                    <button class="channel_top_button">구독</button>
                 </div>
-                <div class="channel_mid">
-                    <!-- 채널칸 - 설명 -->
-                    <p>이 영상의 설명은 테스트를 위해서 아무말이나 길게 작성되었습니다. 고로 아무말 대잔치가 벌어지며 최대한 길게 쓰는것을 목표로하고있으니 다들 포켓몬 챔피언이되어서 신작 포켓몬을 하도록합시다 윈드 웨이브즈 내년 발매예정</p>
-                </div>
+                <button class="channel_top_button">구독</button>
+            </div>
+            <div class="channel_mid">
+                <!-- 채널칸 - 설명 -->
+                <p class="channel_mid_description">이 영상의 설명은 테스트를 위해서 아무말이나 길게 작성되었습니다. 고로 아무말 대잔치가 벌어지며 최대한 길게 쓰는것을 목표로하고있으니 다들 포켓몬 챔피언이되어서 신작 포켓몬을 하도록합시다 윈드 웨이브즈 내년 발매예정</p>
+                <span class="channel_bottom">더 보기</span>
                 <!-- 채널칸 - 더 보기 버튼 -->
-                <div class="channel_bottom">
-                    <p>더 보기</p>
-                </div>
                 <!-- 채널칸 - 하단 보더 -->
             </div>
 
@@ -124,180 +124,147 @@
                 <!-- 댓글 - 상단 바 -->
                 <div class="comment_top">
                     <!-- 상단 바 - 정렬 바-->
-                    <div class="comment_top_sort">
-                        <!-- 정렬 바 - 코멘트 수 -->
-                        <p>댓글 459개</p>
-                        <!-- 정렬 바 - 정렬하기 -->
-                        <p>정렬 기준</p>
-                    </div>
-                    <!-- 댓글 - 사용자 댓글 -->
-                    <div class="comment_top_usercomment">
-                        <!-- 사용자 댓글 - 프로필 사진 -->
-                        <img src="https://placehold.co/60x60" alt="profile_user" class="comment_top_usercomment_pic">
-                        <!-- 사용자 댓글 - 댓글 란 -->
-                        <p class="comment_top_usercomment_comment">댓글 추가...</p>
-                        <!-- 댓글 란 - 하단 보더 -->
-                    </div>
+                    <!-- 정렬 바 - 코멘트 수 -->
+                    <p class="comment_top_comment">댓글 459개</p>
+                    <!-- 정렬 바 - 정렬하기 -->
+                    <button class="comment_top_button">☰ 정렬 기준</button>
+                </div>
+                <!-- 댓글 - 사용자 댓글 -->
+                <div class="comment_top_usercomment">
+                    <!-- 사용자 댓글 - 프로필 사진 -->
+                    <img src="https://placehold.co/60x60" alt="profile_user" class="comment_top_usercomment_pic">
+                    <!-- 사용자 댓글 - 댓글 란 -->
+                    <input class="comment_top_usercomment_comment" type="text" placeholder="댓글 추가...">
+                    <!-- 댓글 란 - 하단 보더 -->
                 </div>
                 <!-- 댓글 - 타 사용자 댓글 * 8 -->
                 <div class="comment_bottom">
                     <!-- 타 사용자 댓글 - 프로필 사진 -->
-                    <div class="comment_bottom_pic">
-                        <img src="https://placehold.co/60x60" alt="profile_other">
-                    </div>
+                    <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
                     <!-- 타 사용자 댓글 - 댓글 란 -->
                     <div class="comment_bottom_comment">
                         <!-- 댓글 란 - 헤더 -->
-                        <div class="comment_bottom_comment_header">
-                            <!-- 헤더 - 닉네임 -->
-                            <p>유저2</p>
+                        <!-- 헤더 - 닉네임 -->
+                        <p class="commnet_bottom_comment_profile">
+                            <span class="comment_bottom_comment_name">유저2</span>
                             <!-- 헤더 - 시간 -->
-                            <p>2 개월 전</p>
-                        </div>
+                            <span class="comment_bottom_comment_time">2개월 전</span>
+                        </p>
                         <!-- 댓글 란 - 텍스트 -->
-                        <div class="comment_bottom_comment_text">
-                            <p>테스트용 임시 텍스트</p>
-                        </div>
+                        <p class="comment_bottom_comment_text">테스트용 임시 텍스트</p>
                         <!-- 댓글 란 - 툴바 -->
                         <div class="comment_bottom_comment_toolbar">
                             <!-- 툴바 - 좋아요 버튼 -->
-                            <p>좋아요</p>
+                            <button class="comment_bottom_comment_toolbar_btn">👍 3</button>
                             <!-- 툴바 - 싫어요 버튼 -->
-                            <p>싫어요</p>
+                            <button class="comment_bottom_comment_toolbar_btn">👎</button>
                             <!-- 툴바 - 답글 버튼 -->
-                            <p>답글</p>
-                        </div>
-                    </div>
-                <div class="comment_bottom">
-                    <div class="comment_bottom_pic">
-                        <img src="https://placehold.co/60x60" alt="profile_other">
-                    </div>
-                    <div class="comment_bottom_comment">
-                        <div class="comment_bottom_comment_header">
-                            <p>유저3</p>
-                            <p>2 개월 전</p>
-                        </div>
-                        <div class="comment_bottom_comment_text">
-                            <p>테스트용 임시 텍스트</p>
-                        </div>
-                        <div class="comment_bottom_comment_toolbar">
-                            <p>좋아요</p>
-                            <p>싫어요</p>
-                            <p>답글</p>
+                            <button class="comment_bottom_comment_toolbar_btn">답글</button>
                         </div>
                     </div>
                 </div>
                 <div class="comment_bottom">
-                    <div class="comment_bottom_pic">
-                        <img src="https://placehold.co/60x60" alt="profile_other">
-                    </div>
+                    <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
                     <div class="comment_bottom_comment">
-                        <div class="comment_bottom_comment_header">
-                            <p>유저4</p>
-                            <p>2 개월 전</p>
-                        </div>
-                        <div class="comment_bottom_comment_text">
-                            <p>테스트용 임시 텍스트</p>
-                        </div>
+                        <p class="commnet_bottom_comment_profile">
+                            <span class="comment_bottom_comment_name">유저3</span>
+                            <span class="comment_bottom_comment_time">2개월 전</span>
+                        </p>
+                        <p class="comment_bottom_comment_text">테스트용 임시 텍스트</p>
                         <div class="comment_bottom_comment_toolbar">
-                            <p>좋아요</p>
-                            <p>싫어요</p>
-                            <p>답글</p>
+                            <button class="comment_bottom_comment_toolbar_btn">👍 3</button>
+                            <button class="comment_bottom_comment_toolbar_btn">👎</button>
+                            <button class="comment_bottom_comment_toolbar_btn">답글</button>
                         </div>
                     </div>
                 </div>
                 <div class="comment_bottom">
-                    <div class="comment_bottom_pic">
-                        <img src="https://placehold.co/60x60" alt="profile_other">
-                    </div>
+                    <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
                     <div class="comment_bottom_comment">
-                        <div class="comment_bottom_comment_header">
-                            <p>유저5</p>
-                            <p>2 개월 전</p>
-                        </div>
-                        <div class="comment_bottom_comment_text">
-                            <p>테스트용 임시 텍스트</p>
-                        </div>
+                        <p class="commnet_bottom_comment_profile">
+                            <span class="comment_bottom_comment_name">유저4</span>
+                            <span class="comment_bottom_comment_time">2개월 전</span>
+                        </p>
+                        <p class="comment_bottom_comment_text">테스트용 임시 텍스트</p>
                         <div class="comment_bottom_comment_toolbar">
-                            <p>좋아요</p>
-                            <p>싫어요</p>
-                            <p>답글</p>
+                            <button class="comment_bottom_comment_toolbar_btn">👍 3</button>
+                            <button class="comment_bottom_comment_toolbar_btn">👎</button>
+                            <button class="comment_bottom_comment_toolbar_btn">답글</button>
                         </div>
                     </div>
                 </div>
                 <div class="comment_bottom">
-                    <div class="comment_bottom_pic">
-                        <img src="https://placehold.co/60x60" alt="profile_other">
-                    </div>
+                    <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
                     <div class="comment_bottom_comment">
-                        <div class="comment_bottom_comment_header">
-                            <p>유저6</p>
-                            <p>2 개월 전</p>
-                        </div>
-                        <div class="comment_bottom_comment_text">
-                            <p>테스트용 임시 텍스트</p>
-                        </div>
+                        <p class="commnet_bottom_comment_profile">
+                            <span class="comment_bottom_comment_name">유저5</span>
+                            <span class="comment_bottom_comment_time">2개월 전</span>
+                        </p>
+                        <p class="comment_bottom_comment_text">테스트용 임시 텍스트</p>
                         <div class="comment_bottom_comment_toolbar">
-                            <p>좋아요</p>
-                            <p>싫어요</p>
-                            <p>답글</p>
+                            <button class="comment_bottom_comment_toolbar_btn">👍 3</button>
+                            <button class="comment_bottom_comment_toolbar_btn">👎</button>
+                            <button class="comment_bottom_comment_toolbar_btn">답글</button>
                         </div>
                     </div>
                 </div>
                 <div class="comment_bottom">
-                    <div class="comment_bottom_pic">
-                        <img src="https://placehold.co/60x60" alt="profile_other">
-                    </div>
+                    <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
                     <div class="comment_bottom_comment">
-                        <div class="comment_bottom_comment_header">
-                            <p>유저7</p>
-                            <p>2 개월 전</p>
-                        </div>
-                        <div class="comment_bottom_comment_text">
-                            <p>테스트용 임시 텍스트</p>
-                        </div>
+                        <p class="commnet_bottom_comment_profile">
+                            <span class="comment_bottom_comment_name">유저6</span>
+                            <span class="comment_bottom_comment_time">2개월 전</span>
+                        </p>
+                        <p class="comment_bottom_comment_text">테스트용 임시 텍스트</p>
                         <div class="comment_bottom_comment_toolbar">
-                            <p>좋아요</p>
-                            <p>싫어요</p>
-                            <p>답글</p>
+                            <button class="comment_bottom_comment_toolbar_btn">👍 3</button>
+                            <button class="comment_bottom_comment_toolbar_btn">👎</button>
+                            <button class="comment_bottom_comment_toolbar_btn">답글</button>
                         </div>
                     </div>
                 </div>
                 <div class="comment_bottom">
-                    <div class="comment_bottom_pic">
-                        <img src="https://placehold.co/60x60" alt="profile_other">
-                    </div>
+                    <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
                     <div class="comment_bottom_comment">
-                        <div class="comment_bottom_comment_header">
-                            <p>유저8</p>
-                            <p>2 개월 전</p>
-                        </div>
-                        <div class="comment_bottom_comment_text">
-                            <p>테스트용 임시 텍스트</p>
-                        </div>
+                        <p class="commnet_bottom_comment_profile">
+                            <span class="comment_bottom_comment_name">유저7</span>
+                            <span class="comment_bottom_comment_time">2개월 전</span>
+                        </p>
+                        <p class="comment_bottom_comment_text">테스트용 임시 텍스트</p>
                         <div class="comment_bottom_comment_toolbar">
-                            <p>좋아요</p>
-                            <p>싫어요</p>
-                            <p>답글</p>
+                            <button class="comment_bottom_comment_toolbar_btn">👍 3</button>
+                            <button class="comment_bottom_comment_toolbar_btn">👎</button>
+                            <button class="comment_bottom_comment_toolbar_btn">답글</button>
                         </div>
                     </div>
                 </div>
                 <div class="comment_bottom">
-                    <div class="comment_bottom_pic">
-                        <img src="https://placehold.co/60x60" alt="profile_other">
-                    </div>
+                    <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
                     <div class="comment_bottom_comment">
-                        <div class="comment_bottom_comment_header">
-                            <p>유저9</p>
-                            <p>2 개월 전</p>
-                        </div>
-                        <div class="comment_bottom_comment_text">
-                            <p>테스트용 임시 텍스트</p>
-                        </div>
+                        <p class="commnet_bottom_comment_profile">
+                            <span class="comment_bottom_comment_name">유저8</span>
+                            <span class="comment_bottom_comment_time">2개월 전</span>
+                        </p>
+                        <p class="comment_bottom_comment_text">테스트용 임시 텍스트</p>
                         <div class="comment_bottom_comment_toolbar">
-                            <p>좋아요</p>
-                            <p>싫어요</p>
-                            <p>답글</p>
+                            <button class="comment_bottom_comment_toolbar_btn">👍 3</button>
+                            <button class="comment_bottom_comment_toolbar_btn">👎</button>
+                            <button class="comment_bottom_comment_toolbar_btn">답글</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment_bottom">
+                    <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
+                    <div class="comment_bottom_comment">
+                        <p class="commnet_bottom_comment_profile">
+                            <span class="comment_bottom_comment_name">유저9</span>
+                            <span class="comment_bottom_comment_time">2개월 전</span>
+                        </p>
+                        <p class="comment_bottom_comment_text">테스트용 임시 텍스트</p>
+                        <div class="comment_bottom_comment_toolbar">
+                            <button class="comment_bottom_comment_toolbar_btn">👍 3</button>
+                            <button class="comment_bottom_comment_toolbar_btn">👎</button>
+                            <button class="comment_bottom_comment_toolbar_btn">답글</button>
                         </div>
                     </div>
                 </div>
