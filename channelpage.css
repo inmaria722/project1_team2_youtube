@@ -103,6 +103,78 @@
 
 .player {
   width: 424px;
+  position: relative;
+  cursor: pointer;
+}
+
+.player-top,
+.bar-full,
+.player-bottom {
+  position: absolute;
+}
+
+.player-top {
+  display: flex;
+  padding: 14px 16px;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.player-title {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-info {
+  width: 20px;
+  height: 20px;
+}
+
+.bar-full {
+  left: 16px;
+  right: 16px;
+  bottom: 50px;
+  height: 3px;
+  background-color: rgba(234, 234, 234, 0.2);
+}
+
+.bar-loaded {
+  width: 60%;
+  height: 100%;
+  background-color: rgba(234, 234, 234, 0.5);
+}
+
+.bar-played {
+  width: 70%;
+  height: 100%;
+  background-color: var(--y-point);
+}
+
+.player-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px 25px;
+}
+
+.bottom-btn {
+  width: 20px;
+}
+
+.playtime {
+  font-size: 0.75rem;
+  align-self: flex-start;
+  color: var(--gray-2);
+}
+
+.block {
+  width: 30px;
 }
 
 .hero-video_desc-box {
