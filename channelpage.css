@@ -199,3 +199,64 @@
   font-size: 0.9rem;
   font-weight: 400;
 }
+
+/* ===================
+    5. 플레이리스트
+====================== */
+.playlist {
+  padding: 0 65px;
+  color: var(--text);
+}
+
+.playlist_title-box {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-top: 1px solid rgba(170, 170, 170, 0.3);
+}
+
+.playlist-title {
+  cursor: pointer;
+}
+
+.play-all-btn {
+  color: var(--gray);
+  cursor: pointer;
+}
+
+.playlist_item-box {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.playlist-item {
+  width: 100%;
+}
+
+.playlist-video_text-box {
+  padding: 10px 0;
+}
+
+.playlist-video_title {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.playlist-video_stats {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
