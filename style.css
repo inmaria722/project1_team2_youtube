@@ -658,16 +658,11 @@ header {
 
 .secondary_list_video_thumbnail {
     position: relative;
-    flex-shrink: 1;
-    flex-basis: 225px;
-    min-width: 140px;
-    max-width: 225px;
+    flex-shrink: 0;
 }
 
 .secondary_list_video_thumbnail img {
-    width: 100%; 
-    height: auto;
-    aspect-ratio: 16 / 9;
+    width: 225px; height: 130px;
     object-fit: cover;
     display: block;
 }
@@ -682,11 +677,6 @@ header {
     border-radius: 2px;
     font-size: 12px;
     padding: 2px 5px;
-}
-
-.secondary_list_video_info {
-    flex: 1;
-    min-width: 0;
 }
 
 .secondary_list_video_info_title {
