@@ -128,7 +128,7 @@ button {
 /* 하단 영상 썸네일 그리드 */
 .main-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+    grid-template-columns: repeat(auto-fit, 276px);
     gap: 16px; margin: 24px;
     cursor: pointer;
 }
