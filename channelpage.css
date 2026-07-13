@@ -84,6 +84,15 @@
   font-weight: 700;
   color: var(--gray);
   white-space: nowrap;
+  cursor: pointer;
+}
+
+.home {
+  border-bottom: 1px solid var(--text);
+}
+
+.tool:not(.home):hover {
+  border-bottom: 1px solid rgba(234, 234, 234, 0.5);
 }
 
 .toolbar_search-box {
@@ -91,6 +100,7 @@
   align-items: center;
   padding-left: 24px;
   gap: 200px;
+  cursor: pointer;
 }
 
 .toolbar_more-btn {

@@ -114,6 +114,7 @@ header {
   align-items: center;
   padding-left: 10px;
   color: var(--border);
+  cursor: text;
 }
 
 .search-icon {
@@ -124,6 +125,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.search-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .mic-icon-box {
@@ -131,12 +137,17 @@ header {
   height: 40px;
   background-color: var(--black);
   border-radius: 100px;
-  margin-left: 4px;
+  margin-left: 6px;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.mic-icon-box:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .mic-icon {
@@ -157,9 +168,15 @@ header {
   width: 40px;
   height: 40px;
   padding: 10px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.menu-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .apps,
@@ -313,7 +330,6 @@ header {
 /* 기본 상태(닫힘)일 때 텍스트 숨기기 */
 .sidebar .menu-item {
   display: none;
-  transition: opacity 0.2s ease;
 }
 
 /* 기본 상태(닫힘)일 때 푸터, 타이틀 숨기기 */
