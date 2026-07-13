@@ -6,6 +6,7 @@
 
 :root {
     --bg: #2d2d2d; /* 전체 배경 */
+    --bg-side: #202020;
     --text-main: #f5f5f5; /* 메인 텍스트 */
     --text-sub: #d3d3d3; /* 서브 텍스트 */
     --text-bottom: #7c7c7c; /* 하단 텍스트 */
@@ -26,9 +27,9 @@ body {
     justify-content: center;
     gap: 20px;
     width: 100%;
-    min-width: 1440px;
     max-width: 1440px;
-    margin: 0 auto;
+    margin-left: 240px;
+    margin-right: auto;
     padding: 20px;
 }
 
@@ -38,8 +39,128 @@ video {
     object-position: center 10%;
 }
 
+/* ===================
+    1. 헤더
+====================== */
+header {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.header_logo {
+    width: 120px;
+}
+
+.search-box-wrap {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border: 1px solid var(--border);
+    cursor: pointer;
+}
+
+.search-typing {
+    width: 362px;
+    height: 100%;
+    background-color: var(--bg-2);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: var(--border);
+}
+
+.search-icon {
+    width: auto;
+    height: 100%;
+    padding: 2px 20px;
+    background-color: var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mic-icon-box {
+    width: 40px;
+    height: 40px;
+    background-color: var(--black);
+    border-radius: 100px;
+    margin-left: 4px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.mic-icon {
+    width: auto;
+    height: 100%;
+}
+
+.header_menu {
+    width: 204px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apps,
+.notif {
+    padding: 12px;
+}
+
+.header-profile {
+    display: block;
+    width: 40px;
+    padding: 4px;
+    overflow: hidden;
+}
+
+.header-profile img {
+    border-radius: 50%;
+}
+
 /*  ====================
-    1. 비디오 칸
+    2. 비디오 칸
 ===================== */
 
 .primary {
@@ -155,7 +276,7 @@ video {
 .video_player_youtube_controls_btn_right_full { font-size: 30px; }
 
 /*=======================
-    1-2. 정보
+    2-2. 정보
 ========================*/
 
 .video_info {
@@ -211,7 +332,7 @@ video {
 }
 
 /* =====================
-    2. 채널 칸
+    3. 채널 칸
 ===================== */
 
 .channel {
@@ -245,11 +366,6 @@ video {
     transition: background 0.2s;
 }
 
-.channel_top_button:hover {
-    background: #a00;
-    border-radius: 4px;
-}
-
 .channel_mid {
     border-bottom: 1px solid var(--tag-off);
     font-size: 14px;
@@ -272,7 +388,7 @@ video {
 }
 
 /* =====================
-    3. 댓글
+    4. 댓글
 ===================== */
 
 .comment {
@@ -333,7 +449,7 @@ video {
 }
 
 /*==================
-    3-2. 하단 댓글
+    4-2. 하단 댓글
 ===================*/
 
 .comment_bottom {
@@ -391,14 +507,13 @@ video {
     border-radius: 18px;
 }
 /* =====================
-    4. 영상 목록
+    5. 영상 목록
 ===================== */
 
 .secondary {
     flex: 3;
     min-width: 200px;
     max-width: 430px;
-    border: 1px solid white;
 }
 
 .secondary_tag {
@@ -408,13 +523,17 @@ video {
 }
 
 .secondary_tag_btn {
-    background: #272727;
+    background: #555;
     color: var(--text-main);
     border: 1px solid #3f3f3f;
     border-radius: 18px;
     font-size: 16px;
     padding: 6px 14px;
     cursor: pointer;
+}
+
+.secondary_tag_btn:active {
+    background: #272727;
 }
 
 .secondary_tag_btn.is_active {
@@ -427,8 +546,16 @@ video {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
     cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.secondary_list_video:hover {
+    background: rgba(0,0,0,0.7);
+    border-radius: 10px;
 }
 
 .secondary_list_video_thumbnail {
@@ -437,7 +564,7 @@ video {
 }
 
 .secondary_list_video_thumbnail img {
-    width: 225px; height: 150px;
+    width: 225px; height: 130px;
     object-fit: cover;
     display: block;
 }
@@ -451,6 +578,7 @@ video {
     font-size: 2px 5px;
     border-radius: 2px;
     font-size: 12px;
+    padding: 2px 5px;
 }
 
 .secondary_list_video_info_title {
@@ -470,4 +598,114 @@ video {
     color: var(--text-bottom);
     font-size: 15px;
     margin: 0;
+}
+
+/* =========================
+    6. 모달
+========================== */
+
+.sub_radio{
+    display: none;
+}
+
+.sub_btn{
+    margin-left: auto;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 9px 22px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+label[for="sub_on"].sub_btn {
+    background: #c00;
+    color: var(--text-main);
+}
+
+label[for="sub_on"].sub_btn:hover {
+    background: #a00;
+}
+
+.sub_btn.is_subscribed {
+    background: var(--tag-off);
+    color: var(--text-sub);
+}
+
+.sub_btn.is_subscribed {
+    display: none;
+}
+
+#sub_on:checked ~ .video label[for="sub_on"].sub_btn,
+#sub_modal:checked ~ .video label[for="sub_on"].sub_btn {
+    display: none;
+}
+
+#sub_on:checked ~ .video .sub_btn.is_subscribed,
+#sub_modal:checked ~ .video .sub_btn.is_subscribed {
+    display: block;
+}
+
+.sub_modal_overlay {
+    display: flex;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    visibility: hidden;
+}
+
+#sub_modal:checked ~ .sub_modal_overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub_modal {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px 24px 16px 24px;
+    min-width: 340px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.sub_modal_text {
+    color: #606060;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.sub_modal_text strong {
+    color: #0a0a0a;
+    font-weight: 500;
+}
+
+.sub_modal_btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.sub_modal_btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0a0a0a;
+    cursor: pointer;
+    border-radius: 18px;
+    transition: background 0.2s;
+}
+
+.sub_modal_btn:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+.sub_modal_btn_cancel {
+    color: #f0243e;
+}
+
+.sub_modal_btn_cancel:hover {
+    background: rgba(240, 36, 62, 0.08);
 }
