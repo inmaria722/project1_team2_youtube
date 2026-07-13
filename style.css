@@ -164,5 +164,70 @@ header {
 ====================== */
 
 .sidebar {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  z-index: 9999;
+  background-color: var(--bg);
+  padding-right: 15px;
+  padding-bottom: 100px;
+  width: 240px;
+  height: 100vh;
+  overflow-y: auto;
+  color: var(--text);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+}
+
+.sidebar ul {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(234, 234, 234, 0.1);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 10px 10px 10px 24px;
+}
+
+.sidebar img {
+  width: 16px;
+}
+
+.menu-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 10px 24px;
+  color: var(--gray);
+}
+
+.youtuber img {
+  width: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.sidebar .footer {
+  border: none;
+}
+
+.footer-item {
+  padding: 16px 24px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gray);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
 }
