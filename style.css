@@ -395,3 +395,15 @@ header {
 .sidebar-checkbox:checked ~ .playlists {
   margin-left: 240px;
 }
+
+@media (max-width: 768px) {
+  .sidebar {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .sidebar-checkbox:checked ~ .sidebar {
+    opacity: 1;
+    visibility: visible;
+  }
+}
