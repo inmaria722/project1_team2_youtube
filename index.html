@@ -18,7 +18,7 @@
       <div class="header-left">
         <!-- 헤더 - 사이드바 버튼 -->
         <button class="sidebar-btn">
-          <i class="fa-solid fa-bars" style="color: rgb(255, 255, 255)"></i>
+          <label for="sidebar-toggle" class="menu-btn">☰</label>
         </button>
         <!-- 헤더 - 유튜브 로고 -->
         <a href="#" class="header_logo"
@@ -69,6 +69,8 @@
     </header>
 
     <!-- 사이드바 -->
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox" />
+
     <nav class="sidebar">
       <!-- 사이드바 - 최상단 -->
       <ul class="top menu-box">
@@ -129,7 +131,7 @@
       <!-- 사이드바 - 구독 -->
       <ul class="subs">
         <!-- 구독 - 타이틀 -->
-        <h4 class="menu-title">구독</h4>
+        <h4 class="menu-title hide-on-close">구독</h4>
         <!-- 구독 - 아이템*7 -->
         <li class="menu youtuber">
           <img src="./images/subscription-01.jpg" alt="구독한 유튜버 프로필" />
@@ -169,7 +171,7 @@
       <!-- 사이드바 - 유튜브 더 보기 -->
       <ul class="more">
         <!-- 유튜브 더 보기 - 타이틀 -->
-        <h4 class="menu-title">구독</h4>
+        <h4 class="menu-title hide-on-close">유튜브 더 보기</h4>
         <!-- 유튜브 더 보기 - 유튜브 프리미엄 -->
         <li class="menu">
           <img
@@ -220,7 +222,7 @@
       </ul>
 
       <!-- 사이드바 - 푸터 -->
-      <ul class="footer">
+      <ul class="footer hide-on-close">
         <li class="footer-1 footer-item">
           <a href="#" class="footer-item-text">정보</a>
           <a href="#" class="footer-item-text">보도자료</a>
