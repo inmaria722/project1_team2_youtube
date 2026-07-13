@@ -113,7 +113,7 @@ button {
     margin-left: 12px;
 }
 /* 태그 선택시 버튼색상변경 */
-.filter:has(input[type="checkbox"]:checked) .tag-reset { background-color: #030303; border: 1px solid #AAA; color: #fff; }
+.filter:has(input[type="checkbox"]:checked) .tag-reset { background-color: #303030; border: 1px solid #AAA; color: #fff; }
 
 .tag-more {
     padding: 20px;
@@ -128,8 +128,9 @@ button {
 /* 하단 영상 썸네일 그리드 */
 .main-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
     gap: 16px; margin: 24px;
+    cursor: pointer;
 }
 .video-box {
     background-color: #000;
@@ -191,16 +192,20 @@ button {
 /* 최하단 반응형 적용구간 */
 @media (max-width: 1024px) {
     .main-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin: 20px;
+        gap: 16px;
     }
 }
 @media (max-width: 768px) {
-    .main-grid { 
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .main-grid {
+        margin: 16px;
+        gap: 14px;
     }
 }
 @media (max-width: 480px) {
     .main-grid { 
         grid-template-columns: 1fr;
+        margin: 12px;
+        gap: 16px;
     }
 }
