@@ -10,6 +10,7 @@
 :root {
   --bg: #212121;
   --bg-2: #121212;
+  --bg-3: #181818;
   --border: #303030;
   --text: #fff;
   --black: #000;
@@ -22,6 +23,7 @@ body {
   font-family: "Pretendard", sans-serif;
   min-height: 100vh;
   background-color: #000;
+  overflow-x: hidden;
 }
 
 a {
@@ -354,4 +356,10 @@ header {
 .sidebar-checkbox:checked ~ .sidebar .hide-on-close {
   display: flex;
   flex-direction: column;
+}
+
+.sidebar-checkbox:checked ~ .channel-banner-box,
+.sidebar-checkbox:checked ~ .hero-video,
+.sidebar-checkbox:checked ~ .playlists {
+  margin-left: 240px;
 }
