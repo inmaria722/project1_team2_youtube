@@ -7,9 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- 인풋 라디오 -->
     <input type="radio" name="sub_state" id="sub_off" class="sub_radio" checked>
     <input type="radio" name="sub_state" id="sub_on" class="sub_radio">
     <input type="radio" name="sub_state" id="sub_modal" class="sub_radio">
+    <!-- 헤더 -->
     <header>
         <!-- 헤더 - 왼쪽 묶음 -->
         <div class="header-left">
@@ -359,9 +361,24 @@
                 <div class="comment_top">
                     <!-- 상단 바 - 정렬 바-->
                     <!-- 정렬 바 - 코멘트 수 -->
-                    <p class="comment_top_comment">댓글 459개</p>
+                    <span class="comment_top_comment">댓글 459개</span>
                     <!-- 정렬 바 - 정렬하기 -->
-                    <button class="comment_top_button">☰ 정렬 기준</button>
+                    <div class="comment_top_sort">
+                        <!-- 정렬하기 - 버튼 -->
+                        <input type="checkbox" id="comment_top_sort_toggle" class="comment_top_sort_toggle">
+                        <label for="comment_top_sort_toggle" class="comment_top_button">≡ 정렬 기준</label>
+                        <!-- 정렬하기 - 드롭다운 -->
+                        <div class="comment_top_sort_dropdown">
+                            <div class="comment_top_sort_dropdown_item is_selected">
+                                <p class="comment_top_sort_dropdown_item_title">인기순</p>
+                                <p class="comment_top_sort_dropdown_item_sub">추천 댓글 표시</p>
+                            </div>
+                            <div class="comment_top_sort_dropdown_item">
+                                <p class="comment_top_sort_dropdown_item_title">최신순</p>
+                                <p class="comment_top_sort_dropdown_item_sub">스팸 가능성이 있는 댓글을 포함하여 최근 댓글 표시</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- 댓글 - 사용자 댓글 -->
                 <div class="comment_top_usercomment">
@@ -505,7 +522,6 @@
                 </div>
             </div>
         </main>
-
 
         <!-- 사이드바 (Secondary) -->
         <aside class="secondary">
@@ -693,6 +709,7 @@
             </div>
         </aside>
     </div>
+    <!-- 모달 오버레이 -->
     <div class="sub_modal_overlay">
         <div class="sub_modal">
             <p class="sub_modal_text">
