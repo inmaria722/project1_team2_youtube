@@ -66,11 +66,26 @@ header {
 }
 
 .sidebar-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   background-color: transparent;
   font-size: 1.2rem;
   cursor: pointer;
   color: var(--text);
+  transition: backgound-color 0.2s ease;
+  border-radius: 50%;
+}
+
+.sidebar-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-btn {
+  cursor: pointer;
 }
 
 .header_logo {
@@ -242,13 +257,6 @@ header {
   display: none;
 }
 
-.menu-btn {
-  font-size: 20px;
-  cursor: pointer;
-  padding: 10px;
-  display: inline-block;
-}
-
 /* =========================
    사이드바 기본 상태 (닫힘)
 ============================ */
@@ -266,7 +274,7 @@ header {
   overflow-y: auto;
   overflow-x: hidden;
   color: var(--text);
-  transition: width 0.2s ease;
+  transition: width ease;
 
   &::-webkit-scrollbar {
     display: none;
@@ -288,18 +296,23 @@ header {
   font-weight: 400;
   padding: 12px 0 12px 24px;
   cursor: pointer;
-  width: 240px;
+  width: 100%;
+  transition: backgound-color 0.2s ease;
+  border-radius: 10px;
+}
+
+.menu:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar img {
-  width: 16px;
+  width: 18px;
   flex-shrink: 0;
 }
 
 /* 기본 상태(닫힘)일 때 텍스트 숨기기 */
 .sidebar .menu-item {
-  opacity: 0;
-  visibility: hidden;
+  display: none;
   transition: opacity 0.2s ease;
 }
 
@@ -316,7 +329,7 @@ header {
 }
 
 .youtuber img {
-  width: 24px;
+  width: 22px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -348,8 +361,7 @@ header {
 
 /* 숨겨졌던 메뉴 글자들을 다시 보이게 */
 .sidebar-checkbox:checked ~ .sidebar .menu-item {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 
 /* 닫혔을 때 숨겼던 하단 메뉴들과 푸터를 다시 보여주기 */
