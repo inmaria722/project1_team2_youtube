@@ -30,6 +30,7 @@
     width: calc(100vw - 70px);
     padding-top: 56px;
     min-width: 0;
+    transition: margin-left 0.2s ease;
 }
 .filter {
     width: 100%;
@@ -147,9 +148,13 @@ button {
     background-color: rgba(42,144,232, 0.4);
 }
 .thumb-img {
+    display: block;
     position: relative;
     overflow: hidden;
     aspect-ratio: 16 / 9;
+}
+.link {
+    text-decoration: none;
 }
 .video-thumb {
     display: block;
