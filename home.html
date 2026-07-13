@@ -5,223 +5,271 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>youtube clone page</title>
     <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./header+side.css">
 </head>
 <body>
-    <input type="checkbox" id="sidebar-toggle" hidden>
     <!-- 헤더 -->
     <header>
-        <!-- 헤더 - 사이드바 버튼 -->
-        <label for="sidebar-toggle" class="sidebar-btn">≡</label>
-        <!-- 헤더 - 유튜브 로고 -->
-        <a href="#" class="header_logo"
-            ><img src="./images/youtube logo.png" alt="유튜브 로고"
-        /></a>
+        <!-- 헤더 - 왼쪽 묶음 -->
+        <div class="header-left">
+            <!-- 헤더 - 사이드바 버튼 -->
+            <button class="sidebar-btn">
+                <label for="sidebar-toggle" class="menu-btn">☰</label>
+            </button>
+
+            <!-- 헤더 - 유튜브 로고 -->
+            <a href="#" class="header_logo">
+                <img src="./images/youtube logo.png" alt="유튜브 로고" />
+            </a>
+        </div>
+
         <!-- 헤더 - 검색 박스 -->
         <div class="search-box-wrap">
             <!-- 검색 박스 - 검색 -->
             <div class="search-box">
                 <!-- 검색 - 검색 입력 창 -->
                 <div class="search-typing">Search</div>
+
                 <!-- 검색 - 돋보기 버튼 -->
                 <div class="search-icon">
                     <img src="./images/search.png" alt="돋보기 아이콘" />
                 </div>
             </div>
+
             <!-- 검색 박스 - 마이크 버튼 -->
-            <div class="mic-icon">
-                <img src="./images/microphone.png" alt="마이크 아이콘" />
+            <div class="mic-icon-box">
+                <img
+                    class="mic-icon"
+                    src="./images/microphone.png"
+                    alt="마이크 아이콘"
+                />
             </div>
         </div>
+
         <!-- 헤더 - 네비게이션 -->
         <nav class="header_menu">
             <!-- 네비게이션 - 동영상 추가 버튼 -->
-            <a href="#" class="create">
+            <a href="#" class="create menu-icon">
                 <img src="./images/create.png" alt="동영상 추가 아이콘" />
             </a>
+
             <!-- 네비게이션 - 앱 버튼 -->
-            <a href="#" class="apps">
+            <a href="#" class="apps menu-icon">
                 <img src="./images/apps.png" alt="앱 아이콘" />
             </a>
+
             <!-- 네비게이션 - 알림 버튼 -->
-            <a href="#" class="notif">
+            <a href="#" class="notif menu-icon">
                 <img src="./images/notification.png" alt="알림 아이콘" />
             </a>
+
             <!-- 네비게이션 - 프로필 버튼 -->
-            <a href="#" class="profile">
+            <a href="#" class="header-profile">
                 <img src="./images/header_nav_profile.jpg" alt="프로필 이미지" />
             </a>
         </nav>
     </header>
-    <div class="page-layout">
-        <!-- 사이드바 -->
-        <nav class="sidebar">
-            <!-- 사이드바 - 최상단 -->
-            <ul class="top menu-box">
-                <!-- 최상단 - 홈 -->
-                <li class="menu">
-                    <img src="./images/Home.png" alt="홈 아이콘" />
-                    <a href="#" class="menu-item">홈</a>
-                </li>
-                <!-- 최상단 - 탐색 -->
-                <li class="menu">
-                    <img src="./images/Explore.png" alt="탐색 아이콘" />
-                    <a href="#" class="menu-item">탐색</a>
-                </li>
-                <!-- 최상단 - 구독 -->
-                <li class="menu">
-                    <img src="./images/subscription.png" alt="구독 아이콘" />
-                    <a href="#" class="menu-item">구독</a>
-                </li>
-            </ul>
-            <!-- 사이드바 - 상단 -->
-            <ul class="top-2 menu-box">
-                <!-- 상단 - 라이브러리 -->
-                <li class="menu">
-                    <img src="./images/Library.png" alt="라이브러리 아이콘" />
-                    <a href="#" class="menu-item">라이브러리</a>
-                </li>
-                <!-- 상단 - 기록 -->
-                <li class="menu">
-                    <img src="./images/History.png" alt="기록 아이콘" />
-                    <a href="#" class="menu-item">기록</a>
-                </li>
-                <!-- 상단 - 내 동영상 -->
-                <li class="menu">
-                    <img src="./images/Your Videos.png" alt="내 동영상 아이콘" />
-                    <a href="#" class="menu-item">내 동영상</a>
-                </li>
-                <!-- 상단 - 나중에 볼 동영상 -->
-                <li class="menu">
-                    <img src="./images/Watch Later.png" alt="나중에 볼 동영상 아이콘" />
-                    <a href="#" class="menu-item">나중에 볼 동영상</a>
-                </li>
-                <!-- 상단 - 좋아요 표시한 동영상 -->
-                <li class="menu">
-                    <img
-                        src="./images/Liked Videos.png"
-                        alt="좋아요 표시한 동영상 아이콘"
-                    />
-                    <a href="#" class="menu-item">좋아요 표시한 동영상</a>
-                </li>
-                <!-- 상단 - 더보기 -->
-                <li class="menu">
-                    <img src="./images/Show More.png" alt="더보기 아이콘" />
-                    <a href="#" class="menu-item">더보기</a>
-                </li>
-            </ul>
-            <!-- 사이드바 - 구독 -->
-            <ul class="subs">
-                <!-- 구독 - 타이틀 -->
-                <h4 class="menu-title">구독</h4>
-                <!-- 구독 - 아이템*7 -->
-                <li class="menu">
-                    <img src="./images/subscription-01.jpg" alt="구독한 유튜버 프로필" />
-                    <a href="#" class="menu-item">가오니의 메뉴판GAONI</a>
-                </li>
-                <li class="menu">
-                    <img src="./images/subscription-02.jpg" alt="구독한 유튜버 프로필" />
-                    <a href="#" class="menu-item">살뺴조DietJo</a>
-                </li>
-                <li class="menu">
-                    <img src="./images/subscription-03.jpg" alt="구독한 유튜버 프로필" />
-                    <a href="#" class="menu-item">혜안</a>
-                </li>
-                <li class="menu">
-                    <img src="./images/subscription-04.jpg" alt="구독한 유튜버 프로필" />
-                    <a href="#" class="menu-item">진돌</a>
-                </li>
-                <li class="menu">
-                    <img src="./images/subscription-05.jpg" alt="구독한 유튜버 프로필" />
-                    <a href="#" class="menu-item">찰스엔터</a>
-                </li>
-                <li class="menu">
-                    <img src="./images/subscription-06.jpg" alt="구독한 유튜버 프로필" />
-                    <a href="#" class="menu-item">오늘의 주우재</a>
-                </li>
-                <li class="menu">
-                    <img src="./images/subscription-07.jpg" alt="구독한 유튜버 프로필" />
-                    <a href="#" class="menu-item">aespa</a>
-                </li>
-                <!-- 구독 - 더보기 -->
-                <li class="menu">
-                    <img src="./images/Show More.png" alt="더보기 아이콘" />
-                    <a href="#" class="menu-item">더보기</a>
-                </li>
-            </ul>
-            <!-- 사이드바 - 유튜브 더 보기 -->
-            <ul class="more">
-                <!-- 유튜브 더 보기 - 타이틀 -->
-                <h4 class="menu-title">구독</h4>
-                <!-- 유튜브 더 보기 - 유튜브 프리미엄 -->
-                <li class="menu">
-                    <img
-                        src="./images/Youtube Premium.png"
-                        alt="유튜브 프리미엄 아이콘"
-                    />
-                    <a href="#" class="menu-item">유튜브 프리미엄</a>
-                </li>
-                <!-- 유튜브 더 보기 - 게임 -->
-                <li class="menu">
-                    <img src="./images/Gaming.png" alt="게임 아이콘" />
-                    <a href="#" class="menu-item">게임</a>
-                </li>
-                <!-- 유튜브 더 보기 - 라이브 -->
-                <li class="menu">
-                    <img src="./images/Live.png" alt="라이브 아이콘" />
-                    <a href="#" class="menu-item">라이브</a>
-                </li>
-                <!-- 유튜브 더 보기 - 스포츠 -->
-                <li class="menu">
-                    <img src="./images/Sports.png" alt="스포츠 아이콘" />
-                    <a href="#" class="menu-item">스포츠</a>
-                </li>
-            </ul>
-            <!-- 사이드바 - 하단 -->
-            <ul class="bottom">
-                <!-- 하단 - 환경설정 -->
-                <li class="menu">
-                    <img src="./images/Settings.png" alt="환경설정 아이콘" />
-                    <a href="#" class="menu-item">환경설정</a>
-                </li>
-                <!-- 하단 - 신고 기록 -->
-                <li class="menu">
-                    <img src="./images/Report History.png" alt="신고 기록 아이콘" />
-                    <a href="#" class="menu-item">신고 기록</a>
-                </li>
-                <!-- 하단 - 도움 -->
-                <li class="menu">
-                    <img src="./images/Help.png" alt="도움 아이콘" />
-                    <a href="#" class="menu-item">도움</a>
-                </li>
-                <!-- 하단 - 피드백 보내기 -->
-                <li class="menu">
-                    <img src="./images/Send feedback.png" alt="피드백 보내기 아이콘" />
-                    <a href="#" class="menu-item">피드백 보내기</a>
-                </li>
-            </ul>
-            <!-- 사이드바 - 푸터 -->
-            <ul class="footer">
-                <li class="footer-1">
-                    <a href="#" class="footer-item-text">정보</a>
-                    <a href="#" class="footer-item-text">보도자료</a>
-                    <a href="#" class="footer-item-text">저작권</a>
-                    <a href="#" class="footer-item-text">문의하기</a>
-                    <a href="#" class="footer-item-text">크리에이터</a>
-                    <a href="#" class="footer-item-text">광고</a>
-                    <a href="#" class="footer-item-text">개발자 </a>
-                </li>
-                <li class="footer-2">
-                    <a href="#" class="footer-item-text">약관</a>
-                    <a href="#" class="footer-item-text">개인정보처리방침</a>
-                    <a href="#" class="footer-item-text">정책 및 안전</a>
-                    <a href="#" class="footer-item-text">YouTube 작동의 원리</a>
-                    <a href="#" class="footer-item-text">새로운 기능 테스트하기</a>
-                </li>
-                <li class="footer-copy">
-                    <a href="#" class="footer-item-text">&copy; 2021 구글 LLC</a>
-                </li>
-            </ul>
-        </nav>
+
+        <div class="page-layout">
+            <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox" />
+
+    <nav class="sidebar">
+        <!-- 사이드바 - 최상단 -->
+        <ul class="top menu-box">
+            <!-- 최상단 - 홈 -->
+            <li class="menu">
+                <img src="./images/Home.png" alt="홈 아이콘" />
+                <a href="#" class="menu-item">홈</a>
+            </li>
+
+            <!-- 최상단 - 탐색 -->
+            <li class="menu">
+                <img src="./images/Explore.png" alt="탐색 아이콘" />
+                <a href="#" class="menu-item">탐색</a>
+            </li>
+
+            <!-- 최상단 - 구독 -->
+            <li class="menu">
+                <img src="./images/subscription.png" alt="구독 아이콘" />
+                <a href="#" class="menu-item">구독</a>
+            </li>
+        </ul>
+
+        <!-- 사이드바 - 상단 -->
+        <ul class="top-2 menu-box">
+            <!-- 상단 - 라이브러리 -->
+            <li class="menu">
+                <img src="./images/Library.png" alt="라이브러리 아이콘" />
+                <a href="#" class="menu-item">라이브러리</a>
+            </li>
+
+            <!-- 상단 - 기록 -->
+            <li class="menu">
+                <img src="./images/History.png" alt="기록 아이콘" />
+                <a href="#" class="menu-item">기록</a>
+            </li>
+
+            <!-- 상단 - 내 동영상 -->
+            <li class="menu">
+                <img src="./images/Your Videos.png" alt="내 동영상 아이콘" />
+                <a href="#" class="menu-item">내 동영상</a>
+            </li>
+
+            <!-- 상단 - 나중에 볼 동영상 -->
+            <li class="menu">
+                <img src="./images/Watch Later.png" alt="나중에 볼 동영상 아이콘" />
+                <a href="#" class="menu-item">나중에 볼 동영상</a>
+            </li>
+
+            <!-- 상단 - 좋아요 표시한 동영상 -->
+            <li class="menu">
+                <img
+                    src="./images/Liked Videos.png"
+                    alt="좋아요 표시한 동영상 아이콘"
+                />
+                <a href="#" class="menu-item">좋아요 표시한 동영상</a>
+            </li>
+
+            <!-- 상단 - 더보기 -->
+            <li class="menu">
+                <img src="./images/Show More.png" alt="더보기 아이콘" />
+                <a href="#" class="menu-item">더보기</a>
+            </li>
+        </ul>
+
+        <!-- 사이드바 - 구독 -->
+        <ul class="subs">
+            <!-- 구독 - 타이틀 -->
+            <h4 class="menu-title hide-on-close">구독</h4>
+
+            <!-- 구독 - 아이템*7 -->
+            <li class="menu youtuber">
+                <img src="./images/subscription-01.jpg" alt="구독한 유튜버 프로필" />
+                <a href="#" class="menu-item">가오니의 메뉴판GAONI</a>
+            </li>
+
+            <li class="menu youtuber">
+                <img src="./images/subscription-02.jpg" alt="구독한 유튜버 프로필" />
+                <a href="#" class="menu-item">살뺴조DietJo</a>
+            </li>
+
+            <li class="menu youtuber">
+                <img src="./images/subscription-03.jpg" alt="구독한 유튜버 프로필" />
+                <a href="#" class="menu-item">혜안</a>
+            </li>
+
+            <li class="menu youtuber">
+                <img src="./images/subscription-04.jpg" alt="구독한 유튜버 프로필" />
+                <a href="#" class="menu-item">진돌</a>
+            </li>
+
+            <li class="menu youtuber">
+                <img src="./images/subscription-05.jpg" alt="구독한 유튜버 프로필" />
+                <a href="#" class="menu-item">찰스엔터</a>
+            </li>
+
+            <li class="menu youtuber">
+                <img src="./images/subscription-06.jpg" alt="구독한 유튜버 프로필" />
+                <a href="#" class="menu-item">오늘의 주우재</a>
+            </li>
+
+            <li class="menu youtuber">
+                <img src="./images/subscription-07.jpg" alt="구독한 유튜버 프로필" />
+                <a href="#" class="menu-item">aespa</a>
+            </li>
+
+            <!-- 구독 - 더보기 -->
+            <li class="menu">
+                <img src="./images/Show More.png" alt="더보기 아이콘" />
+                <a href="#" class="menu-item">더보기</a>
+            </li>
+        </ul>
+
+        <!-- 사이드바 - 유튜브 더 보기 -->
+        <ul class="more">
+            <!-- 유튜브 더 보기 - 타이틀 -->
+            <h4 class="menu-title hide-on-close">유튜브 더 보기</h4>
+
+            <!-- 유튜브 더 보기 - 유튜브 프리미엄 -->
+            <li class="menu">
+                <img
+                    src="./images/Youtube Premium.png"
+                    alt="유튜브 프리미엄 아이콘"
+                />
+                <a href="#" class="menu-item">유튜브 프리미엄</a>
+            </li>
+
+            <!-- 유튜브 더 보기 - 게임 -->
+            <li class="menu">
+                <img src="./images/Gaming.png" alt="게임 아이콘" />
+                <a href="#" class="menu-item">게임</a>
+            </li>
+
+            <!-- 유튜브 더 보기 - 라이브 -->
+            <li class="menu">
+                <img src="./images/Live.png" alt="라이브 아이콘" />
+                <a href="#" class="menu-item">라이브</a>
+            </li>
+
+            <!-- 유튜브 더 보기 - 스포츠 -->
+            <li class="menu">
+                <img src="./images/Sports.png" alt="스포츠 아이콘" />
+                <a href="#" class="menu-item">스포츠</a>
+            </li>
+        </ul>
+
+        <!-- 사이드바 - 하단 -->
+        <ul class="bottom">
+            <!-- 하단 - 환경설정 -->
+            <li class="menu">
+                <img src="./images/Settings.png" alt="환경설정 아이콘" />
+                <a href="#" class="menu-item">환경설정</a>
+            </li>
+
+            <!-- 하단 - 신고 기록 -->
+            <li class="menu">
+                <img src="./images/Report History.png" alt="신고 기록 아이콘" />
+                <a href="#" class="menu-item">신고 기록</a>
+            </li>
+
+            <!-- 하단 - 도움 -->
+            <li class="menu">
+                <img src="./images/Help.png" alt="도움 아이콘" />
+                <a href="#" class="menu-item">도움</a>
+            </li>
+
+            <!-- 하단 - 피드백 보내기 -->
+            <li class="menu">
+                <img src="./images/Send feedback.png" alt="피드백 보내기 아이콘" />
+                <a href="#" class="menu-item">피드백 보내기</a>
+            </li>
+        </ul>
+
+        <!-- 사이드바 - 푸터 -->
+        <ul class="footer hide-on-close">
+            <li class="footer-1 footer-item">
+                <a href="#" class="footer-item-text">정보</a>
+                <a href="#" class="footer-item-text">보도자료</a>
+                <a href="#" class="footer-item-text">저작권</a>
+                <a href="#" class="footer-item-text">문의하기</a>
+                <a href="#" class="footer-item-text">크리에이터</a>
+                <a href="#" class="footer-item-text">광고</a>
+                <a href="#" class="footer-item-text">개발자 </a>
+            </li>
+
+            <li class="footer-2 footer-item">
+                <a href="#" class="footer-item-text">약관</a>
+                <a href="#" class="footer-item-text">개인정보처리방침</a>
+                <a href="#" class="footer-item-text">정책 및 안전</a>
+                <a href="#" class="footer-item-text">YouTube 작동의 원리</a>
+                <a href="#" class="footer-item-text">새로운 기능 테스트하기</a>
+            </li>
+
+            <li class="footer-copy footer-item">
+                <a href="#" class="footer-item-text">&copy; 2021 구글 LLC</a>
+            </li>
+        </ul>
+    </nav>
         <!-- 메인 -->
         <main class="home-main">
             <!-- 상단 체크박스 모음 -->
@@ -277,7 +325,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/camping-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/camping-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title">힐링캠프! 호수속에서 낭만넘치는 캠핑!</span>
@@ -299,7 +347,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/h-t-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/h-t-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title">(신작) 딸을 100층에 가둔 게임, 드디어 결말이 나왔습니다ㄷㄷ;;</span>
@@ -320,7 +368,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/music-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/music-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title">세계가 감동한 K-pop스타의 역동적인 무대!</span>
@@ -341,7 +389,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/ai-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/ai-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title">코딩 누가 더 잘해? GPT와 제미나이에게 싸움붙여보기</span>
@@ -362,7 +410,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/diy-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/diy-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title">셀프 홈 인테리어! 어렵지 않아요😊</span>
@@ -383,7 +431,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/car-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/car-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title">벤츠 콘셉트카 공개했는데 디자인이? </span>
@@ -404,7 +452,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/it-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/it-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title">드디어 출시❗최고성능 Nova One X 언박싱!</span>
@@ -425,7 +473,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/h-t-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/h-t-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title"><<데이브 더 다이버 정글편>> 하면 할수록 스케일이 미쳤습니다ㄷㄷ;</span>
@@ -446,7 +494,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/food-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/food-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title">국내여행 해운대! 무엇을 먹어야 할까?</span>
@@ -467,7 +515,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/cook-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/cook-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title">돈없으면 만들어먹자! 깐풍기 만들기🧑‍🍳</span>
@@ -488,7 +536,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/movie-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/movie-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title">습하고 더운날은 공포영화지😱</span>
@@ -509,7 +557,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/trip2-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/trip2-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title">감탄이 절로 나오는 그리스 산토리니✈️</span>
@@ -530,7 +578,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/shopping-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/shopping-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title">쿠팡 가성비 아이템 총집합💸</span>
@@ -551,7 +599,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/sns-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/sns-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title">맨날보면서 아직도 몰라? 인스타 완전정복👀</span>
@@ -572,7 +620,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/trip-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/trip-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title">옆나라인데 어려워? 다 알려줄게 따라와</span>
@@ -593,7 +641,7 @@
                         </div>
                         <div class="video-bottom">
                             <!-- 하단 프로필이미지 -->
-                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/game2-p.png" alt="youtuber-img" class="youtuber">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/game2-p.png" alt="youtuber-img" class="youtuber-img">
                             <div class="card-text">
                                 <!-- 하단 영상 제목 -->
                                 <span class="video_title">역대급할인 지금 사면 올 이번년도 하고도 남을 할인 총집합</span>
@@ -601,6 +649,48 @@
                                 <div class="video_info">
                                     <span>겜픽</span><br>
                                     <span>73K Views . 1 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 그리드에 들어갈 박스 -->
+                    <article class="video-box trip">
+                        <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                        <div class="thumb-img">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/trip.png" alt="trip-thumb" class="video-thumb">
+                            <div class="video-time">1:20:01</div>
+                        </div>
+                        <div class="video-bottom">
+                            <!-- 하단 프로필이미지 -->
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/trip-p.png" alt="youtuber-img" class="youtuber-img">
+                            <div class="card-text">
+                                <!-- 하단 영상 제목 -->
+                                <span class="video_title">안가보면 후회한다니까요? 스위스 여행!</span>
+                                <!-- 하단 게시자 닉네임 및 영상정보 -->
+                                <div class="video_info">
+                                    <span>여행로드</span><br>
+                                    <span>630.4K Views . 2 weeks ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- 그리드에 들어갈 박스 -->
+                    <article class="video-box game">
+                        <!-- 이미지 그리고 위에 겹칠 시간 표시 블럭 -->
+                        <div class="thumb-img">
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/game.png" alt="game-thumb" class="video-thumb">
+                            <div class="video-time">21:50</div>
+                        </div>
+                        <div class="video-bottom">
+                            <!-- 하단 프로필이미지 -->
+                            <img src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/game-p.png" alt="youtuber-img" class="youtuber-img">
+                            <div class="card-text">
+                                <!-- 하단 영상 제목 -->
+                                <span class="video_title">에테르 레전드 신규 레이드 업데이트! 보스 미리보기, 파티 조합 추천!</span>
+                                <!-- 하단 게시자 닉네임 및 영상정보 -->
+                                <div class="video_info">
+                                    <span>판친놈</span><br>
+                                    <span>61.7K Views . 2 hours ago</span>
                                 </div>
                             </div>
                         </div>

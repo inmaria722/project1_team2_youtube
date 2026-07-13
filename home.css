@@ -15,18 +15,20 @@
 * { box-sizing: border-box; }
 
 /* 상단 flex 태그바 */
-body {
+/* body {
     padding: 0;
     margin: 0;
     font-family: 'Pretendard', sans-serif;
     background-color: #000;
-}
+} */
 .page-layout {
     display: flex;
     width: 100%;
 }
 .home-main {
-    flex: 1;
+    margin-left: 70px;
+    width: calc(100vw - 70px);
+    padding-top: 56px;
     min-width: 0;
 }
 .filter {
@@ -47,7 +49,7 @@ body {
     align-items: center;
     gap: 10px;
     overflow: hidden; 
-    flex: 1; 
+    flex: 1;
     min-width: 0;
     padding-left: 12px;
 }
@@ -128,7 +130,7 @@ button {
 /* 하단 영상 썸네일 그리드 */
 .main-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 276px);
+    grid-template-columns: repeat(auto-fit, 320px);
     gap: 16px; margin: 24px;
     cursor: pointer;
 }
@@ -169,7 +171,7 @@ button {
     flex-wrap: nowrap;
     margin-top: 12px;
 }
-.youtuber {
+.youtuber-img {
     width: 36px; height: 36px;
     border-radius: 50%;
 }
@@ -187,6 +189,13 @@ button {
     font-size: 12px;
     font-weight: 400;
     color: #AAA;
+}
+.sidebar-checkbox:checked ~ .home-main {
+    margin-left: 240px;
+    width:calc(100% - 240px);
+}
+.sidebar-checkbox:checked ~ .home-main .main-grid {
+    grid-template-columns: repeat(auto-fit, 276px);
 }
 
 /* 최하단 반응형 적용구간 */
