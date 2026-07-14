@@ -5,8 +5,8 @@
 * { margin : 0; padding: 0; box-sizing: border-box; }
 
 :root {
-    --bg: #181818;/* 전체 배경 */
-    --bg-head: #212121; 
+    --bg: #212121;/* 전체 배경 */
+    --bg-body: #181818; 
     --bg-2: #121212;
     --bg-side: #202020;
     --border: #303030;
@@ -25,7 +25,7 @@
 
 body {
     font-family: 'Youtube Sans', 'Roboto Sans', Arial, sans-serif;
-    background-color: var(--bg);
+    background-color: var(--bg-body);
     min-height: 100vh;
     line-height: 1.6; /* 헤더 높이 확인후 수정 */
     padding-top: 60px;
