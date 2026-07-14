@@ -85,8 +85,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
     color: var(--text);
-    background-color: var(--bg-head);
+    background-color: var(--bg);
 }
 
 .header-left {
@@ -95,11 +96,26 @@ header {
 }
 
 .sidebar-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     background-color: transparent;
     font-size: 1.2rem;
     cursor: pointer;
     color: var(--text);
+    transition: backgound-color 0.2s ease;
+    border-radius: 50%;
+}
+
+.sidebar-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-btn {
+    cursor: pointer;
 }
 
 .header_logo {
@@ -110,27 +126,31 @@ header {
     display: flex;
     align-items: center;
     height: 100%;
+    width: 470px;
 }
 
 .search-box {
     display: flex;
     align-items: center;
+    flex: 1;
     height: 100%;
     border: 1px solid var(--border);
     cursor: pointer;
 }
 
 .search-typing {
-    width: 362px;
+    width: 100%;
     height: 100%;
     background-color: var(--bg-2);
     display: flex;
     align-items: center;
     padding-left: 10px;
     color: var(--border);
+    cursor: text;
 }
 
 .search-icon {
+    flex-shrink: 0;
     width: auto;
     height: 100%;
     padding: 2px 20px;
@@ -138,6 +158,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.search-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .mic-icon-box {
@@ -145,12 +170,17 @@ header {
     height: 40px;
     background-color: var(--black);
     border-radius: 100px;
-    margin-left: 4px;
+    margin-left: 6px;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.mic-icon-box:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .mic-icon {
@@ -171,9 +201,15 @@ header {
     width: 40px;
     height: 40px;
     padding: 10px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.menu-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .apps,
@@ -835,17 +871,17 @@ label[for="sub_on"].sub_btn:hover {
     top: 56px;
     left: 0;
     z-index: 9999;
-    background-color: var(--bg-head);
+    background-color: var(--bg);
     padding-bottom: 50px;
     width: 70px;
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
     color: var(--text);
-    transition: width 0.2s ease;
+    transition: width ease;
 
     &::-webkit-scrollbar {
-    display: none;
+        display: none;
     }
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -864,19 +900,23 @@ label[for="sub_on"].sub_btn:hover {
     font-weight: 400;
     padding: 12px 0 12px 24px;
     cursor: pointer;
-    width: 240px;
+    width: 100%;
+    transition: backgound-color 0.2s ease;
+    border-radius: 10px;
+}
+
+.menu:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar img {
-    width: 16px;
+    width: 18px;
     flex-shrink: 0;
 }
 
 /* 기본 상태(닫힘)일 때 텍스트 숨기기 */
 .sidebar .menu-item {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease;
+    display: none;
 }
 
 /* 기본 상태(닫힘)일 때 푸터, 타이틀 숨기기 */
@@ -892,7 +932,7 @@ label[for="sub_on"].sub_btn:hover {
 }
 
 .youtuber img {
-    width: 24px;
+    width: 22px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -924,14 +964,31 @@ label[for="sub_on"].sub_btn:hover {
 
 /* 숨겨졌던 메뉴 글자들을 다시 보이게 */
 .sidebar-checkbox:checked ~ .sidebar .menu-item {
-    opacity: 1;
-    visibility: visible;
+    display: block;
 }
 
 /* 닫혔을 때 숨겼던 하단 메뉴들과 푸터를 다시 보여주기 */
 .sidebar-checkbox:checked ~ .sidebar .hide-on-close {
     display: flex;
     flex-direction: column;
+}
+
+.sidebar-checkbox:checked ~ .channel-banner-box,
+.sidebar-checkbox:checked ~ .hero-video,
+.sidebar-checkbox:checked ~ .playlists {
+    margin-left: 240px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sidebar-checkbox:checked ~ .sidebar {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 /* ==============================
@@ -957,7 +1014,7 @@ label[for="sub_on"].sub_btn:hover {
         justify-self: center;
     }
 
-        .video_player, .video_info, .channel, .channel_mid, .comment { max-width: 100%; }
+    .video_player, .video_info, .channel, .channel_mid, .comment { max-width: 100%; }
 
     .secondary { min-width: 0; }
 
