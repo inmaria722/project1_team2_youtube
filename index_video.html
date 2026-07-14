@@ -17,32 +17,32 @@
         <div class="header-left">
             <!-- 헤더 - 사이드바 버튼 -->
             <button class="sidebar-btn">
-            <label for="sidebar-toggle" class="menu-btn">☰</label>
+                <label for="sidebar-toggle" class="menu-btn">☰</label>
             </button>
             <!-- 헤더 - 유튜브 로고 -->
             <a href="#" class="header_logo"
-            ><img src="./images/youtube logo.png" alt="유튜브 로고"
+                ><img src="./images/youtube logo.png" alt="유튜브 로고"
             /></a>
         </div>
 
-        <!-- 헤더 - 검색 박스 -->
+            <!-- 헤더 - 검색 박스 -->
         <div class="search-box-wrap">
             <!-- 검색 박스 - 검색 -->
             <div class="search-box">
-            <!-- 검색 - 검색 입력 창 -->
-            <div class="search-typing">Search</div>
-            <!-- 검색 - 돋보기 버튼 -->
-            <div class="search-icon">
+                <!-- 검색 - 검색 입력 창 -->
+                <div class="search-typing">Search</div>
+                <!-- 검색 - 돋보기 버튼 -->
+                <div class="search-icon">
                 <img src="./images/search.png" alt="돋보기 아이콘" />
-            </div>
+                </div>
             </div>
             <!-- 검색 박스 - 마이크 버튼 -->
             <div class="mic-icon-box">
-            <img
+                <img
                 class="mic-icon"
                 src="./images/microphone.png"
                 alt="마이크 아이콘"
-            />
+                />
             </div>
         </div>
 
@@ -50,24 +50,26 @@
         <nav class="header_menu">
             <!-- 네비게이션 - 동영상 추가 버튼 -->
             <a href="#" class="create menu-icon">
-            <img src="./images/create.png" alt="동영상 추가 아이콘" />
+                <img src="./images/create.png" alt="동영상 추가 아이콘" />
             </a>
             <!-- 네비게이션 - 앱 버튼 -->
             <a href="#" class="apps menu-icon">
-            <img src="./images/apps.png" alt="앱 아이콘" />
+                <img src="./images/apps.png" alt="앱 아이콘" />
             </a>
             <!-- 네비게이션 - 알림 버튼 -->
             <a href="#" class="notif menu-icon">
-            <img src="./images/notification.png" alt="알림 아이콘" />
+                <img src="./images/notification.png" alt="알림 아이콘" />
             </a>
             <!-- 네비게이션 - 프로필 버튼 -->
             <a href="#" class="header-profile">
-            <img src="./images/header_nav_profile.jpg" alt="프로필 이미지" />
+                <img src="./images/header_nav_profile.jpg" alt="프로필 이미지" />
             </a>
         </nav>
     </header>
 
-        <!-- 사이드바 -->
+    <!-- 사이드바 -->
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox" />
+
     <nav class="sidebar">
         <!-- 사이드바 - 최상단 -->
         <ul class="top menu-box">
@@ -120,7 +122,11 @@
             </li>
             <!-- 상단 - 더보기 -->
             <li class="menu">
-            <img src="./images/Show More.png" alt="더보기 아이콘" />
+            <img
+                class="show-more-icon"
+                src="./images/Show More.png"
+                alt="더보기 아이콘"
+            />
             <a href="#" class="menu-item">더보기</a>
             </li>
         </ul>
@@ -160,7 +166,11 @@
             </li>
             <!-- 구독 - 더보기 -->
             <li class="menu">
-            <img src="./images/Show More.png" alt="더보기 아이콘" />
+            <img
+                class="show-more-icon"
+                src="./images/Show More.png"
+                alt="더보기 아이콘"
+            />
             <a href="#" class="menu-item">더보기</a>
             </li>
         </ul>
@@ -240,7 +250,7 @@
             <a href="#" class="footer-item-text">&copy; 2021 구글 LLC</a>
             </li>
         </ul>
-    </nav>
+        </nav>
 
     <!-- 메인(Primary) -->
     <div class="video">
@@ -249,7 +259,9 @@
             <!-- 좌측 - 비디오 칸 (그림자, Video, 이미지)-->
             <div class="video_player">
                 <!-- 비디오칸 - 비디오 영상 -->
-                <video autoplay muted loop src="./video/test_video.mp4" poster="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/main.png" width="640" height="360"></video>
+                <video autoplay muted loop poster="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/main.png" width="640" height="360">
+                    <source src="./video/video.mp4">
+                </video>
                 <div class="video_player_youtube">
                     <div class="video_player_youtube_title">
                     <!-- 비디오 영상 - 제목 -->
@@ -572,7 +584,7 @@
             <!-- 댓글 - 사용자 댓글 -->
             <div class="comment_top_usercomment">
                 <!-- 사용자 댓글 - 프로필 사진 -->
-                <img src="https://placehold.co/60x60" alt="profile_user" class="comment_top_usercomment_pic">
+                <img src="./images/header_nav_profile.jpg" alt="profile_user" class="comment_top_usercomment_pic">
                 <!-- 사용자 댓글 - 댓글 란 -->
                 <input class="comment_top_usercomment_comment" type="text" placeholder="댓글 추가...">
                 <!-- 댓글 란 - 하단 보더 -->
@@ -580,22 +592,22 @@
             <!-- 댓글 - 타 사용자 댓글 * 8 -->
             <div class="comment_bottom">
                 <!-- 타 사용자 댓글 - 프로필 사진 -->
-                <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
+                <img class="comment_bottom_pic" src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/camping-p.png" alt="profile_other">
                 <!-- 타 사용자 댓글 - 댓글 란 -->
                 <div class="comment_bottom_comment">
                     <!-- 댓글 란 - 헤더 -->
                     <!-- 헤더 - 닉네임 -->
                     <p class="commnet_bottom_comment_profile">
-                        <span class="comment_bottom_comment_name">유저2</span>
+                        <span class="comment_bottom_comment_name">감성캠퍼</span>
                         <!-- 헤더 - 시간 -->
-                        <span class="comment_bottom_comment_time">2개월 전</span>
+                        <span class="comment_bottom_comment_time">1일 전</span>
                     </p>
                     <!-- 댓글 란 - 텍스트 -->
-                    <p class="comment_bottom_comment_text">테스트용 임시 텍스트</p>
+                    <p class="comment_bottom_comment_text">와 씨 혜안보다 반가운 게임은 처음이다</p>
                     <!-- 댓글 란 - 툴바 -->
                     <div class="comment_bottom_comment_toolbar">
                         <!-- 툴바 - 좋아요 버튼 -->
-                        <button class="comment_bottom_comment_toolbar_btn">👍 3</button>
+                        <button class="comment_bottom_comment_toolbar_btn">👍 2.7천</button>
                         <!-- 툴바 - 싫어요 버튼 -->
                         <button class="comment_bottom_comment_toolbar_btn">👎</button>
                         <!-- 툴바 - 답글 버튼 -->
@@ -604,106 +616,106 @@
                 </div>
             </div>
             <div class="comment_bottom">
-                <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
+                <img class="comment_bottom_pic" src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/music-p.png" alt="profile_other">
                 <div class="comment_bottom_comment">
                     <p class="commnet_bottom_comment_profile">
-                        <span class="comment_bottom_comment_name">유저22</span>
-                        <span class="comment_bottom_comment_time">2개월 전</span>
+                        <span class="comment_bottom_comment_name">MW</span>
+                        <span class="comment_bottom_comment_time">2일 전</span>
                     </p>
-                    <p class="comment_bottom_comment_text">테스트용 임시 콩줄 텍스트</p>
-                    <p class="comment_bottom_comment_text">테스트용 임시 콩줄 텍스트</p>
+                        <p class="comment_bottom_comment_text"><a style="color: #007aff" href="#">0:07</a>&nbsp;3년 전에 했던 게임 결말 들고 온 혜안님 칭찬합니다.</p>
+                    <div class="comment_bottom_comment_toolbar">
+                        <button class="comment_bottom_comment_toolbar_btn">👍 576</button>
+                        <button class="comment_bottom_comment_toolbar_btn">👎</button>
+                        <button class="comment_bottom_comment_toolbar_btn">답글</button>
+                    </div>
+                </div>
+            </div>
+            <div class="comment_bottom">
+                <img class="comment_bottom_pic" src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/ai-p.png" alt="profile_other">
+                <div class="comment_bottom_comment">
+                    <p class="commnet_bottom_comment_profile">
+                        <span class="comment_bottom_comment_name">AI실험실</span>
+                        <span class="comment_bottom_comment_time">1일 전(수정됨)</span>
+                    </p>
+                    <p class="comment_bottom_comment_text">역시 영식이 정도 되는 유튜버는 1분전 영상인데도 조회수가 폭발 하는구나..</p>
+                    <div class="comment_bottom_comment_toolbar">
+                        <button class="comment_bottom_comment_toolbar_btn">👍 443</button>
+                        <button class="comment_bottom_comment_toolbar_btn">👎</button>
+                        <button class="comment_bottom_comment_toolbar_btn">답글</button>
+                    </div>
+                </div>
+            </div>
+            <div class="comment_bottom">
+                <img class="comment_bottom_pic" src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/diy-p.png" alt="profile_other">
+                <div class="comment_bottom_comment">
+                    <p class="commnet_bottom_comment_profile">
+                        <span class="comment_bottom_comment_name">DIY홈랩</span>
+                        <span class="comment_bottom_comment_time">2일 전</span>
+                    </p>
+                    <p class="comment_bottom_comment_text"><a style="color: #007aff" href="#">8:17</a>&nbsp;자기 뇌 노려보는것 봐 ㅋㅋㅋㅋ</p>
+                    <div class="comment_bottom_comment_toolbar">
+                        <button class="comment_bottom_comment_toolbar_btn">👍 195</button>
+                        <button class="comment_bottom_comment_toolbar_btn">👎</button>
+                        <button class="comment_bottom_comment_toolbar_btn">답글</button>
+                    </div>
+                </div>
+            </div>
+            <div class="comment_bottom">
+                <img class="comment_bottom_pic" src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/it-p.png" alt="profile_other">
+                <div class="comment_bottom_comment">
+                    <p class="commnet_bottom_comment_profile">
+                        <span class="comment_bottom_comment_name">새폰내폰</span>
+                        <span class="comment_bottom_comment_time">3일 전</span>
+                    </p>
+                    <p class="comment_bottom_comment_text"><a style="color: #007aff" href="#">0:37</a>&nbsp;항상 편집자님 음성효과 넣어주시는거 디테일 짱ㅜㅜ</p>
+                    <div class="comment_bottom_comment_toolbar">
+                        <button class="comment_bottom_comment_toolbar_btn">👍 302</button>
+                        <button class="comment_bottom_comment_toolbar_btn">👎</button>
+                        <button class="comment_bottom_comment_toolbar_btn">답글</button>
+                    </div>
+                </div>
+            </div>
+            <div class="comment_bottom">
+                <img class="comment_bottom_pic" src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/food-p.png" alt="profile_other">
+                <div class="comment_bottom_comment">
+                    <p class="commnet_bottom_comment_profile">
+                        <span class="comment_bottom_comment_name">J의 국내 탐방</span>
+                        <span class="comment_bottom_comment_time">3시간 전</span>
+                    </p>
+                    <p class="comment_bottom_comment_text">"혜안 이제 100층 탈출 게임 잘합니다ㅋㅋㅋㅋㅋ"</p>
+                    <div class="comment_bottom_comment_toolbar">
+                        <button class="comment_bottom_comment_toolbar_btn">👍 103</button>
+                        <button class="comment_bottom_comment_toolbar_btn">👎</button>
+                        <button class="comment_bottom_comment_toolbar_btn">답글</button>
+                    </div>
+                </div>
+            </div>
+            <div class="comment_bottom">
+                <img class="comment_bottom_pic" src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/game-p.png" alt="profile_other">
+                <div class="comment_bottom_comment">
+                    <p class="commnet_bottom_comment_profile">
+                        <span class="comment_bottom_comment_name">판친놈</span>
+                        <span class="comment_bottom_comment_time">10시간 전</span>
+                    </p>
+                    <p class="comment_bottom_comment_text"><a style="color: #007aff" href="#">1:02</a>&nbsp;아닠ㅋㅋㅋ 그정도 화살을 목에 맞으면 즉사 아니냐고요 ㅋㅋ</p>
+                    <div class="comment_bottom_comment_toolbar">
+                        <button class="comment_bottom_comment_toolbar_btn">👍 181</button>
+                        <button class="comment_bottom_comment_toolbar_btn">👎</button>
+                        <button class="comment_bottom_comment_toolbar_btn">답글</button>
+                    </div>
+                </div>
+            </div>
+            <div class="comment_bottom">
+                <img class="comment_bottom_pic" src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/trip2-p.png" alt="profile_other">
+                <div class="comment_bottom_comment">
+                    <p class="commnet_bottom_comment_profile">
+                        <span class="comment_bottom_comment_name">여행무드</span>
+                        <span class="comment_bottom_comment_time">2일 전</span>
+                    </p>
+                    <p class="comment_bottom_comment_text">옛날 게임을 화채처럼 이것저것 말아 플레이해 주셔서 추억에 푹 빠질 수 있었어요 🍀 덕분에 잊고 있던 기억들도 하나씩 떠오르고 보는 내내 웃으면서 정말 즐겁게 봤습니다.</p>
+                    <p class="comment_bottom_comment_text">항상 재미있는 영상으로 좋은 추억을 다시 꺼내주셔서 감사합니다 앞으로도 혜안님만의 감성 가득한 영상 기대할게요 사랑해 몰리야 🫧</p>
                     <div class="comment_bottom_comment_toolbar">
                         <button class="comment_bottom_comment_toolbar_btn">👍 2</button>
-                        <button class="comment_bottom_comment_toolbar_btn">👎</button>
-                        <button class="comment_bottom_comment_toolbar_btn">답글</button>
-                    </div>
-                </div>
-            </div>
-            <div class="comment_bottom">
-                <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
-                <div class="comment_bottom_comment">
-                    <p class="commnet_bottom_comment_profile">
-                        <span class="comment_bottom_comment_name">유저4</span>
-                        <span class="comment_bottom_comment_time">2개월 전</span>
-                    </p>
-                    <p class="comment_bottom_comment_text">테스트용 임시 텍스트</p>
-                    <div class="comment_bottom_comment_toolbar">
-                        <button class="comment_bottom_comment_toolbar_btn">👍 3</button>
-                        <button class="comment_bottom_comment_toolbar_btn">👎</button>
-                        <button class="comment_bottom_comment_toolbar_btn">답글</button>
-                    </div>
-                </div>
-            </div>
-            <div class="comment_bottom">
-                <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
-                <div class="comment_bottom_comment">
-                    <p class="commnet_bottom_comment_profile">
-                        <span class="comment_bottom_comment_name">유저5</span>
-                        <span class="comment_bottom_comment_time">2개월 전</span>
-                    </p>
-                    <p class="comment_bottom_comment_text">테스트용 임시 텍스트</p>
-                    <div class="comment_bottom_comment_toolbar">
-                        <button class="comment_bottom_comment_toolbar_btn">👍 3</button>
-                        <button class="comment_bottom_comment_toolbar_btn">👎</button>
-                        <button class="comment_bottom_comment_toolbar_btn">답글</button>
-                    </div>
-                </div>
-            </div>
-            <div class="comment_bottom">
-                <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
-                <div class="comment_bottom_comment">
-                    <p class="commnet_bottom_comment_profile">
-                        <span class="comment_bottom_comment_name">유저6</span>
-                        <span class="comment_bottom_comment_time">2개월 전</span>
-                    </p>
-                    <p class="comment_bottom_comment_text">테스트용 임시 텍스트</p>
-                    <div class="comment_bottom_comment_toolbar">
-                        <button class="comment_bottom_comment_toolbar_btn">👍 3</button>
-                        <button class="comment_bottom_comment_toolbar_btn">👎</button>
-                        <button class="comment_bottom_comment_toolbar_btn">답글</button>
-                    </div>
-                </div>
-            </div>
-            <div class="comment_bottom">
-                <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
-                <div class="comment_bottom_comment">
-                    <p class="commnet_bottom_comment_profile">
-                        <span class="comment_bottom_comment_name">유저7</span>
-                        <span class="comment_bottom_comment_time">2개월 전</span>
-                    </p>
-                    <p class="comment_bottom_comment_text">테스트용 임시 텍스트</p>
-                    <div class="comment_bottom_comment_toolbar">
-                        <button class="comment_bottom_comment_toolbar_btn">👍 3</button>
-                        <button class="comment_bottom_comment_toolbar_btn">👎</button>
-                        <button class="comment_bottom_comment_toolbar_btn">답글</button>
-                    </div>
-                </div>
-            </div>
-            <div class="comment_bottom">
-                <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
-                <div class="comment_bottom_comment">
-                    <p class="commnet_bottom_comment_profile">
-                        <span class="comment_bottom_comment_name">유저8</span>
-                        <span class="comment_bottom_comment_time">2개월 전</span>
-                    </p>
-                    <p class="comment_bottom_comment_text">테스트용 임시 텍스트</p>
-                    <div class="comment_bottom_comment_toolbar">
-                        <button class="comment_bottom_comment_toolbar_btn">👍 3</button>
-                        <button class="comment_bottom_comment_toolbar_btn">👎</button>
-                        <button class="comment_bottom_comment_toolbar_btn">답글</button>
-                    </div>
-                </div>
-            </div>
-            <div class="comment_bottom">
-                <img class="comment_bottom_pic" src="https://placehold.co/60x60" alt="profile_other">
-                <div class="comment_bottom_comment">
-                    <p class="commnet_bottom_comment_profile">
-                        <span class="comment_bottom_comment_name">유저9</span>
-                        <span class="comment_bottom_comment_time">2개월 전</span>
-                    </p>
-                    <p class="comment_bottom_comment_text">테스트용 임시 텍스트</p>
-                    <div class="comment_bottom_comment_toolbar">
-                        <button class="comment_bottom_comment_toolbar_btn">👍 3</button>
                         <button class="comment_bottom_comment_toolbar_btn">👎</button>
                         <button class="comment_bottom_comment_toolbar_btn">답글</button>
                     </div>
