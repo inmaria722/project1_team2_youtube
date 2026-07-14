@@ -396,14 +396,65 @@ header {
   margin-left: 240px;
 }
 
+/* ================================================
+   모바일 반응형 레이아웃 (768px 이하)
+=================================================== */
 @media (max-width: 768px) {
   .sidebar {
-    opacity: 0;
-    visibility: hidden;
+    position: fixed;
+    top: 56px;
+    left: -240px;
+    width: 240px;
+    opacity: 1;
+    visibility: visible;
+    transition: left 0.3s ease;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+
+    transition-duration: 0s !important;
+
+    transition-property: left, width;
+    transition-timing-function: ease;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .sidebar .menu-item,
+  .sidebar .hide-on-close {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
   }
 
   .sidebar-checkbox:checked ~ .sidebar {
-    opacity: 1;
-    visibility: visible;
+    left: 0;
+    width: 240px;
+  }
+
+  .sidebar-checkbox:checked ~ .channel-banner-box,
+  .sidebar-checkbox:checked ~ .hero-video,
+  .sidebar-checkbox:checked ~ .playlists {
+    margin-left: 0 !important;
+  }
+
+  .channel-banner-box,
+  .hero-video,
+  .playlists {
+    margin-left: 0 !important;
+    transition: none;
+  }
+
+  /* =======================
+     오버레이(배경 어둡게)
+  ========================== */
+
+  .sidebar-checkbox:checked ~ .sidebar::before {
+    content: "";
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    cursor: pointer;
   }
 }
