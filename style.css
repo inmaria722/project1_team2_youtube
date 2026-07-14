@@ -760,13 +760,23 @@ label[for="sub_on"].sub_btn:hover {
     background: #a00;
 }
 
-.sub_btn.is_subscribed {
-    background: var(--tag-off);
-    color: var(--text-sub);
+label[for="sub_on"].sub_btn:active {
+    background: #800;
 }
 
 .sub_btn.is_subscribed {
+    background: var(--tag-off);
+    color: var(--text-sub);
     display: none;
+    transition: background 0.2s;
+}
+
+.sub_btn.is_subscribed:hover {
+    background: #5a5a5a;
+}
+
+.sub_btn.is_subscribed:active {
+    background: #6e6e6e;
 }
 
 #sub_on:checked ~ .video label[for="sub_on"].sub_btn,
