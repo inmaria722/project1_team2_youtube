@@ -33,21 +33,23 @@ body {
 
 .video {
     display: grid;
-    grid-template-columns: minmax(0, 670px) minmax(300px, 430px);
+    grid-template-columns: 1fr 430px;
     grid-template-rows: auto 1fr;
     grid-template-areas:
         "primary secondary"
         "comment secondary";
     align-items: start;
-    justify-content: center;
     gap: 20px;
-    margin-left: 240px;
+    margin-left: 70px;
     padding: 20px;
+    transition: margin-left 0.2s ease;
 }
 
 .primary { grid-area: primary; }
 .secondary { grid-area: secondary; }
 .comment { grid-area: comment; }
+
+.video_info, .channel, .channel_mid, .comment { max-width: 100%; }
 
 video {
     background: transparent no-repeat 0 0;
@@ -233,16 +235,14 @@ header {
 ===================== */
 
 .primary {
-    flex: 7;
     min-width: 0;
-    max-width: 670px;
 }
 
 .video_player {
     position: relative;
     width: 100%;
-    max-width: 640px;
     height: auto;
+    aspect-ratio: 16 / 9 ;
     color: var(--text-main);
     overflow: hidden;
 }
@@ -355,7 +355,6 @@ header {
     margin-top: 18px;
     padding-bottom: 15px;
     width: 100%;
-    max-width: 640px;
     height: auto;
     border-bottom: 1px solid var(--tag-off);
 }
@@ -411,7 +410,6 @@ header {
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 640px;
     margin-top: 16px;
 }
 
@@ -443,7 +441,6 @@ header {
     font-size: 14px;
     padding-left: 75px;
     width: 100%;
-    max-width: 640px;
     line-height: 1.5;
     padding-bottom: 20px;
 }
@@ -464,7 +461,6 @@ header {
 ===================== */
 
 .comment {
-    max-width: 640px;
     margin-top: 28px;
 }
 
@@ -645,7 +641,6 @@ header {
 ===================== */
 
 .secondary {
-    flex: 3;
     min-width: 200px;
     max-width: 430px;
 }
@@ -983,11 +978,7 @@ label[for="sub_on"].sub_btn:active {
     flex-direction: column;
 }
 
-.sidebar-checkbox:checked ~ .channel-banner-box,
-.sidebar-checkbox:checked ~ .hero-video,
-.sidebar-checkbox:checked ~ .playlists {
-    margin-left: 240px;
-}
+
 
 @media (max-width: 768px) {
     .sidebar {
@@ -1004,9 +995,19 @@ label[for="sub_on"].sub_btn:active {
 /* ==============================
     8. 반응형
 =============================== */
+@media (min-width: 1025px) {
+    .sidebar-checkbox:checked ~ .channel-banner-box,
+    .sidebar-checkbox:checked ~ .hero-video,
+    .sidebar-checkbox:checked ~ .playlists,
+    .sidebar-checkbox:checked ~ .video {
+        margin-left: 240px;
+    }
+}
 
 @media (max-width: 1024px) {
     .sidebar { display: none; }
+
+
     
     .video {
         grid-template-columns: minmax(0, 1fr);
@@ -1051,13 +1052,13 @@ label[for="sub_on"].sub_btn:active {
     .secondary_list_more { background: rgba(62,116,255,0.15);}
 }
 
-@media (max-width: 768px) {
+@media (min-width: 601px) and (max-width: 768px) {
     .secondary_list {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .secondary_list {
         grid-template-columns: 1fr;
     }
@@ -1072,6 +1073,9 @@ label[for="sub_on"].sub_btn:active {
         width: 100%;
         height: 100%;
     }
+
+    .video_info_bottom_view { font-size: 15px;}
+    .video_info_bottom_controls button { font-size: 12px; }
 
     .video_info,
     .channel,
