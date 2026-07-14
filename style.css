@@ -1,0 +1,409 @@
+/* ===================
+    0. 리샛 + 공통 + 색
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #212121;
+  --bg-2: #121212;
+  --bg-3: #181818;
+  --border: #303030;
+  --text: #fff;
+  --black: #000;
+  --gray: #aaaaaa;
+  --gray-2: #eaeaea;
+  --y-point: #cc0000;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+  min-height: 100vh;
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ===================
+    1. 헤더
+====================== */
+header {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text);
+  transition: backgound-color 0.2s ease;
+  border-radius: 50%;
+}
+
+.sidebar-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-btn {
+  cursor: pointer;
+}
+
+.header_logo {
+  width: 120px;
+}
+
+.search-box-wrap {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 470px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.search-typing {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-2);
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  color: var(--border);
+  cursor: text;
+}
+
+.search-icon {
+  flex-shrink: 0;
+  width: auto;
+  height: 100%;
+  padding: 2px 20px;
+  background-color: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.search-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.mic-icon-box {
+  width: 40px;
+  height: 40px;
+  background-color: var(--black);
+  border-radius: 100px;
+  margin-left: 6px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.mic-icon-box:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.mic-icon {
+  width: auto;
+  height: 100%;
+}
+
+.header_menu {
+  width: 204px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.menu-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.apps,
+.notif {
+  padding: 12px;
+}
+
+.header-profile {
+  display: block;
+  width: 40px;
+  padding: 4px;
+  overflow: hidden;
+}
+
+.header-profile img {
+  border-radius: 50%;
+}
+/* ===================
+    2. 사이드바
+====================== */
+
+/*
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  z-index: 9999;
+  background-color: var(--bg);
+  padding-right: 15px;
+  padding-bottom: 100px;
+  width: 240px;
+  height: 100vh;
+  overflow-y: auto;
+  color: var(--text);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+}
+
+.sidebar ul {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(234, 234, 234, 0.1);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 10px 10px 10px 24px;
+  cursor: pointer;
+}
+
+.sidebar img {
+  width: 16px;
+}
+
+.menu-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 10px 24px;
+  color: var(--gray);
+}
+
+.youtuber img {
+  width: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.sidebar .footer {
+  border: none;
+}
+
+.footer-item {
+  padding: 16px 24px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gray);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+*/
+
+.sidebar-checkbox {
+  display: none;
+}
+
+/* =========================
+   사이드바 기본 상태 (닫힘)
+============================ */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  z-index: 9999;
+  background-color: var(--bg);
+  padding-bottom: 50px;
+  width: 70px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: var(--text);
+  transition: width ease;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.sidebar ul {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(234, 234, 234, 0.1);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 12px 0 12px 24px;
+  cursor: pointer;
+  width: 100%;
+  transition: backgound-color 0.2s ease;
+  border-radius: 10px;
+}
+
+.menu:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar img {
+  width: 18px;
+  flex-shrink: 0;
+}
+
+/* 기본 상태(닫힘)일 때 텍스트 숨기기 */
+.sidebar .menu-item {
+  display: none;
+}
+
+/* 기본 상태(닫힘)일 때 푸터, 타이틀 숨기기 */
+.sidebar .hide-on-close {
+  display: none;
+}
+
+.menu-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 10px 24px;
+  color: var(--gray);
+}
+
+.youtuber img {
+  width: 22px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.sidebar .footer {
+  border: none;
+}
+
+.footer-item {
+  padding: 16px 24px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gray);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* ================================================
+   버튼이 클릭되어 체크박스가 ON 되었을 때 (열림)
+=================================================== */
+
+/* 사이드바 너비를 원래대로 */
+.sidebar-checkbox:checked ~ .sidebar {
+  width: 240px;
+  padding-right: 15px;
+  padding-bottom: 100px;
+}
+
+/* 숨겨졌던 메뉴 글자들을 다시 보이게 */
+.sidebar-checkbox:checked ~ .sidebar .menu-item {
+  display: block;
+}
+
+/* 닫혔을 때 숨겼던 하단 메뉴들과 푸터를 다시 보여주기 */
+.sidebar-checkbox:checked ~ .sidebar .hide-on-close {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-checkbox:checked ~ .channel-banner-box,
+.sidebar-checkbox:checked ~ .hero-video,
+.sidebar-checkbox:checked ~ .playlists {
+  margin-left: 240px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .sidebar-checkbox:checked ~ .sidebar {
+    opacity: 1;
+    visibility: visible;
+  }
+}
