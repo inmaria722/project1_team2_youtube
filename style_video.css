@@ -1,0 +1,1086 @@
+/* ======================
+    0. 리셋 + 공통 + 색상
+====================== */
+
+* { margin : 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --bg: #212121;/* 전체 배경 */
+    --bg-body: #181818; 
+    --bg-2: #121212;
+    --bg-side: #202020;
+    --border: #303030;
+    --black: #000;
+    --gray: #aaaaaa;
+    --text: #fff;
+    --gray-2: #eaeaea;
+    --y-point: #cc0000;
+    --text-main: #f5f5f5; /* 메인 텍스트 */
+    --text-sub: #d3d3d3; /* 서브 텍스트 */
+    --text-bottom: #7c7c7c; /* 하단 텍스트 */
+    --text-tag: #0a0a0a; /* 태그 활성화 텍스트 */
+    --tag-on: #ffffff; /* 태그 활성화 */
+    --tag-off: #464646; /* 태그 비활성화 */
+}
+
+body {
+    font-family: 'Youtube Sans', 'Roboto Sans', Arial, sans-serif;
+    background-color: var(--bg-body);
+    min-height: 100vh;
+    line-height: 1.6; /* 헤더 높이 확인후 수정 */
+    padding-top: 60px;
+}
+
+.video {
+    display: grid;
+    grid-template-columns: 1fr 430px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "primary secondary"
+        "comment secondary";
+    align-items: start;
+    gap: 20px;
+    margin-left: 70px;
+    padding: 20px;
+    transition: margin-left 0.2s ease;
+}
+
+.primary { grid-area: primary; }
+.secondary { grid-area: secondary; }
+.comment { grid-area: comment; }
+
+.video_info, .channel, .channel_mid, .comment { max-width: 100%; }
+
+video {
+    background: transparent no-repeat 0 0;
+    object-fit: cover;
+    object-position: center 10%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ===================
+    1. 헤더
+====================== */
+header {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text);
+    transition: backgound-color 0.2s ease;
+    border-radius: 50%;
+}
+
+.sidebar-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-btn {
+    cursor: pointer;
+}
+
+.header_logo {
+    width: 120px;
+}
+
+.search-box-wrap {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 470px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    border: 1px solid var(--border);
+    cursor: pointer;
+}
+
+.search-typing {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-2);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: var(--border);
+    cursor: text;
+}
+
+.search-icon {
+    flex-shrink: 0;
+    width: auto;
+    height: 100%;
+    padding: 2px 20px;
+    background-color: var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.search-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.mic-icon-box {
+    width: 40px;
+    height: 40px;
+    background-color: var(--black);
+    border-radius: 100px;
+    margin-left: 6px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.mic-icon-box:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.mic-icon {
+    width: auto;
+    height: 100%;
+}
+
+.header_menu {
+    width: 204px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.menu-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.apps,
+.notif {
+    padding: 12px;
+}
+
+.header-profile {
+    display: block;
+    width: 40px;
+    padding: 4px;
+    overflow: hidden;
+}
+
+.header-profile img {
+    border-radius: 50%;
+}
+
+/*  ====================
+    2. 비디오 칸
+===================== */
+
+.primary {
+    min-width: 0;
+}
+
+.video_player {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9 ;
+    color: var(--text-main);
+    overflow: hidden;
+}
+
+.video_player_youtube_controls button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
+.video_player video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video_player_youtube {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.video_player:hover .video_player_youtube {
+    opacity: 1;
+}
+
+.video_player_youtube_title {
+    position: absolute;
+    display: flex;
+    top: 0px; right: 0px; left: 0px;
+    justify-content: space-between;
+    align-content: center;
+    padding: 20px 25px;
+    z-index: 10;
+    background: linear-gradient(0deg, rgba(0,0,0,0), rgba(0,0,0,0.7));
+}
+
+.video_player_youtube_title_name{
+    font-size: 20px;
+    color: var(--text-main);
+}
+
+.video_player_youtube_title_btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.video_player_youtube_controls {
+    position: absolute;
+    left:0; right: 0; bottom: 0;
+    padding: 15px 15px 10px 15px;
+    background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.7));
+}
+
+
+.video_player_youtube_controls_progress {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.video_player_youtube_controls_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video_player_youtube_controls_btn button {
+    padding: 1px 3px;
+    border-radius: 15px;
+    transition: background 0.2s;
+}
+
+.video_player_youtube_controls_btn button:hover {
+    background: rgba(0,0,0,0.7);
+    border-radius: 15px;
+}
+
+.video_player_youtube_controls_btn_left {
+    display: flex;
+    gap: 25px;
+    padding-left: 20px;
+    align-items: center;
+}
+.video_player_youtube_controls_btn_left_play { font-size: 20px; }
+.video_player_youtube_controls_btn_left_next { font-size: 30px; }
+.video_player_youtube_controls_btn_left_sound { font-size: 23px; }
+
+.video_player_youtube_controls_btn_right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.video_player_youtube_controls_btn_right_cc { font-size: 21px; }
+.video_player_youtube_controls_btn_right_hd { font-size: 25px; }
+.video_player_youtube_controls_btn_right_theater { font-size: 40px; }
+.video_player_youtube_controls_btn_right_small { font-size: 30px; }
+.video_player_youtube_controls_btn_right_full { font-size: 30px; }
+
+/*=======================
+    2-2. 정보
+========================*/
+
+.video_info {
+    margin-top: 18px;
+    padding-bottom: 15px;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid var(--tag-off);
+}
+
+.video_info_title {
+    color: var(--text-main);
+}
+
+.video_info_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video_info_bottom_view {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-bottom);
+}
+
+.video_info_bottom_controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.video_info_bottom_controls button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: var(--text-main);
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 18px;
+    transition: background 0.1s;
+}
+
+.video_info_bottom_controls button:hover {
+    background: var(--tag-on);
+    color: var(--text-tag);
+    border-radius: 18px;
+}
+
+/* =====================
+    3. 채널 칸
+===================== */
+
+.channel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.channel_top_propic{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.channel_top_proname {color: var(--text-main); font-size: 16px; cursor: pointer;}
+.channel_top_viewer {color: var(--text-bottom); font-size: 12px;}
+
+.channel_top_button {
+    margin-left: auto;
+    background: #c00;
+    color: var(--text-main);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 9px 22px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.channel_mid {
+    border-bottom: 1px solid var(--tag-off);
+    font-size: 14px;
+    padding-left: 75px;
+    width: 100%;
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+
+.channel_mid_description {
+    color: var(--text-main);
+    margin: 16px 0 12px 0;
+}
+
+.channel_bottom {
+    color: #aaaaaa;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* =====================
+    4. 댓글
+===================== */
+
+.comment {
+    margin-top: 28px;
+}
+
+.comment_top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+    gap: 16px;
+    color: var(--text-main);
+}
+
+.comment_top_comment {
+    border: none;
+    font-size: 18px;
+}
+
+.comment_top_sort {
+    position: relative;
+}
+
+.comment_top_sort_toggle {
+    display: none;
+}
+
+.comment_top_sort label.comment_top_button {
+    cursor: pointer;
+}
+
+.comment_top_button {
+    border: none;
+    font-size: 18px;
+    background: none;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.comment_top_sort_dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 320px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 500;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+}
+
+.comment_top_sort_toggle:checked ~ .comment_top_sort_dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.comment_top_sort_dropdown_item {
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.comment_top_sort_dropdown_item:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+.comment_top_sort_dropdown_item.is_selected {
+    background: #b8b8b8;
+}
+
+.comment_top_sort_dropdown_item_title {
+    color: var(--text-tag);
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 2px 0;
+}
+
+.comment_top_sort_dropdown_item_sub {
+    color: #606060;
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.comment_top_usercomment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.comment_top_usercomment_pic, .comment_bottom_pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 16px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.comment_top_usercomment_comment {
+    flex: 1;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--tag-off);
+    font-size: 16px;
+    padding: 6px 0;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.comment_top_usercomment_comment:focus { 
+    border-bottom-color: white;
+    color: var(--text-main);
+}
+
+/*==================
+    4-2. 하단 댓글
+===================*/
+
+.comment_bottom {
+    display: flex;
+    margin-bottom: 28px;
+}
+
+.commnet_bottom_comment_profile {
+    margin: 0 0 6px 0;
+}
+
+.comment_bottom_comment_name {
+    color: var(--text-main);
+    font-size: 15px;
+    font-weight: 700;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.comment_bottom_comment_time {
+    color: var(--text-bottom);
+    font-size: 15px;
+}
+
+.comment_bottom_comment_text {
+    color: var(--text-main);
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 0 0 10px 0;
+}
+
+.comment_bottom_comment_toolbar {
+    display: flex;
+    align-items: center;
+    color: var(--text-main);
+    gap: 15px;
+}
+
+.comment_bottom_comment_toolbar_btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: var(--text-main);
+    padding: 6px 8px;
+    border-radius: 18px;
+    transition: background 0.2s;
+}
+
+.comment_bottom_comment_toolbar_btn:hover {
+    background: var(--tag-on);
+    color: var(--text-tag);
+    border-radius: 18px;
+}
+/* =====================
+    5. 영상 목록
+===================== */
+
+.secondary {
+    min-width: 200px;
+    max-width: 430px;
+}
+
+.secondary_tag {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.secondary_tag_btn {
+    background: #555;
+    color: var(--text-main);
+    border: 1px solid #3f3f3f;
+    border-radius: 18px;
+    font-size: 16px;
+    padding: 6px 14px;
+    cursor: pointer;
+}
+
+.secondary_tag_btn:active {
+    background: #272727;
+}
+
+.secondary_tag_btn.is_active {
+    background: var(--tag-on);
+    color: var(--text-tag);
+    border-color: var(--tag-on);
+}
+
+.secondary_list_video {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.secondary_list_video:hover {
+    background: rgba(0,0,0,0.7);
+    border-radius: 10px;
+}
+
+.secondary_list_video_thumbnail {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.secondary_list_video_thumbnail img {
+    width: 225px; height: 130px;
+    object-fit: cover;
+    display: block;
+}
+
+.secondary_list_video_thumbnail_time {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: var(--text-main);
+    background: rgba(0,0,0,0.8);
+    font-size: 2px 5px;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 2px 5px;
+}
+
+.secondary_list_video_info_title {
+    color: var(--text-main);
+    font-size: 18px;
+    line-height: 1.3;
+    margin: 0 0 6px 0;
+}
+
+.secondary_list_video_info_channel {
+    color: var(--text-bottom);
+    font-size: 15px;
+    margin: 0 0 3px 0;
+}
+
+.secondary_list_video_info_view {
+    color: var(--text-bottom);
+    font-size: 15px;
+    margin: 0;
+}
+
+/* =========================
+    6. 모달
+========================== */
+
+.sub_radio{
+    display: none;
+}
+
+.sub_btn{
+    margin-left: auto;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 9px 22px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+label[for="sub_on"].sub_btn {
+    background: #c00;
+    color: var(--text-main);
+}
+
+label[for="sub_on"].sub_btn:hover {
+    background: #a00;
+}
+
+label[for="sub_on"].sub_btn:active {
+    background: #800;
+}
+
+.sub_btn.is_subscribed {
+    background: var(--tag-off);
+    color: var(--text-sub);
+    display: none;
+    transition: background 0.2s;
+}
+
+.sub_btn.is_subscribed:hover {
+    background: #5a5a5a;
+}
+
+.sub_btn.is_subscribed:active {
+    background: #6e6e6e;
+}
+
+#sub_on:checked ~ .video label[for="sub_on"].sub_btn,
+#sub_modal:checked ~ .video label[for="sub_on"].sub_btn {
+    display: none;
+}
+
+#sub_on:checked ~ .video .sub_btn.is_subscribed,
+#sub_modal:checked ~ .video .sub_btn.is_subscribed {
+    display: block;
+}
+
+.sub_modal_overlay {
+    display: flex;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    visibility: hidden;
+}
+
+#sub_modal:checked ~ .sub_modal_overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub_modal {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px 24px 16px 24px;
+    min-width: 340px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.sub_modal_text {
+    color: #606060;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.sub_modal_text strong {
+    color: #0a0a0a;
+    font-weight: 500;
+}
+
+.sub_modal_btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.sub_modal_btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0a0a0a;
+    cursor: pointer;
+    border-radius: 18px;
+    transition: background 0.2s;
+}
+
+.sub_modal_btn:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+.sub_modal_btn_cancel {
+    color: #f0243e;
+}
+
+.sub_modal_btn_cancel:hover {
+    background: rgba(240, 36, 62, 0.08);
+}
+
+/* ===============================
+    7-1. 사이드 바
+================================ */
+
+.sidebar-checkbox {
+    display: none;
+}
+
+.menu-btn {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    display: inline-block;
+}
+
+
+/* ===============================
+    7-2. 사이드 바 닫힘
+================================ */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    z-index: 9999;
+    background-color: var(--bg);
+    padding-bottom: 50px;
+    width: 70px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: var(--text);
+    transition: width ease;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.sidebar ul {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(234, 234, 234, 0.1);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 12px 0 12px 24px;
+    cursor: pointer;
+    width: 100%;
+    transition: backgound-color 0.2s ease;
+    border-radius: 10px;
+}
+
+.menu:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar img {
+    width: 18px;
+    flex-shrink: 0;
+}
+
+/* 기본 상태(닫힘)일 때 텍스트 숨기기 */
+.sidebar .menu-item {
+    display: none;
+}
+
+/* 기본 상태(닫힘)일 때 푸터, 타이틀 숨기기 */
+.sidebar .hide-on-close {
+    display: none;
+}
+
+.menu-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 10px 24px;
+    color: var(--gray);
+}
+
+.youtuber img {
+    width: 22px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sidebar .footer {
+    border: none;
+}
+
+.footer-item {
+    padding: 16px 24px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--gray);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+/* ================================================
+    버튼이 클릭되어 체크박스가 ON 되었을 때 (열림)
+=================================================== */
+
+/* 사이드바 너비를 원래대로 */
+.sidebar-checkbox:checked ~ .sidebar {
+    width: 240px;
+    padding-right: 15px;
+    padding-bottom: 100px;
+}
+
+/* 숨겨졌던 메뉴 글자들을 다시 보이게 */
+.sidebar-checkbox:checked ~ .sidebar .menu-item {
+    display: block;
+}
+
+/* 닫혔을 때 숨겼던 하단 메뉴들과 푸터를 다시 보여주기 */
+.sidebar-checkbox:checked ~ .sidebar .hide-on-close {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sidebar-checkbox:checked ~ .sidebar {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* ==============================
+    8. 반응형
+=============================== */
+@media (min-width: 1025px) {
+    .sidebar-checkbox:checked ~ .channel-banner-box,
+    .sidebar-checkbox:checked ~ .hero-video,
+    .sidebar-checkbox:checked ~ .playlists,
+    .sidebar-checkbox:checked ~ .video {
+        margin-left: 240px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .sidebar { display: none; }
+
+
+    
+    .video {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: none;
+        grid-template-areas: 
+            "primary"
+            "secondary"
+            "comment";  
+        margin-left: 0;
+    }
+
+    .primary, .secondary, .comment{
+        width: 100%;
+        max-width: 100%;
+        justify-self: center;
+    }
+
+    .video_player, .video_info, .channel, .channel_mid, .comment { max-width: 100%; }
+
+    .secondary { min-width: 0; }
+
+    .secondary_list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 16px;
+    }
+
+    .secondary_list_video {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    .secondary_list_video_thumbnail img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    .secondary_list_more { background: rgba(62,116,255,0.15);}
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .secondary_list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .secondary_list {
+        grid-template-columns: 1fr;
+    }
+
+    .video_player {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .video_player video {
+        width: 100%;
+        height: 100%;
+    }
+
+    .video_info_bottom_view { font-size: 15px;}
+    .video_info_bottom_controls button { font-size: 12px; }
+
+    .video_info,
+    .channel,
+    .channel_mid {
+        min-width: 0;
+        max-width: 100%;
+    }
+}
