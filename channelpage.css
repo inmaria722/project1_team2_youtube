@@ -1,0 +1,366 @@
+/* ===================
+    1. 채널 배너
+====================== */
+.channel-banner-box {
+  margin-top: 56px;
+  margin-left: 70px;
+}
+
+.banner-img {
+  height: 200px;
+}
+
+.banner-img img {
+  height: 100%;
+}
+
+/* ===================
+    2. 프로필
+====================== */
+.profile-box {
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 65px 4px 65px;
+  color: var(--text);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-name {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.profile-subscribers {
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+.sub-btn {
+  border: none;
+  background-color: var(--y-point);
+  border-radius: 2px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sub-btn:hover {
+  background-color: #a80505;
+}
+
+/* ===================
+    3. 툴 바
+====================== */
+.toolbar {
+  background-color: var(--bg);
+  padding: 0 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text);
+}
+
+.tool-box {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.tool {
+  display: inline-block;
+  padding: 16px 32px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--gray);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.home {
+  border-bottom: 1px solid var(--text);
+}
+
+.tool:not(.home):hover {
+  border-bottom: 1px solid rgba(234, 234, 234, 0.5);
+}
+
+.toolbar_search-box {
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  gap: 24px;
+  cursor: pointer;
+}
+
+.toolbar_search-btn {
+  flex-shrink: 0;
+}
+
+.toolbar_more-btn {
+  transform: rotate(-90deg);
+  flex-shrink: 0;
+}
+
+/* ===================
+4. 대표 동영상
+====================== */
+.hero-video {
+  padding: 24px 65px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+  color: var(--text);
+  margin-left: 70px;
+}
+
+.player {
+  width: 424px;
+  min-width: 240px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.player-top {
+  display: flex;
+  padding: 14px 16px;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.player-title {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-info {
+  width: 20px;
+  height: 20px;
+}
+
+.bar-full {
+  left: 16px;
+  right: 16px;
+  bottom: 50px;
+  height: 3px;
+  background-color: rgba(234, 234, 234, 0.2);
+}
+
+.bar-loaded {
+  width: 60%;
+  height: 100%;
+  background-color: rgba(234, 234, 234, 0.5);
+}
+
+.bar-played {
+  width: 70%;
+  height: 100%;
+  background-color: var(--y-point);
+}
+
+.player-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px 25px;
+}
+
+.bottom-btn {
+  width: 20px;
+}
+
+.playtime {
+  font-size: 0.75rem;
+  align-self: flex-start;
+  color: var(--gray-2);
+  white-space: nowrap;
+}
+
+.block {
+  width: 30px;
+}
+
+/* player:hover */
+.player-top,
+.bar-full,
+.player-bottom {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
+.player:hover .player-top,
+.player:hover .bar-full,
+.player:hover .player-bottom {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero-video_desc-box {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-video_title {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.hero-video_stats {
+  color: var(--gray);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.hero-video_desc {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--gray);
+}
+
+/* ===================
+    5. 플레이리스트
+====================== */
+.playlists {
+  margin-left: 70px;
+}
+
+.playlist {
+  padding: 0 65px;
+  color: var(--text);
+}
+
+.playlist_title-box {
+  padding: 20px 0 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-top: 1px solid rgba(170, 170, 170, 0.3);
+}
+
+.playlist-title {
+  cursor: pointer;
+}
+
+.play-all-btn {
+  color: var(--gray);
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.2s ease;
+  padding: 8px 15px;
+}
+
+.play-all-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.playlist_item-box {
+  padding: 24px 0;
+  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.playlist-item {
+  width: 100%;
+  cursor: pointer;
+}
+
+.player-sm {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.player-sm > img {
+  transition: transform 0.2s ease;
+}
+
+.playlist-item:hover > .player-sm > img {
+  transform: scale(1.1);
+}
+
+.playlist-video_text-box {
+  padding: 10px 0;
+  transition: background-color 0.2s ease;
+  border-radius: 10px;
+}
+
+.playlist-item:hover .playlist-video_text-box {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.playlist-video_title {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: wrap;
+  line-height: 1.6;
+}
+
+.playlist-video_stats {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===================
+    6. 반응형
+====================== */
+@media (max-width: 768px) {
+  .channel-banner-box,
+  .hero-video,
+  .playlists {
+    margin-left: 0;
+  }
+
+  .player-top,
+  .player-bottom,
+  .bar-full {
+    display: none;
+  }
+
+  .tool {
+    padding: 16px 20px;
+    font-size: 0.85rem;
+  }
+
+  .toolbar_search-btn {
+    display: none;
+  }
+}
