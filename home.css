@@ -30,7 +30,6 @@
     width: calc(100vw - 70px);
     padding-top: 56px;
     min-width: 0;
-    transition: margin-left 0.2s ease;
 }
 .filter {
     width: 100%;
