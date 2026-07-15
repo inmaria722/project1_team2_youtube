@@ -26,15 +26,19 @@
       <!-- 헤더 - 검색 박스 -->
       <div class="search-box-wrap">
         <!-- 검색 박스 - 검색 -->
-        <div class="search-box">
-          <!-- 검색 - 검색 입력 창 -->
-          <div class="search-typing">Search</div>
+        <form class="search-box" action="/search" method="GET">
+          <input
+            type="text"
+            name="search_query"
+            class="search-typing"
+            placeholder="Search"
+            required
+          />
 
-          <!-- 검색 - 돋보기 버튼 -->
-          <div class="search-icon">
+          <button type="submit" class="search-icon">
             <img src="./images/search.png" alt="돋보기 아이콘" />
-          </div>
-        </div>
+          </button>
+        </form>
 
         <!-- 검색 박스 - 마이크 버튼 -->
         <div class="mic-icon-box">
