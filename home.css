@@ -31,7 +31,7 @@
 }
 .home-main {
   margin-left: 70px;
-  width: calc(100vw - 70px);
+  width: 100vw;
   padding-top: 56px;
   min-width: 0;
 }
@@ -243,6 +243,11 @@ button {
   .main-grid {
     margin: 16px;
     gap: 14px;
+  }
+
+  .home-main {
+    margin-left: 0;
+    width: 100vw;
   }
 }
 @media (max-width: 480px) {
