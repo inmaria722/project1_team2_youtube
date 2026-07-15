@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="videopage.css" />
+    <title>Videopage</title>
+  </head>
+  <body>
+    <!-- 인풋 라디오 -->
+    <input
+      type="radio"
+      name="sub_state"
+      id="sub_off"
+      class="sub_radio"
+      checked
+    />
+    <input type="radio" name="sub_state" id="sub_on" class="sub_radio" />
+    <input type="radio" name="sub_state" id="sub_modal" class="sub_radio" />
+    <!-- 헤더 -->
+    <header>
+      <!-- 헤더 - 왼쪽 묶음 -->
+      <div class="header-left">
+        <!-- 헤더 - 사이드바 버튼 -->
+        <button class="sidebar-btn">
+          <label for="sidebar-toggle" class="menu-btn">☰</label>
+        </button>
+        <!-- 헤더 - 유튜브 로고 -->
+        <a href="./index.html" class="header_logo"
+          ><img src="./images/youtube logo.png" alt="유튜브 로고"
+        /></a>
+      </div>
+
+      <!-- 헤더 - 검색 박스 -->
+      <div class="search-box-wrap">
+        <!-- 검색 박스 - 검색 -->
+        <div class="search-box">
+          <!-- 검색 - 검색 입력 창 -->
+          <div class="search-typing">Search</div>
+          <!-- 검색 - 돋보기 버튼 -->
+          <div class="search-icon">
+            <img src="./images/search.png" alt="돋보기 아이콘" />
+          </div>
+        </div>
+        <!-- 검색 박스 - 마이크 버튼 -->
+        <div class="mic-icon-box">
+          <img
+            class="mic-icon"
+            src="./images/microphone.png"
+            alt="마이크 아이콘"
+          />
+        </div>
+      </div>
+
+      <!-- 헤더 - 네비게이션 -->
+      <nav class="header_menu">
+        <!-- 네비게이션 - 동영상 추가 버튼 -->
+        <a href="#" class="create menu-icon">
+          <img src="./images/create.png" alt="동영상 추가 아이콘" />
+        </a>
+        <!-- 네비게이션 - 앱 버튼 -->
+        <a href="#" class="apps menu-icon">
+          <img src="./images/apps.png" alt="앱 아이콘" />
+        </a>
+        <!-- 네비게이션 - 알림 버튼 -->
+        <a href="#" class="notif menu-icon">
+          <img src="./images/notification.png" alt="알림 아이콘" />
+        </a>
+        <!-- 네비게이션 - 프로필 버튼 -->
+        <a href="#" class="header-profile">
+          <img src="./images/header_nav_profile.jpg" alt="프로필 이미지" />
+        </a>
+      </nav>
+    </header>
+
+    <!-- 사이드바 -->
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-checkbox" />
+
+    <nav class="sidebar">
+      <!-- 사이드바 - 최상단 -->
+      <ul class="top menu-box">
+        <!-- 최상단 - 홈 -->
+        <li class="menu">
+          <img src="./images/Home.png" alt="홈 아이콘" />
+          <a href="#" class="menu-item">홈</a>
+        </li>
+        <!-- 최상단 - 탐색 -->
+        <li class="menu">
+          <img src="./images/Explore.png" alt="탐색 아이콘" />
+          <a href="#" class="menu-item">탐색</a>
+        </li>
+        <!-- 최상단 - 구독 -->
+        <li class="menu">
+          <img src="./images/subscription.png" alt="구독 아이콘" />
+          <a href="#" class="menu-item">구독</a>
+        </li>
+      </ul>
+
+      <!-- 사이드바 - 상단 -->
+      <ul class="top-2 menu-box">
+        <!-- 상단 - 라이브러리 -->
+        <li class="menu">
+          <img src="./images/Library.png" alt="라이브러리 아이콘" />
+          <a href="#" class="menu-item">라이브러리</a>
+        </li>
+        <!-- 상단 - 기록 -->
+        <li class="menu">
+          <img src="./images/History.png" alt="기록 아이콘" />
+          <a href="#" class="menu-item">기록</a>
+        </li>
+        <!-- 상단 - 내 동영상 -->
+        <li class="menu">
+          <img src="./images/Your Videos.png" alt="내 동영상 아이콘" />
+          <a href="#" class="menu-item">내 동영상</a>
+        </li>
+        <!-- 상단 - 나중에 볼 동영상 -->
+        <li class="menu">
+          <img src="./images/Watch Later.png" alt="나중에 볼 동영상 아이콘" />
+          <a href="#" class="menu-item">나중에 볼 동영상</a>
+        </li>
+        <!-- 상단 - 좋아요 표시한 동영상 -->
+        <li class="menu">
+          <img
+            src="./images/Liked Videos.png"
+            alt="좋아요 표시한 동영상 아이콘"
+          />
+          <a href="#" class="menu-item">좋아요 표시한 동영상</a>
+        </li>
+        <!-- 상단 - 더보기 -->
+        <li class="menu">
+          <img
+            class="show-more-icon"
+            src="./images/Show More.png"
+            alt="더보기 아이콘"
+          />
+          <a href="#" class="menu-item">더보기</a>
+        </li>
+      </ul>
+
+      <!-- 사이드바 - 구독 -->
+      <ul class="subs">
+        <!-- 구독 - 타이틀 -->
+        <h4 class="menu-title hide-on-close">구독</h4>
+        <!-- 구독 - 아이템*7 -->
+        <li class="menu youtuber">
+          <img src="./images/subscription-01.jpg" alt="구독한 유튜버 프로필" />
+          <a href="#" class="menu-item">가오니의 메뉴판GAONI</a>
+        </li>
+        <li class="menu youtuber">
+          <img src="./images/subscription-02.jpg" alt="구독한 유튜버 프로필" />
+          <a href="#" class="menu-item">살뺴조DietJo</a>
+        </li>
+        <li class="menu youtuber">
+          <img src="./images/subscription-03.jpg" alt="구독한 유튜버 프로필" />
+          <a href="#" class="menu-item">혜안</a>
+        </li>
+        <li class="menu youtuber">
+          <img src="./images/subscription-04.jpg" alt="구독한 유튜버 프로필" />
+          <a href="#" class="menu-item">진돌</a>
+        </li>
+        <li class="menu youtuber">
+          <img src="./images/subscription-05.jpg" alt="구독한 유튜버 프로필" />
+          <a href="#" class="menu-item">찰스엔터</a>
+        </li>
+        <li class="menu youtuber">
+          <img src="./images/subscription-06.jpg" alt="구독한 유튜버 프로필" />
+          <a href="#" class="menu-item">오늘의 주우재</a>
+        </li>
+        <li class="menu youtuber">
+          <img src="./images/subscription-07.jpg" alt="구독한 유튜버 프로필" />
+          <a href="#" class="menu-item">aespa</a>
+        </li>
+        <!-- 구독 - 더보기 -->
+        <li class="menu">
+          <img
+            class="show-more-icon"
+            src="./images/Show More.png"
+            alt="더보기 아이콘"
+          />
+          <a href="#" class="menu-item">더보기</a>
+        </li>
+      </ul>
+
+      <!-- 사이드바 - 유튜브 더 보기 -->
+      <ul class="more">
+        <!-- 유튜브 더 보기 - 타이틀 -->
+        <h4 class="menu-title hide-on-close">유튜브 더 보기</h4>
+        <!-- 유튜브 더 보기 - 유튜브 프리미엄 -->
+        <li class="menu">
+          <img
+            src="./images/Youtube Premium.png"
+            alt="유튜브 프리미엄 아이콘"
+          />
+          <a href="#" class="menu-item">유튜브 프리미엄</a>
+        </li>
+        <!-- 유튜브 더 보기 - 게임 -->
+        <li class="menu">
+          <img src="./images/Gaming.png" alt="게임 아이콘" />
+          <a href="#" class="menu-item">게임</a>
+        </li>
+        <!-- 유튜브 더 보기 - 라이브 -->
+        <li class="menu">
+          <img src="./images/Live.png" alt="라이브 아이콘" />
+          <a href="#" class="menu-item">라이브</a>
+        </li>
+        <!-- 유튜브 더 보기 - 스포츠 -->
+        <li class="menu">
+          <img src="./images/Sports.png" alt="스포츠 아이콘" />
+          <a href="#" class="menu-item">스포츠</a>
+        </li>
+      </ul>
+
+      <!-- 사이드바 - 하단 -->
+      <ul class="bottom">
+        <!-- 하단 - 환경설정 -->
+        <li class="menu">
+          <img src="./images/Settings.png" alt="환경설정 아이콘" />
+          <a href="#" class="menu-item">환경설정</a>
+        </li>
+        <!-- 하단 - 신고 기록 -->
+        <li class="menu">
+          <img src="./images/Report History.png" alt="신고 기록 아이콘" />
+          <a href="#" class="menu-item">신고 기록</a>
+        </li>
+        <!-- 하단 - 도움 -->
+        <li class="menu">
+          <img src="./images/Help.png" alt="도움 아이콘" />
+          <a href="#" class="menu-item">도움</a>
+        </li>
+        <!-- 하단 - 피드백 보내기 -->
+        <li class="menu">
+          <img src="./images/Send feedback.png" alt="피드백 보내기 아이콘" />
+          <a href="#" class="menu-item">피드백 보내기</a>
+        </li>
+      </ul>
+
+      <!-- 사이드바 - 푸터 -->
+      <ul class="footer hide-on-close">
+        <li class="footer-1 footer-item">
+          <a href="#" class="footer-item-text">정보</a>
+          <a href="#" class="footer-item-text">보도자료</a>
+          <a href="#" class="footer-item-text">저작권</a>
+          <a href="#" class="footer-item-text">문의하기</a>
+          <a href="#" class="footer-item-text">크리에이터</a>
+          <a href="#" class="footer-item-text">광고</a>
+          <a href="#" class="footer-item-text">개발자 </a>
+        </li>
+        <li class="footer-2 footer-item">
+          <a href="#" class="footer-item-text">약관</a>
+          <a href="#" class="footer-item-text">개인정보처리방침</a>
+          <a href="#" class="footer-item-text">정책 및 안전</a>
+          <a href="#" class="footer-item-text">YouTube 작동의 원리</a>
+          <a href="#" class="footer-item-text">새로운 기능 테스트하기</a>
+        </li>
+        <li class="footer-copy footer-item">
+          <a href="#" class="footer-item-text">&copy; 2021 구글 LLC</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 메인(Primary) -->
+    <div class="video">
+      <!-- 메인 - 좌측 (그림자, Video, 이미지)-->
+      <main class="primary">
+        <!-- 좌측 - 비디오 칸 (그림자, Video, 이미지)-->
+        <div class="video_player">
+          <!-- 비디오칸 - 비디오 영상 -->
+          <video
+            autoplay
+            muted
+            loop
+            poster="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/main.png"
+            width="640"
+            height="360"
+          >
+            <source src="./video/video.mp4" />
+          </video>
+          <div class="video_player_youtube">
+            <div class="video_player_youtube_title">
+              <!-- 비디오 영상 - 제목 -->
+              <div class="video_player_youtube_title_name">
+                (신작) 딸을 100층에 가둔 게임, 드디어 결말이 나왔습니다ㄷㄷ;;
+              </div>
+              <!-- 비디오  영상 - 인포 아이콘 -->
+              <button class="video_player_youtube_title_btn">i</button>
+              <!-- 비디오  영상 - 영상 하단-->
+            </div>
+            <div class="video_player_youtube_controls">
+              <!-- 영상 하단 - 재생바 -->
+              <input
+                type="range"
+                class="video_player_youtube_controls_progress"
+              />
+              <!-- 영상 하단 - 좌측-->
+              <div class="video_player_youtube_controls_btn">
+                <div class="video_player_youtube_controls_btn_left">
+                  <!-- 영상 하단 - 재생 아이콘 -->
+                  <button class="video_player_youtube_controls_btn_left_play">
+                    ▶
+                  </button>
+                  <!-- 영상 하단 - 다음 아이콘 -->
+                  <button class="video_player_youtube_controls_btn_left_next">
+                    ⏭
+                  </button>
+                  <!-- 영상 하단 - 소리 아이콘 -->
+                  <button class="video_player_youtube_controls_btn_left_sound">
+                    🔊
+                  </button>
+                  <!-- 영상 하단 - 재생 시간 -->
+                  <span>5·07 / 15·28</span>
+                </div>
+                <!-- 영상 하단 -- 우측 -->
+                <div class="video_player_youtube_controls_btn_right">
+                  <!-- 영상 하단 - 자막 아이콘 -->
+                  <button class="video_player_youtube_controls_btn_right_cc">
+                    CC
+                  </button>
+                  <!-- 영상 하단 - 화질 아이콘 -->
+                  <button class="video_player_youtube_controls_btn_right_hd">
+                    ⚙️
+                  </button>
+                  <!-- 아이콘 - HD -->
+                  <!-- 영상 하단 - 영화관 사이즈 아이콘 -->
+                  <button
+                    class="video_player_youtube_controls_btn_right_theater"
+                  >
+                    □
+                  </button>
+                  <!-- 영상 하단 - 소형 플레이어 아이콘 -->
+                  <button class="video_player_youtube_controls_btn_right_small">
+                    📺
+                  </button>
+                  <!-- 영상 하단 - 전체 화면 아이콘 -->
+                  <button class="video_player_youtube_controls_btn_right_full">
+                    ⛶
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 비디오칸 - 영상 정보 -->
+        <div class="video_info">
+          <!-- 영상 정보 - 제목 -->
+          <h2 class="video_info_title">
+            (신작) 딸을 100층에 가둔 게임, 드디어 결말이 나왔습니다ㄷㄷ;;
+          </h2>
+          <!-- 영상 정보 - 제목 하단 -->
+          <div class="video_info_bottom">
+            <!-- 제목 하단 - 조회수,업로드 일 -->
+            <div class="video_info_bottom_view">
+              <span>조회수 24만회</span>
+              <span>·</span>
+              <span>2026. 7. 12.</span>
+            </div>
+            <!-- 제목 하단 - 우측 아이콘 -->
+            <div class="video_info_bottom_controls">
+              <!-- 아이콘 - 좋아요 버튼 -->
+              <button>👍 8.1천</button>
+              <!-- 버튼 - 아이콘 -->
+              <!-- 버튼 - 숫자 -->
+              <!-- 아이콘 - 싫어요 버튼 -->
+              <button>👎 45</button>
+              <!-- 버튼 - 아이콘 -->
+              <!-- 버튼 - 숫자 -->
+              <!-- 아이콘 - 공유 버튼 -->
+              <button>↗ 공유</button>
+              <!-- 버튼 - 아이콘 -->
+              <!-- 버튼 - 글자 -->
+              <!-- 아이콘 - 플레이리스트 저장 버튼 -->
+              <button>☰ 저장</button>
+              <!-- 버튼 - 아이콘 -->
+              <!-- 버튼 - 글자 -->
+              <!-- 아이콘 - 더보기 버튼 -->
+              <button>···</button>
+              <!-- 버튼 - 아이콘 -->
+            </div>
+          </div>
+          <!-- 영상 정보 - 하단 보더 -->
+        </div>
+
+        <!-- 메인 - 채널칸 -->
+        <div class="channel">
+          <!-- 채널칸 - 상단칸 -->
+          <!-- 상단칸 - 채널 사진 -->
+          <img
+            src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/h-t-p.png"
+            alt="profile_channel"
+            class="channel_top_propic"
+          />
+          <div class="channel_top">
+            <!-- 상단칸 - 채널 명 -->
+            <!-- 채널 명 - 채널 이름 -->
+            <p class="channel_top_proname">혜안</p>
+            <!-- 채널 명 - 구독자 수 -->
+            <p class="channel_top_viewer">구독자 305만명</p>
+            <!-- 상단칸 - 구독 버튼 -->
+          </div>
+          <label for="sub_on" class="channel_top_button sub_btn">구독</label>
+          <label
+            for="sub_modal"
+            class="channel_top_button sub_btn is_subscribed"
+            >구독중</label
+          >
+        </div>
+        <div class="channel_mid">
+          <!-- 채널칸 - 설명 -->
+          <p class="channel_mid_description">
+            백층탈출의 마지막<br />[업로드] 금,토,일,월<br />[문의메일]
+            zxcv34276@gmail.com
+          </p>
+          <span class="channel_bottom">더 보기</span>
+          <!-- 채널칸 - 더 보기 버튼 -->
+          <!-- 채널칸 - 하단 보더 -->
+        </div>
+      </main>
+
+      <!-- 사이드바 (Secondary) -->
+      <aside class="secondary">
+        <!-- 사이드바 - 태그 -->
+        <div class="secondary_tag">
+          <!-- 태그 - 버튼 -->
+          <button class="secondary_tag_btn is_active">모두</button>
+          <!-- 태그 - 버튼 -->
+          <button class="secondary_tag_btn">혜안 제공</button>
+        </div>
+        <!-- 사이드바 - 영상 목록 -->
+        <!-- 영상 목록 - 영상 * 15 -->
+        <div class="secondary_list">
+          <div class="secondary_list_video">
+            <!-- 영상 - 썸네일 -->
+            <div class="secondary_list_video_thumbnail">
+              <!-- 썸네일 - 이미지 -->
+              <img
+                src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/ai.png"
+                alt="thmbnail_1"
+              />
+              <!-- 썸네일 - 영상 시간 -->
+              <span class="secondary_list_video_thumbnail_time">20:17</span>
+            </div>
+            <!-- 영상 - 영상 정보 -->
+            <div class="secondary_list_video_info">
+              <!-- 영상 정보 - 제목 -->
+              <p class="secondary_list_video_info_title">
+                코딩 누가 더 잘해? GPT와 제미나이에게 싸움붙여보기
+              </p>
+              <!-- 영상 정보 - 채널 정보 -->
+              <!-- 채널 정보 - 채널 이름 -->
+              <p class="secondary_list_video_info_channel">AI실험실</p>
+              <!-- 채널 정보 - 조회수, 업로드일 -->
+              <p class="secondary_list_video_info_view">
+                조회수 28만회 · 1년 전
+              </p>
+            </div>
+          </div>
+          <div class="secondary_list_video">
+            <div class="secondary_list_video_thumbnail">
+              <img
+                src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/camping.png"
+                alt="thumbnail_2"
+              />
+              <span class="secondary_list_video_thumbnail_time">32:43</span>
+            </div>
+            <div class="secondary_list_video_info">
+              <p class="secondary_list_video_info_title">
+                힐링캠프! 호수속에서 낭만넘치는 캠핑!
+              </p>
+              <p class="secondary_list_video_info_channel">감성캠퍼</p>
+              <p class="secondary_list_video_info_view">
+                조회수 1.2만회 · 3주 전
+              </p>
+            </div>
+          </div>
+          <div class="secondary_list_video">
+            <div class="secondary_list_video_thumbnail">
+              <img
+                src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/car.png"
+                alt="thumbnail_3"
+              />
+              <span class="secondary_list_video_thumbnail_time">28:17</span>
+            </div>
+            <div class="secondary_list_video_info">
+              <p class="secondary_list_video_info_title">
+                벤츠 콘셉트카 공개했는데 디자인이?
+              </p>
+              <p class="secondary_list_video_info_channel">인포카</p>
+              <p class="secondary_list_video_info_view">
+                조회수 1.2만회 · 4개월 전
+              </p>
+            </div>
+          </div>
+          <div class="secondary_list_video">
+            <div class="secondary_list_video_thumbnail">
+              <img
+                src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/cook.png"
+                alt="thmbnail_4"
+              />
+              <span class="secondary_list_video_thumbnail_time">8:24</span>
+            </div>
+            <div class="secondary_list_video_info">
+              <p class="secondary_list_video_info_title">
+                돈없으면 만들어먹자! 깐풍기 만들기 🧑‍🍳
+              </p>
+              <p class="secondary_list_video_info_channel">컨셉집밥</p>
+              <p class="secondary_list_video_info_view">
+                조회수 7.7만회 · 2개월 전
+              </p>
+            </div>
+          </div>
+          <div class="secondary_list_video">
+            <div class="secondary_list_video_thumbnail">
+              <img
+                src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/trip2.png"
+                alt="thmbnail_5"
+              />
+              <span class="secondary_list_video_thumbnail_time">50:29</span>
+            </div>
+            <div class="secondary_list_video_info">
+              <p class="secondary_list_video_info_title">
+                옆나라인데 어려워? 다 알려줄게 따라와
+              </p>
+              <p class="secondary_list_video_info_channel">여행로드</p>
+              <p class="secondary_list_video_info_view">
+                조회수 99만회 · 2년 전
+              </p>
+            </div>
+          </div>
+          <div class="secondary_list_video">
+            <div class="secondary_list_video_thumbnail">
+              <img
+                src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/diy.png"
+                alt="thmbnail_6"
+              />
+              <span class="secondary_list_video_thumbnail_time">44:39</span>
+            </div>
+            <div class="secondary_list_video_info">
+              <p class="secondary_list_video_info_title">
+                셀프 홈 인테리어! 어렵지 않아요😊
+              </p>
+              <p class="secondary_list_video_info_channel">DIY홈랩</p>
+              <p class="secondary_list_video_info_view">
+                조회수 11만회 · 1년 전
+              </p>
+            </div>
+          </div>
+          <div class="secondary_list_video">
+            <div class="secondary_list_video_thumbnail">
+              <img
+                src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/food.png"
+                alt="thmbnail_7"
+              />
+              <span class="secondary_list_video_thumbnail_time">42:41</span>
+            </div>
+            <div class="secondary_list_video_info">
+              <p class="secondary_list_video_info_title">
+                국내여행 해운대! 무엇을 먹어야 할까?
+              </p>
+              <p class="secondary_list_video_info_channel">J의 국내 탐방</p>
+              <p class="secondary_list_video_info_view">
+                조회수 41만회 · 11개월 전
+              </p>
+            </div>
+          </div>
+          <div class="secondary_list_video">
+            <div class="secondary_list_video_thumbnail">
+              <img
+                src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/game.png"
+                alt="thmbnail_8"
+              />
+              <span class="secondary_list_video_thumbnail_time">21:50</span>
+            </div>
+            <div class="secondary_list_video_info">
+              <p class="secondary_list_video_info_title">
+                에테르 레전드 신규 레이드 업데이트! 보스 미리보기, 파티 조합
+                추천!
+              </p>
+              <p class="secondary_list_video_info_channel">판친놈</p>
+              <p class="secondary_list_video_info_view">
+                조회수 6.1만회 · 2시간 전
+              </p>
+            </div>
+          </div>
+          <div class="secondary_list_video">
+            <div class="secondary_list_video_thumbnail">
+              <img
+                src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/game2.png"
+                alt="thmbnail_9"
+              />
+              <span class="secondary_list_video_thumbnail_time">27:40</span>
+            </div>
+            <div class="secondary_list_video_info">
+              <p class="secondary_list_video_info_title">
+                역대급할인 지금 사면 올 이번년도 하고도 남을 할인 총집합
+              </p>
+              <p class="secondary_list_video_info_channel">겜픽</p>
+              <p class="secondary_list_video_info_view">
+                조회수 7.3만회 · 1일 전
+              </p>
+            </div>
+          </div>
+          <div class="secondary_list_video">
+            <div class="secondary_list_video_thumbnail">
+              <img
+                src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/it.png"
+                alt="thmbnail_10"
+              />
+              <span class="secondary_list_video_thumbnail_time">19:22</span>
+            </div>
+            <div class="secondary_list_video_info">
+              <p class="secondary_list_video_info_title">
+                드디어 출시❗최고성능 Nova One X 언박싱!
+              </p>
+              <p class="secondary_list_video_info_channel">새폰내폰</p>
+              <p class="secondary_list_video_info_view">
+                조회수 33만회 · 1일 전
+              </p>
+            </div>
+          </div>
+          <div class="secondary_list_video">
+            <div class="secondary_list_video_thumbnail">
+              <img
+                src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/movie.png"
+                alt="thmbnail_11"
+              />
+              <span class="secondary_list_video_thumbnail_time">17:28</span>
+            </div>
+            <div class="secondary_list_video_info">
+              <p class="secondary_list_video_info_title">
+                습하고 더운날은 공포영화지😱
+              </p>
+              <p class="secondary_list_video_info_channel">무비조아</p>
+              <p class="secondary_list_video_info_view">
+                조회수 90만회 · 1주 전
+              </p>
+            </div>
+          </div>
+          <div class="secondary_list_video">
+            <div class="secondary_list_video_thumbnail">
+              <img
+                src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/music.png"
+                alt="thmbnail_12"
+              />
+              <span class="secondary_list_video_thumbnail_time">8:37</span>
+            </div>
+            <div class="secondary_list_video_info">
+              <p class="secondary_list_video_info_title">
+                세계가 감동한 K-pop스타의 역동적인 무대!
+              </p>
+              <p class="secondary_list_video_info_channel">MW</p>
+              <p class="secondary_list_video_info_view">
+                조회수 120만회 · 3개월 전
+              </p>
+            </div>
+          </div>
+          <div class="secondary_list_video">
+            <div class="secondary_list_video_thumbnail">
+              <img
+                src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/shopping.png"
+                alt="thmbnail_13"
+              />
+              <span class="secondary_list_video_thumbnail_time">7:32</span>
+            </div>
+            <div class="secondary_list_video_info">
+              <p class="secondary_list_video_info_title">
+                쿠팡 가성비 아이템 총집합💸
+              </p>
+              <p class="secondary_list_video_info_channel">현명한 소비/p></p>
+              <p class="secondary_list_video_info_view">
+                조회수 6.7만회 · 5개월 전
+              </p>
+            </div>
+          </div>
+          <div class="secondary_list_video">
+            <div class="secondary_list_video_thumbnail">
+              <img
+                src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/SNS.png"
+                alt="thmbnail_14"
+              />
+              <span class="secondary_list_video_thumbnail_time">4:17</span>
+            </div>
+            <div class="secondary_list_video_info">
+              <p class="secondary_list_video_info_title">
+                맨날보면서 아직도 몰라? 인스타 완전정복👀
+              </p>
+              <p class="secondary_list_video_info_channel">알쓸정</p>
+              <p class="secondary_list_video_info_view">
+                조회수 77만회 · 10개월 전
+              </p>
+            </div>
+          </div>
+          <div class="secondary_list_video">
+            <div class="secondary_list_video_thumbnail">
+              <img
+                src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/trip3.png"
+                alt="thmbnail_15"
+              />
+              <span class="secondary_list_video_thumbnail_time">42:10</span>
+            </div>
+            <div class="secondary_list_video_info">
+              <p class="secondary_list_video_info_title">
+                감탄이 절로 나오는 그리스 산토리니✈️
+              </p>
+              <p class="secondary_list_video_info_channel">여행무드</p>
+              <p class="secondary_list_video_info_view">
+                조회수 50만회 · 8개월 전
+              </p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- 메인 - 댓글 -->
+      <section class="comment">
+        <!-- 댓글 - 상단 바 -->
+        <div class="comment_top">
+          <!-- 상단 바 - 정렬 바-->
+          <!-- 정렬 바 - 코멘트 수 -->
+          <span class="comment_top_comment">댓글 748개</span>
+          <!-- 정렬 바 - 정렬하기 -->
+          <div class="comment_top_sort">
+            <!-- 정렬하기 - 버튼 -->
+            <input
+              type="checkbox"
+              id="comment_top_sort_toggle"
+              class="comment_top_sort_toggle"
+            />
+            <label for="comment_top_sort_toggle" class="comment_top_button"
+              >≡ 정렬 기준</label
+            >
+            <!-- 정렬하기 - 드롭다운 -->
+            <div class="comment_top_sort_dropdown">
+              <div class="comment_top_sort_dropdown_item is_selected">
+                <p class="comment_top_sort_dropdown_item_title">인기순</p>
+                <p class="comment_top_sort_dropdown_item_sub">추천 댓글 표시</p>
+              </div>
+              <div class="comment_top_sort_dropdown_item">
+                <p class="comment_top_sort_dropdown_item_title">최신순</p>
+                <p class="comment_top_sort_dropdown_item_sub">
+                  스팸 가능성이 있는 댓글을 포함하여 최근 댓글 표시
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 댓글 - 사용자 댓글 -->
+        <div class="comment_top_usercomment">
+          <!-- 사용자 댓글 - 프로필 사진 -->
+          <img
+            src="./images/header_nav_profile.jpg"
+            alt="profile_user"
+            class="comment_top_usercomment_pic"
+          />
+          <!-- 사용자 댓글 - 댓글 란 -->
+          <input
+            class="comment_top_usercomment_comment"
+            type="text"
+            placeholder="댓글 추가..."
+          />
+          <!-- 댓글 란 - 하단 보더 -->
+        </div>
+        <!-- 댓글 - 타 사용자 댓글 * 8 -->
+        <div class="comment_bottom">
+          <!-- 타 사용자 댓글 - 프로필 사진 -->
+          <img
+            class="comment_bottom_pic"
+            src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/camping-p.png"
+            alt="profile_other"
+          />
+          <!-- 타 사용자 댓글 - 댓글 란 -->
+          <div class="comment_bottom_comment">
+            <!-- 댓글 란 - 헤더 -->
+            <!-- 헤더 - 닉네임 -->
+            <p class="commnet_bottom_comment_profile">
+              <span class="comment_bottom_comment_name">감성캠퍼</span>
+              <!-- 헤더 - 시간 -->
+              <span class="comment_bottom_comment_time">1일 전</span>
+            </p>
+            <!-- 댓글 란 - 텍스트 -->
+            <p class="comment_bottom_comment_text">
+              와 씨 혜안보다 반가운 게임은 처음이다
+            </p>
+            <!-- 댓글 란 - 툴바 -->
+            <div class="comment_bottom_comment_toolbar">
+              <!-- 툴바 - 좋아요 버튼 -->
+              <button class="comment_bottom_comment_toolbar_btn">
+                👍 2.7천
+              </button>
+              <!-- 툴바 - 싫어요 버튼 -->
+              <button class="comment_bottom_comment_toolbar_btn">👎</button>
+              <!-- 툴바 - 답글 버튼 -->
+              <button class="comment_bottom_comment_toolbar_btn">답글</button>
+            </div>
+          </div>
+        </div>
+        <div class="comment_bottom">
+          <img
+            class="comment_bottom_pic"
+            src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/music-p.png"
+            alt="profile_other"
+          />
+          <div class="comment_bottom_comment">
+            <p class="commnet_bottom_comment_profile">
+              <span class="comment_bottom_comment_name">MW</span>
+              <span class="comment_bottom_comment_time">2일 전</span>
+            </p>
+            <p class="comment_bottom_comment_text">
+              <a style="color: #007aff" href="#">0:07</a>&nbsp;3년 전에 했던
+              게임 결말 들고 온 혜안님 칭찬합니다.
+            </p>
+            <div class="comment_bottom_comment_toolbar">
+              <button class="comment_bottom_comment_toolbar_btn">👍 576</button>
+              <button class="comment_bottom_comment_toolbar_btn">👎</button>
+              <button class="comment_bottom_comment_toolbar_btn">답글</button>
+            </div>
+          </div>
+        </div>
+        <div class="comment_bottom">
+          <img
+            class="comment_bottom_pic"
+            src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/ai-p.png"
+            alt="profile_other"
+          />
+          <div class="comment_bottom_comment">
+            <p class="commnet_bottom_comment_profile">
+              <span class="comment_bottom_comment_name">AI실험실</span>
+              <span class="comment_bottom_comment_time">1일 전(수정됨)</span>
+            </p>
+            <p class="comment_bottom_comment_text">
+              역시 영식이 정도 되는 유튜버는 1분전 영상인데도 조회수가 폭발
+              하는구나..
+            </p>
+            <div class="comment_bottom_comment_toolbar">
+              <button class="comment_bottom_comment_toolbar_btn">👍 443</button>
+              <button class="comment_bottom_comment_toolbar_btn">👎</button>
+              <button class="comment_bottom_comment_toolbar_btn">답글</button>
+            </div>
+          </div>
+        </div>
+        <div class="comment_bottom">
+          <img
+            class="comment_bottom_pic"
+            src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/diy-p.png"
+            alt="profile_other"
+          />
+          <div class="comment_bottom_comment">
+            <p class="commnet_bottom_comment_profile">
+              <span class="comment_bottom_comment_name">DIY홈랩</span>
+              <span class="comment_bottom_comment_time">2일 전</span>
+            </p>
+            <p class="comment_bottom_comment_text">
+              <a style="color: #007aff" href="#">8:17</a>&nbsp;자기 뇌
+              노려보는것 봐 ㅋㅋㅋㅋ
+            </p>
+            <div class="comment_bottom_comment_toolbar">
+              <button class="comment_bottom_comment_toolbar_btn">👍 195</button>
+              <button class="comment_bottom_comment_toolbar_btn">👎</button>
+              <button class="comment_bottom_comment_toolbar_btn">답글</button>
+            </div>
+          </div>
+        </div>
+        <div class="comment_bottom">
+          <img
+            class="comment_bottom_pic"
+            src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/it-p.png"
+            alt="profile_other"
+          />
+          <div class="comment_bottom_comment">
+            <p class="commnet_bottom_comment_profile">
+              <span class="comment_bottom_comment_name">새폰내폰</span>
+              <span class="comment_bottom_comment_time">3일 전</span>
+            </p>
+            <p class="comment_bottom_comment_text">
+              <a style="color: #007aff" href="#">0:37</a>&nbsp;항상 편집자님
+              음성효과 넣어주시는거 디테일 짱ㅜㅜ
+            </p>
+            <div class="comment_bottom_comment_toolbar">
+              <button class="comment_bottom_comment_toolbar_btn">👍 302</button>
+              <button class="comment_bottom_comment_toolbar_btn">👎</button>
+              <button class="comment_bottom_comment_toolbar_btn">답글</button>
+            </div>
+          </div>
+        </div>
+        <div class="comment_bottom">
+          <img
+            class="comment_bottom_pic"
+            src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/food-p.png"
+            alt="profile_other"
+          />
+          <div class="comment_bottom_comment">
+            <p class="commnet_bottom_comment_profile">
+              <span class="comment_bottom_comment_name">J의 국내 탐방</span>
+              <span class="comment_bottom_comment_time">3시간 전</span>
+            </p>
+            <p class="comment_bottom_comment_text">
+              "혜안 이제 100층 탈출 게임 잘합니다ㅋㅋㅋㅋㅋ"
+            </p>
+            <div class="comment_bottom_comment_toolbar">
+              <button class="comment_bottom_comment_toolbar_btn">👍 103</button>
+              <button class="comment_bottom_comment_toolbar_btn">👎</button>
+              <button class="comment_bottom_comment_toolbar_btn">답글</button>
+            </div>
+          </div>
+        </div>
+        <div class="comment_bottom">
+          <img
+            class="comment_bottom_pic"
+            src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/game-p.png"
+            alt="profile_other"
+          />
+          <div class="comment_bottom_comment">
+            <p class="commnet_bottom_comment_profile">
+              <span class="comment_bottom_comment_name">판친놈</span>
+              <span class="comment_bottom_comment_time">10시간 전</span>
+            </p>
+            <p class="comment_bottom_comment_text">
+              <a style="color: #007aff" href="#">1:02</a>&nbsp;아닠ㅋㅋㅋ 그정도
+              화살을 목에 맞으면 즉사 아니냐고요 ㅋㅋ
+            </p>
+            <div class="comment_bottom_comment_toolbar">
+              <button class="comment_bottom_comment_toolbar_btn">👍 181</button>
+              <button class="comment_bottom_comment_toolbar_btn">👎</button>
+              <button class="comment_bottom_comment_toolbar_btn">답글</button>
+            </div>
+          </div>
+        </div>
+        <div class="comment_bottom">
+          <img
+            class="comment_bottom_pic"
+            src="https://pub-b15f5fc07ddb441e8d9a1de9f83f2c2f.r2.dev/test/project/trip2-p.png"
+            alt="profile_other"
+          />
+          <div class="comment_bottom_comment">
+            <p class="commnet_bottom_comment_profile">
+              <span class="comment_bottom_comment_name">여행무드</span>
+              <span class="comment_bottom_comment_time">2일 전</span>
+            </p>
+            <p class="comment_bottom_comment_text">
+              옛날 게임을 화채처럼 이것저것 말아 플레이해 주셔서 추억에 푹 빠질
+              수 있었어요 🍀 덕분에 잊고 있던 기억들도 하나씩 떠오르고 보는 내내
+              웃으면서 정말 즐겁게 봤습니다.
+            </p>
+            <p class="comment_bottom_comment_text">
+              항상 재미있는 영상으로 좋은 추억을 다시 꺼내주셔서 감사합니다
+              앞으로도 혜안님만의 감성 가득한 영상 기대할게요 사랑해 몰리야 🫧
+            </p>
+            <div class="comment_bottom_comment_toolbar">
+              <button class="comment_bottom_comment_toolbar_btn">👍 2</button>
+              <button class="comment_bottom_comment_toolbar_btn">👎</button>
+              <button class="comment_bottom_comment_toolbar_btn">답글</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- 모달 오버레이 -->
+    <div class="sub_modal_overlay">
+      <div class="sub_modal">
+        <p class="sub_modal_text">
+          <strong>혜안</strong> 구독을 취소하시겠습니까?
+        </p>
+        <div class="sub_modal_btns">
+          <label for="sub_on" class="sub_modal_btn">취소</label>
+          <label for="sub_off" class="sub_modal_btn sub_modal_btn_cancel"
+            >구독 취소</label
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
