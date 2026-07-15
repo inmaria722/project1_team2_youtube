@@ -175,6 +175,8 @@ button {
   position: relative;
   overflow: hidden;
   aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .link {
   text-decoration: none;
